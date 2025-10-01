@@ -1,0 +1,123 @@
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: '@metadata,beat'
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: '@metadata,type'
+    DataType: String
+    ValueType: Constant
+    Value: _doc
+  - name: '@metadata,version'
+    DataType: String
+    ValueType: Constant
+    Value: 8.12.2
+  - name: event,dataset
+    DataType: String
+    ValueType: Constant
+    Value: system.load
+  - name: event,module
+    DataType: String
+    ValueType: Constant
+    Value: system
+  - name: event,duration
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 10000-100000
+  - name: bu_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: vublock_name
+    DataType: String
+    ValueType: Constant
+    Value: linux-monitor
+  - name: service,type
+    DataType: String
+    ValueType: Constant
+    Value: system
+  - name: system,load,norm,1
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-0.2
+  - name: system,load,norm,5
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-0.2
+  - name: system,load,norm,15
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-0.2
+  - name: system,load,cores
+    DataType: Uint64
+    ValueType: Constant
+    Value: 8
+  - name: system,load,1
+    DataType: Float32
+    ValueType: "EvaluatedValue"
+    Value: "system,load,norm,1 * system,load,cores"
+  - name: system,load,5
+    DataType: Float32
+    ValueType: "EvaluatedValue"
+    Value: "system,load,norm,5 * system,load,cores"
+  - name: system,load,15
+    DataType: Float32
+    ValueType: "EvaluatedValue"
+    Value: "system,load,norm,15 * system,load,cores"
+  - name: source_id
+    DataType: String
+    ValueType: Constant
+    Value: 164.52.200.38
+  - name: tenant_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: agent,ephemeral_id
+    DataType: String
+    ValueType: Constant
+    Value: 212779c2-631a-4a70-a1e2-c351acb2df51
+  - name: agent,id
+    DataType: String
+    ValueType: Constant
+    Value: f0c15a8d-6c3a-4ad4-8751-3c8a58651748
+  - name: agent,name
+    DataType: String
+    ValueType: Constant
+    Value: e2e-68-38
+  - name: agent,type
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: agent,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.12.2
+  - name: ecs,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.0.0
+  - name: metricset,name
+    DataType: String
+    ValueType: Constant
+    Value: load
+  - name: "metricset,period"
+    DataType: Uint64
+    ValueType: "FromLocal"
+    Value: "period"
+  - name: topic_name
+    DataType: String
+    ValueType: Constant
+    Value: linux-monitor-input

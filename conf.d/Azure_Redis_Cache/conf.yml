@@ -4,7 +4,7 @@ uniquekey:
   DataType: IPv4
   ValueType: "RandomFixed"
   Value: 10.10.10.1
-  NumUniqKey: 50000
+  NumUniqKey: 100
 
 period: 1s
 
@@ -25,7 +25,4 @@ output.file:
   max_files: 5 #Once the number of files have reached max_files limit, it will overwrite the 1st file
 
 # Include following yml files from this directory
-Include_sub_modules: [
- metrics,
- 
-]
+Include_sub_modules: [metrics]

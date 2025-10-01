@@ -1,0 +1,47 @@
+group:
+- name: good
+  fields:
+  - name: fields,response_time
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-0.2
+  - name: fields,result_code
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: fields,result_type
+    DataType: String
+    ValueType: Constant
+    Value: success
+  - name: name
+    DataType: String
+    ValueType: Constant
+    Value: net_response
+  - name: tags,host
+    DataType: String
+    ValueType: Constant
+    Value: vuSmartMaps
+  - name: tags,port
+    DataType: Uint64
+    ValueType: Constant
+    Value: 443
+  - name: tags,protocol
+    DataType: String
+    ValueType: Constant
+    Value: tcp
+  - name: tags,result
+    DataType: String
+    ValueType: Constant
+    Value: success
+  - name: tags,server
+    DataType: String
+    ValueType: Constant
+    Value: www.google.com
+  - name: tags,topic_name
+    DataType: String
+    ValueType: Constant
+    Value: servicebeat-metrics-input
+  - name: tags,vublock_name
+    DataType: String
+    ValueType: Constant
+    Value: Service Availability

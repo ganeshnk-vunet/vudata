@@ -1,0 +1,283 @@
+group:
+- name: good
+  fields:
+  - name: QueueDepthLowThreshold%
+    DataType: Uint64
+    ValueType: Constant
+    Value: 20
+  - name: LastAlteredDate
+    DataType: String
+    ValueType: Constant
+    Value: '2023-03-29'
+  - name: MQCA_CLUS_CHL_NAME
+    DataType: String
+    ValueType: Constant
+    Value: ""
+  - name: MQCA_Q_DESC
+    DataType: String
+    ValueType: Constant
+    Value: ""
+  - name: MQIA_DEF_PUT_RESPONSE_TYPE
+    DataType: Uint64
+    ValueType: Constant
+    Value: 1
+  - name: Port
+    DataType: String
+    ValueType: Constant
+    Value: "1415"
+  - name: MQIA_STATISTICS_Q
+    DataType: Int64
+    ValueType: Constant
+    Value: -3
+  - name: QueueType
+    DataType: Uint64
+    ValueType: Constant
+    Value: 1
+  - name: MQIA_CLWL_USEQ
+    DataType: Int64
+    ValueType: Constant
+    Value: -3
+  - name: MQIA_Q_DEPTH_MAX_EVENT
+    DataType: Uint64
+    ValueType: Constant
+    Value: 1
+  - name: MQIA_MONITORING_Q
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: OldestMessageAge
+    DataType: Int64
+    ValueType: Constant
+    Value: -1
+  - name: MQCA_CLUSTER_NAMELIST
+    DataType: String
+    ValueType: Constant
+    Value: ""
+  - name: MQIA_CLWL_Q_PRIORITY
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: MQIA_Q_DEPTH_HIGH_EVENT
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: MQIA_HARDEN_GET_BACKOUT
+    DataType: Uint64
+    ValueType: Constant
+    Value: 1
+  - name: MQIA_MSG_DELIVERY_SEQUENCE
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: UncommittedMessages
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: MQIA_TRIGGER_MSG_PRIORITY
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: MQCA_CLUSTER_NAME
+    DataType: String
+    ValueType: Constant
+    Value: ""
+  - name: MQIA_SHAREABILITY
+    DataType: Uint64
+    ValueType: Constant
+    Value: 1
+  - name: MQIA_BACKOUT_THRESHOLD
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: QmgrName
+    DataType: String
+    ValueType: Constant
+    Value: RATBBRQM
+  - name: MQIA_TRIGGER_TYPE
+    DataType: Uint64
+    ValueType: Constant
+    Value: 1
+  - name: MQIA_DEF_READ_AHEAD
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: MQIA_NPM_CLASS
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: MQCACF_MEDIA_LOG_EXTENT_NAME
+    DataType: String
+    ValueType: Constant
+    Value: ""
+  - name: MQIA_RETENTION_INTERVAL
+    DataType: Uint64
+    ValueType: Constant
+    Value: 999999999
+  - name: MQIA_CLWL_Q_RANK
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: StatisticType
+    DataType: String
+    ValueType: Constant
+    Value: QueueMetrics
+  - name: LastGetDate
+    DataType: String
+    ValueType: Constant
+    Value: ""
+  - name: MQIA_INHIBIT_GET
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: OpenOutputCount
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: MQIA_ACCOUNTING_Q
+    DataType: Int64
+    ValueType: Constant
+    Value: -3
+  - name: OnQTime
+    DataType: String
+    ValueType: Constant
+    Value: "[0,0]"
+  - name: LastPutTime
+    DataType: String
+    ValueType: Constant
+    Value: ""
+  - name: MQIA_TRIGGER_CONTROL
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: MQIA_SCOPE
+    DataType: Uint64
+    ValueType: Constant
+    Value: 1
+  - name: MQIA_Q_SERVICE_INTERVAL_EVENT
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  # - name: Time
+  #   DataType: String
+  #   ValueType: Constant
+  #   Value: 2025-09-11T02:59:00.416+0530
+  - name: MQIA_PROPERTY_CONTROL
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: MQCA_CREATION_TIME
+    DataType: String
+    ValueType: Constant
+    Value: 15.47.39
+  - name: MQCA_INITIATION_Q_NAME
+    DataType: String
+    ValueType: Constant
+    Value: ""
+  - name: MaxQueueDepth
+    DataType: Uint64
+    ValueType: Constant
+    Value: 100000
+  - name: MQCA_PROCESS_NAME
+    DataType: String
+    ValueType: Constant
+    Value: ""
+  - name: MQCA_TRIGGER_DATA
+    DataType: String
+    ValueType: Constant
+    Value: ""
+  - name: DisplayName
+    DataType: String
+    ValueType: Constant
+    Value: SFMS MQ
+  - name: LastPutDate
+    DataType: String
+    ValueType: Constant
+    Value: ""
+  - name: QueueName
+    DataType: String
+    ValueType: Constant
+    Value: DEAD.LOCAL
+  - name: MQIA_DEF_PRIORITY
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: MQIA_DEF_PERSISTENCE
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: OpenInputCount
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: MQIA_Q_DEPTH_LOW_EVENT
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: MQIA_TRIGGER_DEPTH
+    DataType: Uint64
+    ValueType: Constant
+    Value: 1
+  - name: MQCA_CREATION_DATE
+    DataType: String
+    ValueType: Constant
+    Value: '2023-03-29'
+  - name: MQIA_USAGE
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: Host
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: MaxMessageLength
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1558291-15582910
+  - name: MQCA_BACKOUT_REQ_Q_NAME
+    DataType: String
+    ValueType: Constant
+    Value: ""
+  - name: target
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: MQIA_DEF_BIND
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: MQIA_DEFINITION_TYPE
+    DataType: Uint64
+    ValueType: Constant
+    Value: 1
+  - name: MQIA_Q_SERVICE_INTERVAL
+    DataType: Uint64
+    ValueType: Constant
+    Value: 999999999
+  - name: MQIA_DEF_INPUT_OPEN_OPTION
+    DataType: Uint64
+    ValueType: Constant
+    Value: 2
+  - name: MQIA_INHIBIT_PUT
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: QueueDepthHighThreshold%
+    DataType: Uint64
+    ValueType: Constant
+    Value: 80
+  - name: LastAlteredTime
+    DataType: String
+    ValueType: Constant
+    Value: 15.47.39
+  - name: MQCA_CUSTOM
+    DataType: String
+    ValueType: Constant
+    Value: ""
+  - name: MQIA_DIST_LISTS
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: MQIACF_Q_STATUS_TYPE
+    DataType: Uint64
+    ValueType: Constant
+    Value: 1105

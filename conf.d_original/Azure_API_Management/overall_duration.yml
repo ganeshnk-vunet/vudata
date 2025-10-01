@@ -1,0 +1,59 @@
+group:
+- name: good
+  fields:
+    - name: fields,average
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-100
+    - name: fields,count
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-100
+    - name: fields,maximum
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-100
+    - name: fields,minimum
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-100
+    - name: fields,timeStamp
+      DataType: DateTime
+      ValueType: Current
+      Value: datetime_rfc3339
+    - name: fields,total
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 1-100
+    - name: name
+      DataType: String
+      ValueType: Constant
+      Value: azure_monitor_microsoft_apimanagement_service_overall_duration_of_gateway_requests
+    - name: tags,host
+      DataType: String
+      ValueType: Constant
+      Value: ip-10-0-110-68
+    - name: tags,namespace
+      DataType: String
+      ValueType: Constant
+      Value: Microsoft.ApiManagement/service
+    - name: tags,resource_group
+      DataType: String
+      ValueType: Constant
+      Value: vunet-auto
+    - name: tags,resource_name
+      DataType: String
+      ValueType: FromLocal
+      Value: UniqueKey
+    - name: tags,resource_region
+      DataType: String
+      ValueType: Constant
+      Value: eastus
+    - name: tags,subscription_id
+      DataType: String
+      ValueType: Constant
+      Value: e9b87239-7fe2-42de-a1a9-b4ea97bc949b
+    - name: tags,unit
+      DataType: String
+      ValueType: Constant
+      Value: MilliSeconds

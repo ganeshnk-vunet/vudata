@@ -1,0 +1,36 @@
+enabled: true
+uniquekey:
+  name: "host"
+  DataType: IPv4
+  ValueType: "RandomFixed"
+  Value: "164.52.213.222"
+  NumUniqKey: 2
+period: 10s
+
+# Add the timestamp field name and type. Type could be epoch_in_seconds, epoch_in_ms or datetime_rfc3339
+timestamp:
+  name: "@timestamp"
+  type: datetime_rfc3339
+
+output.kafka:
+  enabled: true
+  topic: "ibm-was-metrics-input"
+
+output.file:
+ enabled: false
+ path: ./tmp/was/
+ filename: was.json
+ rotate_every_mb: 1
+ max_files: 5    #Once the number of files have reached max_files limit, it will overwrite the 1st file
+
+# Include following yml files from this directory.. To include all, please use ‘*’
+#Include_sub_modules: [connection_pool]
+Include_sub_modules: [connection_pool_module,
+                      jvm_runtime_module,
+                      server_status_module,
+                      session_manager_module,
+                      system_module,
+                      thread_pool_module,
+                      transaction_manager_module,
+                      web_app_module]
+

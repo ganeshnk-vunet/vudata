@@ -1,0 +1,81 @@
+uniquekey:
+  # You can not override the key but you can create a new key in combination
+  # of previous and new ones. The following config will make sure that tool
+  # generate document for host and pid combination for each host IP & PID
+  name: fields,name
+  DataType: String
+  ValueType: RandomFixed
+  Value: "memory-\\d{1}"
+  NumUniqKey: 1
+
+group:
+- name: good
+  fields:
+  - name: fields,@timestamp
+    DataType: DateTime
+    ValueType: Current
+    Value: ISO_8601
+  - name: fields,period
+    DataType: Uint64
+    ValueType: FromLocal
+    Value: period
+  - name: fields,system_name
+    DataType: String
+    ValueType: RandomFixed
+    Value: "Cisco-Switch-\\d{2}"
+  - name: fields,memory_free
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 700000-900000
+  - name: fields,memory_in_use
+    DataType: Uint64
+    ValueType: EvaluatedValue
+    Value: "1200000 - fields,memory_free"
+  - name: fields,name
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey
+  - name: name
+    DataType: String
+    ValueType: Constant
+    Value: cisco-memory-health
+  - name: tags,bu_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: tags,host
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: tags,index
+    DataType: String
+    ValueType: Constant
+    Value: '0'
+  - name: tags,message_key
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: tags,tenant_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: tags,type
+    DataType: String
+    ValueType: Constant
+    Value: snmp
+  - name: tags,data_type
+    DataType: String
+    ValueType: Constant
+    Value: cisco-memory-health
+  - name: tags,topic_of
+    DataType: String
+    ValueType: Constant
+    Value: snmp-cisco-l3switch
+  - name: tags,vendor_name
+    DataType: String
+    ValueType: Constant
+    Value: cisco
+  - name: tags,device_type
+    DataType: String
+    ValueType: Constant
+    Value: l3switch

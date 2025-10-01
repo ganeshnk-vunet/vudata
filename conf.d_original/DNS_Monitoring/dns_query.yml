@@ -1,0 +1,51 @@
+group:
+- name: good
+  fields:
+  - name: fields,query_time_ms
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,rcode_value
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,result_code
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: name
+    DataType: String
+    ValueType: Constant
+    Value: dns_query
+  - name: tags,domain
+    DataType: String
+    ValueType: Constant
+    Value: facebook.com
+  - name: tags,host
+    DataType: String
+    ValueType: Constant
+    Value: telegraf-dns-1-1-1-1-6d7fbb685c-b68bs
+  - name: tags,rcode
+    DataType: String
+    ValueType: Constant
+    Value: NOERROR
+  - name: tags,record_type
+    DataType: String
+    ValueType: Constant
+    Value: NS
+  - name: tags,result
+    DataType: String
+    ValueType: Constant
+    Value: success
+  - name: tags,server
+    DataType: String
+    ValueType: Constant
+    Value: 8.8.8.8
+  - name: '@debug_metadata,data_stream'
+    DataType: String
+    ValueType: Constant
+    Value: dns-metrics-input
+  - name: timestamp
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-2000000000

@@ -1,14 +1,13 @@
 uniquekey:
-   name: kubernetes,pod,name
-   DataType: String
-   ValueType: RandomFixed
-   Value: "kube-proxy-\\d{2}"
-   NumUniqKey: 5
-
-   name: kubernetes,container,name
-   DataType: String
-   ValueType: RandomFixed
-   Value: "syslog-\\d{2}"
+- name: kubernetes,pod,name
+  DataType: String
+  ValueType: RandomFixed
+  Value: "kube-proxy-\\d{2}"
+  NumUniqKey: 5
+- name: kubernetes,container,name
+  DataType: String
+  ValueType: RandomFixed
+  Value: "syslog-\\d{2}"
 group:
 - name: good
   fields:

@@ -113,7 +113,6 @@ group:
     Value: "system,filesystem,total - system,filesystem,used,bytes"
   - name: system,filesystem,used,pct
     DataType: Float32
-    ValueType: RandomRange
     ValueType: "EvaluatedValue"
     Value: "system,filesystem,used,bytes / system,filesystem,total"
   - name: system,filesystem,mount_point

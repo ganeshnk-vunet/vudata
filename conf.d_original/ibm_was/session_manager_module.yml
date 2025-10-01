@@ -1,0 +1,75 @@
+uniquekey:
+  # Unique key will be based on host IP and connection pool name to ensure that each entry is distinct.
+  name: host,Name
+  DataType: String
+  ValueType: RandomFixed
+  Value: "Application-Server\\d{2}"
+  NumUniqKey: 5
+
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: ActiveCount_current
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1-10
+  - name: Node
+    DataType: String
+    ValueType: RandomFixed
+    Value: "e2e-82-222Node\\d{2}"
+  - name: ServerIP
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: Host
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: Time
+    DataType: DateTime
+    ValueType: Current
+    Value: datetime_rfc3339
+  - name: Process
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey
+  - name: Name
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey
+  - name: ProcessType
+    DataType: String
+    ValueType: Constant
+    Value: ManagedProcess
+  - name: HostDisplayName
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: LiveCount_current
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 2-20
+  - name: StatisticType
+    DataType: String
+    ValueType: Constant
+    Value: servletSessionsModule
+  - name: StatisticSubTypeLevel1
+    DataType: String
+    ValueType: RandomFixed
+    Value: "DefaultApplication.ear#DefaultWebApplication.war\\d{2}"
+  - name: Cell
+    DataType: String
+    ValueType: RandomFixed
+    Value: "e2e-82-222Cell\\d{2}"

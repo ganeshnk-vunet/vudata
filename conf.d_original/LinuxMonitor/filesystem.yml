@@ -1,0 +1,150 @@
+uniquekey:
+  # You can not override the key but you can create a new key in combination
+  # of previous and new ones. The following config will make sure that tool
+  # generate document for host and pid combination for each host IP & PID
+  name: system,filesystem,mount_point
+  DataType: String
+  ValueType: RandomFixed
+  Value: "/data-\\d{2}"
+  NumUniqKey: 1
+
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: '@metadata,beat'
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: '@metadata,type'
+    DataType: String
+    ValueType: Constant
+    Value: _doc
+  - name: '@metadata,version'
+    DataType: String
+    ValueType: Constant
+    Value: 8.12.2
+  - name: bu_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: tenant_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: source_id
+    DataType: String
+    ValueType: Constant
+    Value: 172.16.102.231
+  - name: agent,id
+    DataType: String
+    ValueType: Constant
+    Value: b17f5610-6c0e-418d-a090-cc50ecaf7439
+  - name: agent,name
+    DataType: String
+    ValueType: Constant
+    Value: e2e-68-106
+  - name: agent,type
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: agent,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.12.2
+  - name: agent,ephemeral_id
+    DataType: String
+    ValueType: Constant
+    Value: 5ae03f0f-8a1a-4de2-aea4-eeb28fba67a3
+  - name: event,duration
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 33045-330450
+  - name: event,dataset
+    DataType: String
+    ValueType: Constant
+    Value: system.filesystem
+  - name: event,module
+    DataType: String
+    ValueType: Constant
+    Value: system
+  - name: service,type
+    DataType: String
+    ValueType: Constant
+    Value: system
+  - name: system,filesystem,type
+    DataType: String
+    ValueType: Constant
+    Value: ext4
+  - name: system,filesystem,options
+    DataType: String
+    ValueType: Constant
+    Value: rw,noatime,discard
+  - name: system,filesystem,files
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1000000-10000000
+  - name: system,filesystem,device_name
+    DataType: String
+    ValueType: Constant
+    Value: /dev/mapper/vg01-lv01
+  - name: system,filesystem,total
+    DataType: Uint64
+    ValueType: Constant
+    Value: 24000000000
+  - name: system,filesystem,used,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 20000000-200000000
+  - name: system,filesystem,available
+    DataType: Uint64
+    ValueType: "EvaluatedValue"
+    Value: "system,filesystem,total - system,filesystem,used,bytes"
+  - name: system,filesystem,used,pct
+    DataType: Float32
+    ValueType: RandomRange
+    ValueType: "EvaluatedValue"
+    Value: "system,filesystem,used,bytes / system,filesystem,total"
+  - name: system,filesystem,mount_point
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey
+  - name: system,filesystem,free
+    DataType: Uint64
+    ValueType: "EvaluatedValue"
+    Value: "system,filesystem,total - system,filesystem,used,bytes"
+  - name: system,filesystem,free_files
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1000000-10000000
+  - name: vublock_name
+    DataType: String
+    ValueType: Constant
+    Value: linux-monitor
+  - name: topic_name
+    DataType: String
+    ValueType: Constant
+    Value: linux-monitor-input
+  - name: ecs,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.0.0
+  - name: metricset,name
+    DataType: String
+    ValueType: Constant
+    Value: filesystem
+  - name: "metricset,period"
+    DataType: Uint64
+    ValueType: "FromLocal"
+    Value: "period"

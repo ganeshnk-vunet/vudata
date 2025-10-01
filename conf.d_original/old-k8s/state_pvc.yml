@@ -1,0 +1,115 @@
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: '@metadata,beat'
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: '@metadata,type'
+    DataType: String
+    ValueType: Constant
+    Value: _doc
+  - name: '@metadata,version'
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.0
+  - name: ecs,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.0.0
+  - name: event,module
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes
+  - name: event,duration
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 67892-678920
+  - name: event,dataset
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes.persistentvolumeclaim
+  - name: service,address
+    DataType: String
+    ValueType: Constant
+    Value: http://kube-state-metrics.kube-system:8080/metrics
+  - name: service,type
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes
+  - name: kubernetes,namespace
+    DataType: String
+    ValueType: Constant
+    Value: vsmaps
+  - name: kubernetes,persistentvolumeclaim,access_mode
+    DataType: String
+    ValueType: Constant
+    Value: ReadWriteOnce
+  - name: kubernetes,persistentvolumeclaim,storage_class
+    DataType: String
+    ValueType: Constant
+    Value: longhorn
+  - name: kubernetes,persistentvolumeclaim,volume_name
+    DataType: String
+    ValueType: Constant
+    Value: pvc-2233aebb-bc22-41b2-adcd-9ff595b179dc
+  - name: kubernetes,persistentvolumeclaim,name
+    DataType: String
+    ValueType: Constant
+    Value: nairobi
+  - name: kubernetes,persistentvolumeclaim,phase
+    DataType: String
+    ValueType: Constant
+    Value: Bound
+  - name: kubernetes,persistentvolumeclaim,request_storage,bytes
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 214748364-2147483640
+  - name: cluster_identifiers
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: agent,type
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: agent,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.0
+  - name: agent,ephemeral_id
+    DataType: String
+    ValueType: Constant
+    Value: 8f37b49a-39d9-45ac-ab9e-7648d5fd92a1
+  - name: agent,id
+    DataType: String
+    ValueType: Constant
+    Value: 50c8df2a-d875-4bc5-98de-c33473d9451c
+  - name: agent,name
+    DataType: String
+    ValueType: Constant
+    Value: e2e-72-51
+  - name: metricset,period
+    DataType: Uint64
+    ValueType: FromLocal
+    Value: period
+  - name: metricset,name
+    DataType: String
+    ValueType: Constant
+    Value: state_persistentvolumeclaim
+  - name: component
+    DataType: String
+    ValueType: Constant
+    Value: kube-state-metrics

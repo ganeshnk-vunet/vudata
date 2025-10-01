@@ -1,0 +1,549 @@
+uniquekey:
+  # You can not override the key but you can create a new key in combination
+  # of previous and new ones. The following config will make sure that tool
+  # generate document for host and pid combination for each host IP & PID
+  name: process,pid
+  DataType: Uint32
+  ValueType: RandomFixed
+  Value: 1000
+  NumUniqKey: 1
+
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: '@metadata,beat'
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: '@metadata,type'
+    DataType: String
+    ValueType: Constant
+    Value: _doc
+  - name: '@metadata,version'
+    DataType: String
+    ValueType: Constant
+    Value: 8.12.2
+  - name: "metricset,period"
+    DataType: Uint64
+    ValueType: "FromLocal"
+    Value: "period"
+  - name: metricset,name
+    DataType: String
+    ValueType: Constant
+    Value: process
+  - name: service,type
+    DataType: String
+    ValueType: Constant
+    Value: system
+  - name: system,process,cgroup,cgroups_version
+    DataType: Uint64
+    ValueType: Constant
+    Value: 100
+  - name: system,process,cgroup,id
+    DataType: String
+    ValueType: Constant
+    Value: init.scope
+  - name: system,process,cgroup,path
+    DataType: String
+    ValueType: Constant
+    Value: /process/path
+  - name: system,process,cgroup,cpu,id
+    DataType: String
+    ValueType: Constant
+    Value: init.scope
+  - name: system,process,cgroup,cpu,path
+    DataType: String
+    ValueType: Constant
+    Value: /process/path
+  - name: system,process,cgroup,cpu,pressure,full,10,pct
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-0.1
+  - name: system,process,cgroup,cpu,pressure,full,60,pct
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-0.1
+  - name: system,process,cgroup,cpu,pressure,full,300,pct
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-0.1
+  - name: system,process,cgroup,cpu,pressure,full,total
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0.1-0.2
+  - name: system,process,cgroup,cpu,pressure,some,10,pct
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-0.1
+  - name: system,process,cgroup,cpu,pressure,some,60,pct
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-0.1
+  - name: system,process,cgroup,cpu,pressure,some,300,pct
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-0.1
+  - name: system,process,cgroup,cpu,pressure,some,total
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0.1-0.2
+  - name: system,process,cgroup,cpu,stats,usage,pct
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-0.1
+  - name: system,process,cgroup,cpu,stats,usage,norm,pct
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-0.1
+  - name: system,process,cgroup,cpu,stats,usage,ns
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 10000000-100000000
+  - name: system,process,cgroup,cpu,stats,user,pct
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-0.1
+  - name: system,process,cgroup,cpu,stats,user,norm,pct
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-0.1
+  - name: system,process,cgroup,cpu,stats,user,ns
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1000000-80000000
+  - name: system,process,cgroup,cpu,stats,system,ns
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1000000-10000000
+  - name: system,process,cgroup,cpu,stats,system,pct
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-0.1
+  - name: system,process,cgroup,cpu,stats,system,norm,pct
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-0.1
+  - name: system,process,cgroup,memory,path
+    DataType: String
+    ValueType: Constant
+    Value: /user.slice/user-1000.slice/user@1000.service/init.scope
+  - name: system,process,cgroup,memory,mem,usage,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 100000-1000000
+  - name: system,process,cgroup,memory,mem,low,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,mem,events,oom_kill
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,mem,events,low
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,mem,events,high
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,mem,events,max
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,mem,events,oom
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,memsw,events,max
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,memsw,events,fail
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,memsw,events,high
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,memsw,usage,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,memsw,low,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,stats,page_refill
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 9-90
+  - name: system,process,cgroup,memory,stats,page_scan
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 21-210
+  - name: system,process,cgroup,memory,stats,workingset_refault_file
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 10-100
+  - name: system,process,cgroup,memory,stats,inactive_file,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,stats,active_file,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,stats,anon,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 34816-348160
+  - name: system,process,cgroup,memory,stats,shmem_thp,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,stats,page_steal
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 10-100
+  - name: system,process,cgroup,memory,stats,workingset_refault_anon
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,stats,kernel_stack,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,stats,page_lazy_freed
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,stats,file_mapped,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,stats,file,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,stats,file_dirty,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,stats,slab_unreclaimable,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1000-10000
+  - name: system,process,cgroup,memory,stats,sock,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,stats,workingset_restore_anon
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,stats,swap_cached,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,stats,thp_fault_alloc
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,stats,page_activate
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 9-90
+  - name: system,process,cgroup,memory,stats,file_writeback,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,stats,page_tables,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,stats,shmem,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,stats,workingset_activate_anon
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,stats,active_anon,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 100-4000
+  - name: system,process,cgroup,memory,stats,slab,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 80000-800000
+  - name: system,process,cgroup,memory,stats,inactive_anon,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 30000-300000
+  - name: system,process,cgroup,memory,stats,page_deactivate
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 9-90
+  - name: system,process,cgroup,memory,stats,htp_collapse_alloc
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,stats,workingset_node_reclaim
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,stats,major_page_faults
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,stats,slab_reclaimable,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 80000-800000
+  - name: system,process,cgroup,memory,stats,page_lazy_free
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,stats,file_thp,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,stats,workingset_restore_file
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,stats,workingset_activate_file
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,stats,page_faults
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-250
+  - name: system,process,cgroup,memory,stats,unevictable,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,stats,anon_thp,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,stats,per_cpu,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cgroup,memory,id
+    DataType: String
+    ValueType: Constant
+    Value: init.scope
+  - name: system,process,state
+    DataType: String
+    ValueType: Constant
+    Value: sleeping
+  - name: system,process,num_threads
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cmdline
+    DataType: String
+    ValueType: Constant
+    Value: /lib/systemd/systemd --user
+  - name: system,process,memory,size
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1000000-10000000
+  - name: system,process,memory,share
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 400000-4000000
+  - name: system,process,memory,rss,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 600000-6000000
+  - name: system,process,memory,rss,pct
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,process,cpu,start_time
+    DataType: String
+    ValueType: Constant
+    Value: '2024-10-10T16:28:34.000Z'
+  - name: system,process,cpu,total,value
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 10000-100000
+  - name: system,process,cpu,total,pct
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0.3-0.5
+  - name: system,process,cpu,total,norm,pct
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0.1-0.2
+  - name: system,process,fd,open
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 5-20
+  - name: system,process,fd,limit,hard
+    DataType: Uint64
+    ValueType: Constant
+    Value: 100000
+  - name: system,process,fd,limit,soft
+    DataType: Uint64
+    ValueType: Constant
+    Value: 10000
+  - name: system,process,io,read_char
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 100000000-1000000000
+  - name: system,process,io,write_char
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 50-5000
+  - name: system,process,io,read_ops
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 100000-3000000
+  - name: system,process,io,write_ops
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 10-1000
+  - name: system,process,io,read_bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 10000-100000
+  - name: system,process,io,write_bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 10000-100000
+  - name: system,process,io,cancelled_write_bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1000-100000
+  - name: source_id
+    DataType: String
+    ValueType: Constant
+    Value: 172.16.102.231
+  - name: bu_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: process,executable
+    DataType: String
+    ValueType: Constant
+    Value: /usr/lib/systemd/systemd
+  - name: process,args
+    DataType: String
+    ValueType: Constant
+    Value: /lib/systemd/systemd
+  - name: process,args
+    DataType: String
+    ValueType: Constant
+    Value: --user
+  - name: process,working_directory
+    DataType: String
+    ValueType: Constant
+    Value: /
+  - name: process,name
+    DataType: String
+    ValueType: Constant
+    Value: systemd
+  - name: process,parent,pid
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10000
+  - name: process,state
+    DataType: String
+    ValueType: Constant
+    Value: sleeping
+  - name: process,memory,pct
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0.1-0.2
+  - name: process,pid
+    DataType: Uint64
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey
+  - name: process,pgid
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1000-10000
+  - name: process,cpu,start_time
+    DataType: String
+    ValueType: Constant
+    Value: '2024-10-10T16:28:34.000Z'
+  - name: process,cpu,pct
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0.1-0.2
+  - name: process,command_line
+    DataType: String
+    ValueType: Constant
+    Value: /lib/systemd/systemd --user
+  - name: tenant_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: topic_name
+    DataType: String
+    ValueType: Constant
+    Value: linux-monitor-input
+  - name: user,name
+    DataType: String
+    ValueType: Constant
+    Value: vunet
+  - name: vublock_name
+    DataType: String
+    ValueType: Constant
+    Value: linux-monitor
+  - name: event,module
+    DataType: String
+    ValueType: Constant
+    Value: system
+  - name: event,duration
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 100000-10000000
+  - name: event,dataset
+    DataType: String
+    ValueType: Constant
+    Value: system.process
+  - name: agent,type
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: agent,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.12.2
+  - name: agent,ephemeral_id
+    DataType: String
+    ValueType: Constant
+    Value: 5ae03f0f-8a1a-4de2-aea4-eeb28fba67a3
+  - name: agent,id
+    DataType: String
+    ValueType: Constant
+    Value: b17f5610-6c0e-418d-a090-cc50ecaf7439
+  - name: agent,name
+    DataType: String
+    ValueType: Constant
+    Value: e2e-68-106
+  - name: ecs,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.0.0

@@ -1,0 +1,7 @@
+$(timestamp) UPI $(txnType) with $(txnId) received from $(clientIP) with $(amount) for $(destAccount)
+$__sleepTime 1-2
+$(timestamp) $(txnId) sent to NPCI with $(amount) for $(destAccount)
+$__sleepTime 3-4
+$(timestamp) $(txnId) response with $(respCode) received from NPCI with $(amount) for $(destAccount)
+$__sleepTime 5-6
+$(timestamp) UPI $(txnType) with $(txnId) response with $(respCode) sent to the requestor

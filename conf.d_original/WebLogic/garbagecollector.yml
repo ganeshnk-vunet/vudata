@@ -1,0 +1,343 @@
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: applicationIP
+    DataType: String
+    ValueType: Constant
+    Value: 172.16.102.231
+  - name: StartTime_ms
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 14816576-148165760
+  - name: tenant_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: applicationport
+    DataType: Uint64
+    ValueType: RandomFixed
+    Value: "7001-50000"
+  - name: CollectionTime
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 497-4970
+  - name: EndTime
+    DataType: String
+    ValueType: Constant
+    Value: '2024-12-12 10:59:35.274'
+  - name: Memory,CodeHeap 'profiled nmethods',MemoryAfterGc,init
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 255590-2555900
+  - name: Memory,CodeHeap 'profiled nmethods',MemoryAfterGc,committed
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 7228620-72286200
+  - name: Memory,CodeHeap 'profiled nmethods',MemoryAfterGc,max
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 12291276-122912760
+  - name: Memory,CodeHeap 'profiled nmethods',MemoryAfterGc,used
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 7005158-70051580
+  - name: Memory,CodeHeap 'profiled nmethods',MemoryBeforeGc,init
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 255590-2555900
+  - name: Memory,CodeHeap 'profiled nmethods',MemoryBeforeGc,committed
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 7228620-72286200
+  - name: Memory,CodeHeap 'profiled nmethods',MemoryBeforeGc,max
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 12291276-122912760
+  - name: Memory,CodeHeap 'profiled nmethods',MemoryBeforeGc,used
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 7005158-70051580
+  - name: Memory,G1 Old Gen,MemoryAfterGc,init
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 10590617-105906170
+  - name: Memory,G1 Old Gen,MemoryAfterGc,committed
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 51694796-516947960
+  - name: Memory,G1 Old Gen,MemoryAfterGc,max
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 193986560-1939865600
+  - name: Memory,G1 Old Gen,MemoryAfterGc,used
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 42321254-423212540
+  - name: Memory,G1 Old Gen,MemoryBeforeGc,init
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 10590617-105906170
+  - name: Memory,G1 Old Gen,MemoryBeforeGc,committed
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 51694796-516947960
+  - name: Memory,G1 Old Gen,MemoryBeforeGc,max
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 193986560-1939865600
+  - name: Memory,G1 Old Gen,MemoryBeforeGc,used
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 42271680-422716800
+  - name: Memory,CodeHeap 'non-profiled nmethods',MemoryAfterGc,init
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 255590-2555900
+  - name: Memory,CodeHeap 'non-profiled nmethods',MemoryAfterGc,committed
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 4777574-47775740
+  - name: Memory,CodeHeap 'non-profiled nmethods',MemoryAfterGc,max
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 12291276-122912760
+  - name: Memory,CodeHeap 'non-profiled nmethods',MemoryAfterGc,used
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 4772928-47729280
+  - name: Memory,CodeHeap 'non-profiled nmethods',MemoryBeforeGc,init
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 255590-2555900
+  - name: Memory,CodeHeap 'non-profiled nmethods',MemoryBeforeGc,committed
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 4777574-47775740
+  - name: Memory,CodeHeap 'non-profiled nmethods',MemoryBeforeGc,max
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 12291276-122912760
+  - name: Memory,CodeHeap 'non-profiled nmethods',MemoryBeforeGc,used
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 4772928-47729280
+  - name: Memory,G1 Survivor Space,MemoryAfterGc,init
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-100
+  - name: Memory,G1 Survivor Space,MemoryAfterGc,committed
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 629145-6291450
+  - name: Memory,G1 Survivor Space,MemoryAfterGc,max
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-100
+  - name: Memory,G1 Survivor Space,MemoryAfterGc,used
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 629145-6291450
+  - name: Memory,G1 Survivor Space,MemoryBeforeGc,init
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-100
+  - name: Memory,G1 Survivor Space,MemoryBeforeGc,committed
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 629145-6291450
+  - name: Memory,G1 Survivor Space,MemoryBeforeGc,max
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-100
+  - name: Memory,G1 Survivor Space,MemoryBeforeGc,used
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 629145-6291450
+  - name: Memory,Compressed Class Space,MemoryAfterGc,init
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-100
+  - name: Memory,Compressed Class Space,MemoryAfterGc,committed
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 3887513-38875130
+  - name: Memory,Compressed Class Space,MemoryAfterGc,max
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 107374182-1073741820
+  - name: Memory,Compressed Class Space,MemoryAfterGc,used
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 3663177-36631770
+  - name: Memory,Compressed Class Space,MemoryBeforeGc,init
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-100
+  - name: Memory,Compressed Class Space,MemoryBeforeGc,committed
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 3887513-38875130
+  - name: Memory,Compressed Class Space,MemoryBeforeGc,max
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 107374182-1073741820
+  - name: Memory,Compressed Class Space,MemoryBeforeGc,used
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 3663177-36631770
+  - name: Memory,Metaspace,MemoryAfterGc,init
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-100
+  - name: Memory,Metaspace,MemoryAfterGc,committed
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 32105676-321056760
+  - name: Memory,Metaspace,MemoryAfterGc,max
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-100
+  - name: Memory,Metaspace,MemoryAfterGc,used
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 31410313-314103130
+  - name: Memory,Metaspace,MemoryBeforeGc,init
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-100
+  - name: Memory,Metaspace,MemoryBeforeGc,committed
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 32105676-321056760
+  - name: Memory,Metaspace,MemoryBeforeGc,max
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-100
+  - name: Memory,Metaspace,MemoryBeforeGc,used
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 31410313-314103130
+  - name: Memory,G1 Eden Space,MemoryAfterGc,init
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 1572864-15728640
+  - name: Memory,G1 Eden Space,MemoryAfterGc,committed
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 53896806-538968060
+  - name: Memory,G1 Eden Space,MemoryAfterGc,max
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-100
+  - name: Memory,G1 Eden Space,MemoryAfterGc,used
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-100
+  - name: Memory,G1 Eden Space,MemoryBeforeGc,init
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 1572864-15728640
+  - name: Memory,G1 Eden Space,MemoryBeforeGc,committed
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 53896806-538968060
+  - name: Memory,G1 Eden Space,MemoryBeforeGc,max
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-100
+  - name: Memory,G1 Eden Space,MemoryBeforeGc,used
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 51275366-512753660
+  - name: Memory,CodeHeap 'non-nmethods',MemoryAfterGc,init
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 255590-2555900
+  - name: Memory,CodeHeap 'non-nmethods',MemoryAfterGc,committed
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 255590-2555900
+  - name: Memory,CodeHeap 'non-nmethods',MemoryAfterGc,max
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 583270-5832700
+  - name: Memory,CodeHeap 'non-nmethods',MemoryAfterGc,used
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 158131-1581310
+  - name: Memory,CodeHeap 'non-nmethods',MemoryBeforeGc,init
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 255590-2555900
+  - name: Memory,CodeHeap 'non-nmethods',MemoryBeforeGc,committed
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 255590-2555900
+  - name: Memory,CodeHeap 'non-nmethods',MemoryBeforeGc,max
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 583270-5832700
+  - name: Memory,CodeHeap 'non-nmethods',MemoryBeforeGc,used
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 158131-1581310
+  - name: StartTime
+    DataType: String
+    ValueType: Constant
+    Value: '2024-12-12 10:59:35.270'
+  - name: CollectionCount
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 90-900
+  - name: Duration
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: EndTime_ms
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 14816577-148165770
+  - name: Name
+    DataType: String
+    ValueType: Constant
+    Value: G1 Young Generation
+  - name: ObjectName
+    DataType: String
+    ValueType: Constant
+    Value: java.lang:Location=AdminServer,name=G1 Young Generation,type=GarbageCollector
+  - name: target
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: Type
+    DataType: String
+    ValueType: Constant
+    Value: GarbageCollection
+  - name: Valid
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: ServerName
+    DataType: String
+    ValueType: Constant
+    Value: AdminServer
+  - name: source_id
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: bu_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'

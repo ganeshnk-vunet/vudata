@@ -1,0 +1,151 @@
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: '@metadata,beat'
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: '@metadata,type'
+    DataType: String
+    ValueType: Constant
+    Value: _doc
+  - name: '@metadata,version'
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.4
+  - name: ecs,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.0.0
+  - name: service,type
+    DataType: String
+    ValueType: Constant
+    Value: system
+  - name: system,socket,summary,all,count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 100-1000
+  - name: system,socket,summary,all,listening
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 10-80
+  - name: system,socket,summary,tcp,all,time_wait
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: system,socket,summary,tcp,all,fin_wait1
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: system,socket,summary,tcp,all,fin_wait2
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: system,socket,summary,tcp,all,last_ack
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: system,socket,summary,tcp,all,close_wait
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: system,socket,summary,tcp,all,established
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 10-100
+  - name: system,socket,summary,tcp,all,syn_sent
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: system,socket,summary,tcp,all,count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 70-200
+  - name: system,socket,summary,tcp,all,orphan
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: system,socket,summary,tcp,all,syn_recv
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: system,socket,summary,tcp,all,closing
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: system,socket,summary,tcp,all,listening
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 10-40
+  - name: system,socket,summary,tcp,memory
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1000-10000
+  - name: system,socket,summary,udp,memory
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 100-10000
+  - name: system,socket,summary,udp,all,count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 10-100
+  - name: topic_name
+    DataType: String
+    ValueType: Constant
+    Value: linux-monitor-input
+  - name: vublock_name
+    DataType: String
+    ValueType: Constant
+    Value: linux-monitor
+  - name: agent,ephemeral_id
+    DataType: String
+    ValueType: Constant
+    Value: 8d589b57-d52d-4509-b66a-e2f742758bfb
+  - name: agent,id
+    DataType: String
+    ValueType: Constant
+    Value: 7bdf95c8-4046-41ed-9bd7-eb03ca9ddc74
+  - name: agent,name
+    DataType: String
+    ValueType: Constant
+    Value: e2e-97-245
+  - name: agent,type
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: agent,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.4
+  - name: event,dataset
+    DataType: String
+    ValueType: Constant
+    Value: system.socket.summary
+  - name: event,module
+    DataType: String
+    ValueType: Constant
+    Value: system
+  - name: event,duration
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1648351-16483510
+  - name: metricset,period
+    DataType: Uint64
+    ValueType: FromLocal
+    Value: period
+  - name: metricset,name
+    DataType: String
+    ValueType: Constant
+    Value: socket_summary

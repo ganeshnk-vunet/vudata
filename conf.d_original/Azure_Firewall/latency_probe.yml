@@ -1,0 +1,47 @@
+group:
+- name: good
+  fields:
+  - name: fields,average
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,timeStamp
+    DataType: String
+    ValueType: Constant
+    Value: '2025-03-10T14:54:00Z'
+  - name: name
+    DataType: String
+    ValueType: Constant
+    Value: azure_monitor_microsoft_network_azurefirewalls_latency_probe
+  - name: tags,host
+    DataType: String
+    ValueType: Constant
+    Value: ip-10-0-110-68
+  - name: tags,namespace
+    DataType: String
+    ValueType: Constant
+    Value: Microsoft.Network/azureFirewalls
+  - name: tags,resource_group
+    DataType: String
+    ValueType: Constant
+    Value: vunet-auto
+  - name: tags,resource_name
+    DataType: String
+    ValueType: Constant
+    Value: vu-azure-firewall
+  - name: tags,resource_region
+    DataType: String
+    ValueType: Constant
+    Value: centralindia
+  - name: tags,subscription_id
+    DataType: String
+    ValueType: Constant
+    Value: e9b87239-7fe2-42de-a1a9-b4ea97bc949b
+  - name: tags,unit
+    DataType: String
+    ValueType: Constant
+    Value: MilliSeconds
+  - name: timestamp
+    DataType: Int64
+    ValueType: RandomRange
+    Value: 1741618500-1741618600

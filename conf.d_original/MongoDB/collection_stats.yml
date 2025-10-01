@@ -1,0 +1,75 @@
+group:
+- name: good
+  fields:
+  - name: fields,avg_obj_size
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-5000
+  - name: fields,count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1-5
+  - name: fields,ok
+    DataType: Uint64
+    ValueType: Constant
+    Value: 1
+  - name: fields,size
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10000
+  - name: fields,storage_size
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 10000-50000
+  - name: fields,total_index_size
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 10000-50000
+  - name: fields,type
+    DataType: String
+    ValueType: Constant
+    Value: col_stat
+  - name: name
+    DataType: String
+    ValueType: Constant
+    Value: mongodb_col_stats
+  - name: tags,collection
+    DataType: String
+    ValueType: Constant
+    Value: local.replset.minvalid
+  - name: tags,db_name
+    DataType: String
+    ValueType: Constant
+    Value: local
+  - name: tags,host
+    DataType: String
+    ValueType: Constant
+    Value: telegraf-mongodb-1-1-1-1-649b8b6485-67r9r
+  - name: tags,hostname
+    DataType: String
+    ValueType: Constant
+    Value: 164.52.213.222:27017
+  - name: tags,interval
+    DataType: String
+    ValueType: Constant
+    Value: 60s
+  - name: tags,node_type
+    DataType: String
+    ValueType: Constant
+    Value: PRI
+  - name: tags,rs_name
+    DataType: String
+    ValueType: Constant
+    Value: rs0
+  - name: tags,topic_name
+    DataType: String
+    ValueType: Constant
+    Value: mongo-metrics-input
+  - name: tags,vublock_name
+    DataType: String
+    ValueType: Constant
+    Value: MongoDB
+  - name: timestamp
+    DataType: DateTime
+    ValueType: Current
+    Value: "epoch_in_seconds"

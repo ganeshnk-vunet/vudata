@@ -1,0 +1,124 @@
+# uniquekey:
+#   name: host
+#   DataType: String
+#   ValueType: RandomFixed
+#   Value: 172.16.68.168
+#   NumUniqKey: 1
+
+group:
+- name: g1_young_generation
+  fields:
+    - name: tenant_id
+      DataType: String
+      ValueType: Enumeration
+      Value: "1:100"
+
+    - name: bu_id
+      DataType: String
+      ValueType: Enumeration
+      Value: "1:100"
+
+    - name: application_name
+      DataType: String
+      ValueType: Enumeration
+      Value: "IBMB:100"
+
+    - name: vublock_name
+      DataType: String
+      ValueType: Constant
+      Value: ""
+
+    - name: Host
+      DataType: String
+      ValueType: FromLocal
+      Value: "UniqueKey"
+
+    - name: host
+      DataType: String
+      ValueType: FromLocal
+      Value: "UniqueKey"
+
+    - name: source_id
+      DataType: String
+      ValueType: FromLocal
+      Value: "UniqueKey"
+
+    - name: target
+      DataType: String
+      ValueType: FromLocal
+      Value: "UniqueKey"
+
+    - name: KeyPropertyListType
+      DataType: String
+      ValueType: Constant
+      Value: "GarbageCollector"
+
+    - name: ObjectName
+      DataType: String
+      ValueType: Constant
+      Value: "java.lang:type=GarbageCollector,name=G1 Young Generation"
+
+    - name: CollectionTime
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 34-340
+
+    - name: CollectionCount
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 5-50
+
+    - name: Name
+      DataType: String
+      ValueType: Constant
+      Value: "G1 Young Generation"
+
+    - name: KeyPropertyListName
+      DataType: String
+      ValueType: Constant
+      Value: "G1 Young Generation"
+
+    - name: MemoryPoolNames
+      DataType: String
+      ValueType: Constant
+      Value: " [\"G1 Eden Space\", \"G1 Survivor Space\", \"G1 Old Gen\"] "
+
+    - name: LastGcInfo,duration
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 1-100
+
+    - name: LastGcInfo,GcThreadCount
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 1-100
+
+    - name: LastGcInfo,startTime
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 51398-513980
+
+    - name: LastGcInfo,endTime
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 51398-513980
+
+    - name: LastGcInfo,id
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 5-50
+
+    - name: LastGcInfo,gcStartTimestamp
+      DataType: DateTime
+      ValueType: Constant
+      Value: "2025-08-25T16:08:52.849+0530"
+
+    - name: LastGcInfo,gcEndTimestamp
+      DataType: DateTime
+      ValueType: Constant
+      Value: "2025-08-25T16:08:52.852+0530"
+
+    - name: Valid
+      DataType: Boolean
+      ValueType: Constant
+      Value: true

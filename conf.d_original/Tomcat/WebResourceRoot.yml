@@ -1,0 +1,111 @@
+# -------------------------
+# vuDataSim Configuration
+# -------------------------
+# uniquekey:
+#   name: host
+#   DataType: String
+#   ValueType: RandomFixed
+#   Value: 172.16.68.100-172.16.68.200
+#   NumUniqKey: 5
+
+group:
+- name: good
+  fields:
+    # Metadata
+    - name: tenant_id
+      DataType: String
+      ValueType: Enumeration
+      Value: "1:85,2:10,3:5"
+
+    - name: bu_id
+      DataType: String
+      ValueType: Enumeration
+      Value: "1:80,2:20"
+
+    - name: application_name
+      DataType: String
+      ValueType: Enumeration
+      Value: "IBMB:90,IBMA:10"
+
+    # vublock_name (empty or labeled)
+    - name: vublock_name
+      DataType: String
+      ValueType: Enumeration
+      Value: "'' :95,ResourceRootBlock:5"
+
+    # Host fields
+    - name: Host
+      DataType: String
+      ValueType: FromLocal
+      Value: UniqueKey
+    - name: host
+      DataType: String
+      ValueType: FromLocal
+      Value: UniqueKey
+    - name: source_id
+      DataType: String
+      ValueType: FromLocal
+      Value: UniqueKey
+    - name: target
+      DataType: String
+      ValueType: FromLocal
+      Value: UniqueKey
+
+    # Time
+    - name: Time
+      DataType: DateTime
+      ValueType: Current
+      Value: "datetime_rfc3339"
+
+    # WebResourceRoot identity
+    - name: KeyPropertyListType
+      DataType: String
+      ValueType: Constant
+      Value: "WebResourceRoot"
+
+    - name: KeyPropertyListName
+      DataType: String
+      ValueType: Constant
+      Value: "Cache"
+
+    - name: ObjectName
+      DataType: String
+      ValueType: Constant
+      Value: '"Catalina:type=WebResourceRoot,host=localhost,context=/ibmb":50, "Catalina:type=WebResourceRoot,host=localhost,context=/manager":20, "Catalina:type=WebResourceRoot,host=localhost,context=/host-manager":15, "Catalina:type=WebResourceRoot,host=localhost,context=/examples":15'
+
+    - name: modelerType
+      DataType: String
+      ValueType: Enumeration
+      Value: "org.apache.catalina.webresources.StandardRoot:70,org.apache.catalina.webresources.Cache:30"
+
+    # Booleans and state
+    - name: cachingAllowed
+      DataType: Boolean
+      ValueType: Constant
+      Value: "true"
+
+    - name: trackLockedFiles
+      DataType: Boolean
+      ValueType: Constant
+      Value: "false"
+
+    - name: allowLinking
+      DataType: Boolean
+      ValueType: Constant
+      Value: "false"
+
+    - name: stateName
+      DataType: String
+      ValueType: Enumeration
+      Value: "STARTED:96,STOPPED:4"
+
+    - name: archiveIndexStrategy
+      DataType: String
+      ValueType: Enumeration
+      Value: "SIMPLE:80,INDEXED:20"
+
+    # TrackedResources: (empty list or short simulation list)
+    - name: trackedResources
+      DataType: String
+      ValueType: Constant
+      Value: "TrackedResourceList"

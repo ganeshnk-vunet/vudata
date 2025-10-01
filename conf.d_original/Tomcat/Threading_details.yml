@@ -1,0 +1,140 @@
+# -------------------------
+# vuDataSim Configuration
+# -------------------------
+# uniquekey:
+#   name: host
+#   DataType: String
+#   ValueType: RandomFixed
+#   Value: 172.16.68.100-172.16.68.200
+#   NumUniqKey: 5
+
+group:
+- name: good
+  fields:
+    # Standard metadata
+    - name: tenant_id
+      DataType: String
+      ValueType: Enumeration
+      Value: "1:80,2:10,3:10"
+
+    - name: bu_id
+      DataType: String
+      ValueType: Enumeration
+      Value: "1:90,2:10"
+
+    - name: application_name
+      DataType: String
+      ValueType: Enumeration
+      Value: "IBMB:70,IBMA:20,IBMC:10"
+
+    - name: vublock_name
+      DataType: String
+      ValueType: Enumeration
+      Value: "'' :90,ThreadSimulationBlock:10"
+
+    # Timestamp fields
+    - name: "@timestamp"
+      DataType: DateTime
+      ValueType: Current
+      Value: "datetime_rfc3339"
+
+    - name: Time
+      DataType: DateTime
+      ValueType: Current
+      Value: "datetime_rfc3339"
+
+    # Host fields from UniqueKey
+    - name: Host
+      DataType: String
+      ValueType: FromLocal
+      Value: UniqueKey
+    - name: host
+      DataType: String
+      ValueType: FromLocal
+      Value: UniqueKey
+    - name: source_id
+      DataType: String
+      ValueType: FromLocal
+      Value: UniqueKey
+    - name: target
+      DataType: String
+      ValueType: FromLocal
+      Value: UniqueKey
+
+    # Identifiers
+    - name: KeyPropertyListType
+      DataType: String
+      ValueType: Constant
+      Value: "Threading_details"
+
+    - name: ThreadName
+      DataType: String
+      ValueType: Enumeration
+      Value: "Reference Handler:40,Finalizer:20,Cleaner-0:20,Notification Thread:20"
+
+    - name: KeyPropertyListName
+      DataType: String
+      ValueType: EvaluatedValue
+      Value: "ThreadName"
+
+    - name: ThreadState
+      DataType: String
+      ValueType: Enumeration
+      Value: "RUNNABLE:50,WAITING:20,TIMED_WAITING:20,BLOCKED:10"
+
+    - name: StackTrace
+      DataType: String
+      ValueType: Constant
+      Value: '"java.base@17.0.15/java.lang.ref.Reference.waitForReferencePendingList(Native Method)" :25, "java.base@17.0.15/java.lang.ref.Reference.processPendingReferences(Reference.java:253)" :25, "java.base@17.0.15/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:172)" :25, "java.base@17.0.15/java.lang.Thread.sleep(Native Method)" :25'
+
+
+    # Thread/Lock info
+    - name: ThreadID
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 1-100
+
+    - name: LockOwnerID
+      DataType: Int64
+      ValueType: Enumeration
+      Value: "-1:80,1:10,2:10"
+
+    - name: BlockedCount
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-1000
+
+    - name: WaitedCount
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-1000
+
+    - name: BlockedTime
+      DataType: Int64
+      ValueType: Enumeration
+      Value: "-1:70,0:20,10:10"
+
+    - name: WaitedTime
+      DataType: Int64
+      ValueType: Enumeration
+      Value: "-1:70,0:20,10:10"
+
+    - name: InNative
+      DataType: Boolean
+      ValueType: Enumeration
+      Value: "false:90,true:10"
+
+    - name: Suspended
+      DataType: Boolean
+      ValueType: Enumeration
+      Value: "false:95,true:5"
+
+    - name: MonitorInfo
+      DataType: String
+      ValueType: Enumeration
+      Value: "'' :95,monitor-obj@123:5"
+
+    - name: locks
+      DataType: String
+      ValueType: Enumeration
+      Value: "'' :90,java.util.concurrent.locks.ReentrantLock@deadbeef:10"

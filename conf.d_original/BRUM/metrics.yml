@@ -1,0 +1,227 @@
+group:
+- name: good
+  fields:
+  - name: attributes,browser_name
+    DataType: String
+    ValueType: Constant
+    Value: Firefox
+  - name: attributes,cls
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: attributes,connectEnd_time
+    DataType: String
+    ValueType: Constant
+    Value: '2025-08-28T04:26:16.492Z'
+  - name: attributes,connectStart_time
+    DataType: String
+    ValueType: Constant
+    Value: '2025-08-28T04:26:16.456Z'
+  - name: attributes,dns_lookup_time
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: attributes,domainLookupEnd_time
+    DataType: String
+    ValueType: Constant
+    Value: '2025-08-28T04:26:16.456Z'
+  - name: attributes,domainLookupStart_time
+    DataType: String
+    ValueType: Constant
+    Value: '2025-08-28T04:26:16.456Z'
+  - name: attributes,fetchStart_time
+    DataType: String
+    ValueType: Constant
+    Value: '2025-08-28T04:26:16.449Z'
+  - name: attributes,geo.city_name
+    DataType: String
+    ValueType: Constant
+    Value: Bengaluru
+  - name: attributes,geo.continent_code
+    DataType: String
+    ValueType: Constant
+    Value: AS
+  - name: attributes,geo.continent_name
+    DataType: String
+    ValueType: Constant
+    Value: Asia
+  - name: attributes,geo.country_iso_code
+    DataType: String
+    ValueType: Constant
+    Value: IN
+  - name: attributes,geo.country_name
+    DataType: String
+    ValueType: Constant
+    Value: India
+  - name: attributes,geo.location.lat
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 1-20
+  - name: attributes,geo.location.lon
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 60-90
+  - name: attributes,geo.postal_code
+    DataType: String
+    ValueType: Constant
+    Value: '562130'
+  - name: attributes,geo.region_iso_code
+    DataType: String
+    ValueType: Constant
+    Value: KA
+  - name: attributes,geo.region_name
+    DataType: String
+    ValueType: Constant
+    Value: Karnataka
+  - name: attributes,geo.timezone
+    DataType: String
+    ValueType: Constant
+    Value: Asia/Kolkata
+  - name: attributes,http.client_ip
+    DataType: String
+    ValueType: Constant
+    Value: 106.51.65.123
+  - name: attributes,http.url
+    DataType: String
+    ValueType: Constant
+    Value: http://164.52.205.50/login
+  - name: attributes,instrumentation_library_name
+    DataType: String
+    ValueType: Constant
+    Value: '@opentelemetry/instrumentation-document-load'
+  - name: attributes,location.href
+    DataType: String
+    ValueType: Constant
+    Value: http://164.52.205.50/login
+  - name: attributes,network_time
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 4300000-43000000
+  - name: attributes,os_name
+    DataType: String
+    ValueType: Constant
+    Value: Linux
+  - name: attributes,pntiming_connectEnd_time_unix_nano
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 175635517649200000-1756355176492000000
+  - name: attributes,pntiming_connectStart_time_unix_nano
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 175635517645600000-1756355176456000000
+  - name: attributes,pntiming_domainLookupEnd_time_unix_nano
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 175635517645600000-1756355176456000000
+  - name: attributes,pntiming_domainLookupStart_time_unix_nano
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 175635517645600000-1756355176456000000
+  - name: attributes,pntiming_fetch_start_time_unix_nano
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 175635517644900000-1756355176449000000
+  - name: attributes,pntiming_requestStart_time_unix_nano
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 175635517649200000-1756355176492000000
+  - name: attributes,pntiming_responseEnd_time_unix_nano
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 175635517652900000-1756355176529000000
+  - name: attributes,pntiming_responseStart_time_unix_nano
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 175635517652900000-1756355176529000000
+  - name: attributes,requestStart_time
+    DataType: String
+    ValueType: Constant
+    Value: '2025-08-28T04:26:16.492Z'
+  - name: attributes,request_time
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 3700000-37000000
+  - name: attributes,responseEnd_time
+    DataType: String
+    ValueType: Constant
+    Value: '2025-08-28T04:26:16.529Z'
+  - name: attributes,responseStart_time
+    DataType: String
+    ValueType: Constant
+    Value: '2025-08-28T04:26:16.529Z'
+  - name: attributes,response_time
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: attributes,rum.session_id
+    DataType: String
+    ValueType: Constant
+    Value: 4bc65df71f0049db06665f9d48d0c5b3
+  - name: attributes,server_time
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 3700000-37000000
+  - name: attributes,source.address
+    DataType: String
+    ValueType: Constant
+    Value: 106.51.65.123
+  - name: attributes,tcp_connect_time
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 3600000-36000000
+  - name: durationNano
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 8000000-80000000
+  - name: parentSpanId
+    DataType: String
+    ValueType: Constant
+    Value: c7b04f4bc5481bb2
+  - name: resource,application
+    DataType: String
+    ValueType: Constant
+    Value: IBMB
+  - name: resource,service.name
+    DataType: String
+    ValueType: Constant
+    Value: vubank-frontend
+  - name: rum_session_id
+    DataType: String
+    ValueType: Constant
+    Value: 4bc65df71f0049db06665f9d48d0c5b3
+  - name: traceId
+    DataType: String
+    ValueType: Constant
+    Value: 959f9b2639f6e6de6287268431acc83f
+  - name: spanId
+    DataType: String
+    ValueType: Constant
+    Value: 960ff5d83e94dba1
+  - name: span_end_time
+    DataType: String
+    ValueType: Constant
+    Value: '2025-08-28T04:26:16.529Z'
+  - name: is_root_span
+    DataType: Boolean
+    ValueType: Constant
+    Value: false
+  - name: span_kind
+    DataType: String
+    ValueType: Constant
+    Value: SPAN_KIND_INTERNAL
+  - name: span_name
+    DataType: String
+    ValueType: Constant
+    Value: documentFetch
+  - name: span_start_time
+    DataType: String
+    ValueType: Constant
+    Value: '2025-08-28T04:26:16.449Z'
+  - name: status,code
+    DataType: String
+    ValueType: Constant
+    Value: Unset
+  - name: timestamp
+    DataType: String
+    ValueType: Constant
+    Value: '2025-08-28T04:26:16.529Z'

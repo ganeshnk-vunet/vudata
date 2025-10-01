@@ -1,0 +1,131 @@
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: '@metadata,beat'
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: '@metadata,type'
+    DataType: String
+    ValueType: Constant
+    Value: _doc
+  - name: '@metadata,version'
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.0
+  - name: kubernetes,namespace
+    DataType: String
+    ValueType: Constant
+    Value: vsmaps
+  - name: kubernetes,replicaset,name
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes-metrics-574fd4b4cc
+  - name: kubernetes,replicaset,replicas,observed
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: kubernetes,replicaset,replicas,labeled
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: kubernetes,replicaset,replicas,ready
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: kubernetes,replicaset,replicas,desired
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: kubernetes,replicaset,replicas,available
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: kubernetes,deployment,name
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes-metrics
+  - name: kubernetes,labels,app
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes-metrics
+  - name: kubernetes,labels,application
+    DataType: String
+    ValueType: Constant
+    Value: vustream
+  - name: kubernetes,labels,pod-template-hash
+    DataType: String
+    ValueType: Constant
+    Value: 574fd4b4cc
+  - name: service,address
+    DataType: String
+    ValueType: Constant
+    Value: http://kube-state-metrics.kube-system:8080/metrics
+  - name: service,type
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes
+  - name: cluster_identifiers
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: ecs,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.0.0
+  - name: event,module
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes
+  - name: event,duration
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 232356-2323560
+  - name: event,dataset
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes.replicaset
+  - name: metricset,period
+    DataType: Uint64
+    ValueType: FromLocal
+    Value: period
+  - name: metricset,name
+    DataType: String
+    ValueType: Constant
+    Value: state_replicaset
+  - name: component
+    DataType: String
+    ValueType: Constant
+    Value: kube-state-metrics
+  - name: agent,id
+    DataType: String
+    ValueType: Constant
+    Value: 50c8df2a-d875-4bc5-98de-c33473d9451c
+  - name: agent,name
+    DataType: String
+    ValueType: Constant
+    Value: e2e-72-51
+  - name: agent,type
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: agent,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.0
+  - name: agent,ephemeral_id
+    DataType: String
+    ValueType: Constant
+    Value: 8f37b49a-39d9-45ac-ab9e-7648d5fd92a1

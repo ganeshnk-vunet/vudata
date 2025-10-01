@@ -1,0 +1,119 @@
+group:
+  - name: good
+    fields:
+      - name: "system,cpu,cores"
+        DataType: Uint64
+        ValueType: "Constant"
+        Value: "8"
+      - name: "system,cpu,user,norm,pct"
+        DataType: Float32
+        ValueType: "RandomRange"
+        Value: "0.01-0.1"
+      - name: "system,cpu,total,norm,pct"
+        DataType: Float32
+        ValueType: "RandomRange"
+        Value: "0.1-0.3"
+      - name: "system,cpu,iowait,norm,pct"
+        DataType: Float32
+        ValueType: "RandomRange"
+        Value: "0-0.02"
+      - name: "system,cpu,system,norm,pct"
+        DataType: Float32
+        ValueType: "EvaluatedValue"
+        Value: "system,cpu,total,norm,pct - system,cpu,user,norm,pct"
+      - name: "system,cpu,total,pct"
+        DataType: Float32
+        ValueType: "EvaluatedValue"
+        Value: "system,cpu,total,norm,pct * system,cpu,cores"
+      - name: "system,cpu,user,pct"
+        DataType: Float32
+        ValueType: "EvaluatedValue"
+        Value: "system,cpu,user,norm,pct * system,cpu,cores"
+      - name: "system,cpu,system,pct"
+        DataType: Float32
+        ValueType: "EvaluatedValue"
+        Value: "system,cpu,system,norm,pct * system,cpu,cores"
+      - name: "system,cpu,iowait,pct"
+        DataType: Float32
+        ValueType: "EvaluatedValue"
+        Value: "system,cpu,iowait,norm,pct * system,cpu,cores"
+      - name: "system,cpu,idle,norm,pct"
+        DataType: Float32
+        ValueType: "EvaluatedValue"
+        Value: "1 - system,cpu,total,norm,pct"
+      - name: "system,cpu,idle,pct"
+        DataType: Float32
+        ValueType: "EvaluatedValue"
+        Value: "system,cpu,idle,norm,pct * system,cpu,cores"
+      - name: "host,ip"
+        DataType: String
+        ValueType: "FromLocalAsList"
+        Value: "UniqueKey"
+      - name: "host,hostname"
+        DataType: String
+        ValueType: "FromLocal"
+        Value: "UniqueKey"
+      - name: "host,name"
+        DataType: String
+        ValueType: "FromLocal"
+        Value: "UniqueKey"
+      - name: "source_id"
+        DataType: String
+        ValueType: "FromLocal"
+        Value: "UniqueKey"
+      - name: "metricset,name"
+        DataType: String
+        ValueType: "Constant"
+        Value: "cpu"
+      - name: "metricset,period"
+        DataType: Uint64
+        ValueType: "FromLocal"
+        Value: "period"
+      - name: "event,dataset"
+        DataType: String
+        ValueType: "Constant"
+        Value: "system.cpu"
+      - name: "event,module"
+        DataType: String
+        ValueType: "Constant"
+        Value: "system"
+      - name: "event,duration"
+        DataType: Uint64
+        ValueType: "FromLocal"
+        Value: "period"
+      - name: "vublock_name"
+        DataType: String
+        ValueType: "Constant"
+        Value: "linux-monitor"
+      - name: "topic_name"
+        DataType: String
+        ValueType: "Constant"
+        Value: "linux-monitor-input"
+      - name: bu_id
+        DataType: String
+        ValueType: Constant
+        Value: '1'
+      - name: tenant_id
+        DataType: String
+        ValueType: Constant
+        Value: '1'
+      - name: agent,ephemeral_id
+        DataType: String
+        ValueType: Constant
+        Value: 5ae03f0f-8a1a-4de2-aea4-eeb28fba67a3
+      - name: agent,id
+        DataType: String
+        ValueType: Constant
+        Value: b17f5610-6c0e-418d-a090-cc50ecaf7439
+      - name: agent,name
+        DataType: String
+        ValueType: Constant
+        Value: e2e-68-106
+      - name: agent,type
+        DataType: String
+        ValueType: Constant
+        Value: metricbeat
+      - name: agent,version
+        DataType: String
+        ValueType: Constant
+        Value: 8.12.2

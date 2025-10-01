@@ -1,0 +1,164 @@
+uniquekey:
+  # You can not override the key but you can create a new key in combination
+  # of previous and new ones. The following config will make sure that tool
+  # generate document for host and pid combination for each host IP & PID
+  name: system,core,id
+  DataType: Uint32
+  ValueType: RandomFixed
+  Value: 1
+  NumUniqKey: 1
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: '@metadata,beat'
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: '@metadata,type'
+    DataType: String
+    ValueType: Constant
+    Value: _doc
+  - name: '@metadata,version'
+    DataType: String
+    ValueType: Constant
+    Value: 8.12.2
+  - name: event,duration
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 50000-600000
+  - name: event,dataset
+    DataType: String
+    ValueType: Constant
+    Value: system.core
+  - name: event,module
+    DataType: String
+    ValueType: Constant
+    Value: system
+  - name: system,core,model_number
+    DataType: String
+    ValueType: Constant
+    Value: '106'
+  - name: system,core,core_id
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,core,id
+    DataType: Uint64
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey
+  - name: system,core,total,pct
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0.2-0.5
+  - name: system,core,iowait,pct
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-0.01
+  - name: system,core,system,pct
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0.05-0.1
+  - name: system,core,irq,pct
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-0.001
+  - name: system,core,softirq,pct
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-0.001
+  - name: system,core,model_name
+    DataType: String
+    ValueType: Constant
+    Value: Intel(R) Xeon(R) Platinum 8375C CPU @ 2.90GHz
+  - name: system,core,user,pct
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0.1-0.18
+  - name: system,core,nice,pct
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-0.001
+  - name: system,core,idle,pct
+    DataType: Float32
+    ValueType: "EvaluatedValue"
+    Value: "1 - system,core,total,pct"
+  - name: system,core,physical_id
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: system,core,steal,pct
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-0.001
+  - name: system,core,mhz
+    DataType: Float
+    ValueType: Constant
+    Value: 3500
+  - name: tenant_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: vublock_name
+    DataType: String
+    ValueType: Constant
+    Value: linux-monitor
+  - name: ecs,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.0.0
+  - name: metricset,period
+    DataType: Uint64
+    ValueType: FromLocal
+    Value: period
+  - name: metricset,name
+    DataType: String
+    ValueType: Constant
+    Value: core
+  - name: service,type
+    DataType: String
+    ValueType: Constant
+    Value: system
+  - name: bu_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: topic_name
+    DataType: String
+    ValueType: Constant
+    Value: linux-monitor-input
+  - name: source_id
+    DataType: String
+    ValueType: Constant
+    Value: 10.0.110.68
+  - name: agent,ephemeral_id
+    DataType: String
+    ValueType: Constant
+    Value: 424b9f51-b770-494a-be28-94b80c5e6a12
+  - name: agent,id
+    DataType: String
+    ValueType: Constant
+    Value: e5705a0e-187d-4a88-b18c-aecabcf5cb85
+  - name: agent,name
+    DataType: String
+    ValueType: Constant
+    Value: ip-10-0-110-68
+  - name: agent,type
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: agent,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.12.2

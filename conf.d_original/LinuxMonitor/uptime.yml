@@ -1,0 +1,103 @@
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: '@metadata,beat'
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: '@metadata,type'
+    DataType: String
+    ValueType: Constant
+    Value: _doc
+  - name: '@metadata,version'
+    DataType: String
+    ValueType: Constant
+    Value: 8.12.2
+  - name: agent,ephemeral_id
+    DataType: String
+    ValueType: Constant
+    Value: fd509ccc-8687-4eea-8eb3-eb4c483d1983
+  - name: agent,id
+    DataType: String
+    ValueType: Constant
+    Value: 9eecda4d-75f6-40b1-a6e9-1b0de857881c
+  - name: agent,name
+    DataType: String
+    ValueType: Constant
+    Value: e2e-68-106
+  - name: agent,type
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: agent,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.12.2
+  - name: system,uptime,duration,ms
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 487776900-4877769000
+  - name: bu_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: vublock_name
+    DataType: String
+    ValueType: Constant
+    Value: linux-monitor
+  - name: ecs,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.0.0
+  - name: source_id
+    DataType: String
+    ValueType: Constant
+    Value: 172.16.102.231
+  - name: tenant_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: service,type
+    DataType: String
+    ValueType: Constant
+    Value: system
+  - name: topic_name
+    DataType: String
+    ValueType: Constant
+    Value: linux-monitor-input
+  - name: target
+    DataType: String
+    ValueType: Constant
+    Value: 172.16.102.231
+  - name: event,module
+    DataType: String
+    ValueType: Constant
+    Value: system
+  - name: event,duration
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 2467-24670
+  - name: event,dataset
+    DataType: String
+    ValueType: Constant
+    Value: system.uptime
+  - name: metricset,period
+    DataType: Uint64
+    ValueType: FromLocal
+    Value: period
+  - name: metricset,name
+    DataType: String
+    ValueType: Constant
+    Value: uptime
