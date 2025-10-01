@@ -1,0 +1,19 @@
+enabled: true
+uniquekey:
+  name: "host"
+  DataType: IPv4
+  ValueType: "RandomFixed"
+  Value: "10.10.10.2"
+  NumUniqKey: 1
+period: 5s
+#LogsPerSec: 600
+MBPerDay: 1000
+
+output.file:
+  path: ./tmp/exampleLogs/
+  filename: exampleLogs.json
+  rotate_every_mb: 10000
+  max_files: 5
+
+# Include following yml files from this directory.. To include all, please use ‘*’
+Include_sub_modules: [logs]

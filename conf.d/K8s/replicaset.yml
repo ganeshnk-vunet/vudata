@@ -1,0 +1,299 @@
+uniquekey:
+   name: kubernetes,pod,name
+   DataType: String
+   ValueType: RandomFixed
+   Value: "kube-proxy-\\d{2}"
+   NumUniqKey: 1
+
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: '@metadata,beat'
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: '@metadata,type'
+    DataType: String
+    ValueType: Constant
+    Value: _doc
+  - name: '@metadata,version'
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.0
+  - name: service,type
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes
+  - name: service,address
+    DataType: String
+    ValueType: Constant
+    Value: https://e2e-72-47:10250/stats/summary
+  - name: kubernetes,namespace_labels,kubernetes_io/metadata_name
+    DataType: String
+    ValueType: Constant
+    Value: vsmaps
+  - name: kubernetes,pod,network,rx,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 55298682-552986820
+  - name: kubernetes,pod,network,rx,errors
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: kubernetes,pod,network,tx,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 56344136-563441360
+  - name: kubernetes,pod,network,tx,errors
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: kubernetes,pod,start_time
+    DataType: String
+    ValueType: Constant
+    Value: '2024-11-29T08:38:11Z'
+  - name: kubernetes,pod,ip
+    DataType: String
+    ValueType: Constant
+    Value: 10.32.1.64
+  - name: kubernetes,pod,cpu,usage,nanocores
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 309821-3098210
+  - name: kubernetes,pod,memory,page_faults
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 115518-1155180
+  - name: kubernetes,pod,memory,major_page_faults
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: kubernetes,pod,memory,usage,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 11795251-117952510
+  - name: kubernetes,pod,memory,available,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 40643788-406437880
+  - name: kubernetes,pod,memory,working_set,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 11785011-117850110
+  - name: kubernetes,pod,memory,rss,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 11607244-116072440
+  - name: kubernetes,pod,name
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey
+  - name: kubernetes,pod,uid
+    DataType: String
+    ValueType: Constant
+    Value: 78d9b206-5d59-46d1-ad78-95111efedb54
+  - name: kubernetes,namespace
+    DataType: String
+    ValueType: Constant
+    Value: vsmaps
+  - name: kubernetes,node,hostname
+    DataType: String
+    ValueType: Constant
+    Value: e2e-72-47
+  - name: kubernetes,node,name
+    DataType: String
+    ValueType: Constant
+    Value: e2e-72-47
+  - name: kubernetes,node,name
+    DataType: String
+    ValueType: Constant
+    Value: e2e-72-49    
+  - name: kubernetes,node,uid
+    DataType: String
+    ValueType: Constant
+    Value: aa1b1356-70ec-4b71-949d-dce756bc4608
+  - name: kubernetes,node,labels,TelegrafSNMPTrap
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,kurl_sh/cluster
+    DataType: String
+    ValueType: Boolean
+    Value: 'true'
+  - name: kubernetes,node,labels,scheduler
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,kubernetes_io/hostname
+    DataType: String
+    ValueType: Constant
+    Value: e2e-72-47
+  - name: kubernetes,node,labels,snmpheartbeat
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,node_longhorn_io/create-default-disk
+    DataType: String
+    ValueType: Constant
+    Value: config
+  - name: kubernetes,node,labels,mlflow
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,vuHTTPPoller
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,kubernetes_io/arch
+    DataType: String
+    ValueType: Constant
+    Value: amd64
+  - name: kubernetes,node,labels,snmptrap
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,worker
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,beta_kubernetes_io/os
+    DataType: String
+    ValueType: Constant
+    Value: linux
+  - name: kubernetes,node,labels,webserver
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,TelegrafHTTPPoller
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,zookeeper
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,timescaledb
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,renderer
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,broker
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,beta_kubernetes_io/arch
+    DataType: String
+    ValueType: Constant
+    Value: amd64
+  - name: kubernetes,node,labels,vublockstore
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,alert
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,reporter
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,nairobi
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,clickhouse
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,kubernetes_io/os
+    DataType: String
+    ValueType: Constant
+    Value: linux
+  - name: kubernetes,replicaset,name
+    DataType: String
+    ValueType: Constant
+    Value: syslog-6b7b8955df
+  - name: kubernetes,labels,app
+    DataType: String
+    ValueType: Constant
+    Value: syslog
+  - name: kubernetes,labels,application
+    DataType: String
+    ValueType: Constant
+    Value: vustream
+  - name: kubernetes,labels,pod-template-hash
+    DataType: String
+    ValueType: Constant
+    Value: 6b7b8955df
+  - name: kubernetes,deployment,name
+    DataType: String
+    ValueType: Constant
+    Value: syslog
+  - name: kubernetes,namespace_uid
+    DataType: String
+    ValueType: Constant
+    Value: 198cae80-d980-4e69-9f49-6dd19a87014e
+  - name: cluster_identifiers
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: agent,id
+    DataType: String
+    ValueType: Constant
+    Value: 57de9a68-e333-4123-bf0f-77348dd25525
+  - name: agent,name
+    DataType: String
+    ValueType: Constant
+    Value: e2e-72-47
+  - name: agent,type
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: agent,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.0
+  - name: agent,ephemeral_id
+    DataType: String
+    ValueType: Constant
+    Value: c0bd24de-87c3-4442-9fe9-97e3836b9cce
+  - name: ecs,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.0.0
+  - name: event,dataset
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes.pod
+  - name: event,module
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes
+  - name: event,duration
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 5606266-56062660
+  - name: metricset,period
+    DataType: Uint64
+    ValueType: FromLocal
+    Value: period
+  - name: metricset,name
+    DataType: String
+    ValueType: Constant
+    Value: pod
+

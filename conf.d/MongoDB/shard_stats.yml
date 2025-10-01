@@ -1,0 +1,67 @@
+group:
+- name: good
+  fields:
+  - name: fields,available
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,created
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,in_use
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,refreshing
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,type
+    DataType: String
+    ValueType: Constant
+    Value: shard_host_stat
+  - name: name
+    DataType: String
+    ValueType: Constant
+    Value: mongodb_shard_stats
+  - name: tags,collection
+    DataType: String
+    ValueType: Constant
+    Value: local.replset.oplogTruncateAfterPoint
+  - name: tags,db_name
+    DataType: String
+    ValueType: Constant
+    Value: local
+  - name: tags,host
+    DataType: String
+    ValueType: Constant
+    Value: telegraf-mongodb-1-1-1-1-649b8b6485-67r9r
+  - name: tags,hostname
+    DataType: String
+    ValueType: Constant
+    Value: 164.52.213.222:27019
+  - name: tags,interval
+    DataType: String
+    ValueType: Constant
+    Value: 60s
+  - name: tags,node_type
+    DataType: String
+    ValueType: Constant
+    Value: PRI
+  - name: tags,rs_name
+    DataType: String
+    ValueType: Constant
+    Value: rs0
+  - name: tags,topic_name
+    DataType: String
+    ValueType: Constant
+    Value: mongo-metrics-input
+  - name: tags,vublock_name
+    DataType: String
+    ValueType: Constant
+    Value: MongoDB
+  - name: timestamp
+    DataType: DateTime
+    ValueType: Current
+    Value: "epoch_in_seconds"

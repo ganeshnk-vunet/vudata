@@ -1,0 +1,99 @@
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: '@metadata,beat'
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: '@metadata,type'
+    DataType: String
+    ValueType: Constant
+    Value: _doc
+  - name: '@metadata,version'
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.0
+  - name: event,duration
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 768440-7684400
+  - name: event,dataset
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes.proxy
+  - name: event,module
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes
+  - name: metricset,period
+    DataType: Uint64
+    ValueType: FromLocal
+    Value: period
+  - name: metricset,name
+    DataType: String
+    ValueType: Constant
+    Value: proxy
+  - name: service,address
+    DataType: String
+    ValueType: Constant
+    Value: http://164.52.204.50:10249/metrics
+  - name: service,type
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes
+  - name: kubernetes,proxy,code
+    DataType: String
+    ValueType: Constant
+    Value: '200'
+  - name: kubernetes,proxy,host
+    DataType: String
+    ValueType: Constant
+    Value: 164.52.204.51:6443
+  - name: kubernetes,proxy,method
+    DataType: String
+    ValueType: Constant
+    Value: GET
+  - name: kubernetes,proxy,client,request,count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 802-8020
+  - name: cluster_identifiers
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: ecs,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.0.0
+  - name: agent,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.0
+  - name: agent,ephemeral_id
+    DataType: String
+    ValueType: Constant
+    Value: e5e18c63-5759-415e-8c87-29920971d8e7
+  - name: agent,id
+    DataType: String
+    ValueType: Constant
+    Value: 75d517e9-2896-41c3-94a4-8905b93ef255
+  - name: agent,name
+    DataType: String
+    ValueType: Constant
+    Value: e2e-72-50
+  - name: agent,type
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat

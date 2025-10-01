@@ -1,0 +1,103 @@
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: '@metadata,beat'
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: '@metadata,type'
+    DataType: String
+    ValueType: Constant
+    Value: _doc
+  - name: '@metadata,version'
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.0
+  - name: metricset,period
+    DataType: Uint64
+    ValueType: FromLocal
+    Value: period
+  - name: metricset,name
+    DataType: String
+    ValueType: Constant
+    Value: state_persistentvolume
+  - name: kubernetes,persistentvolume,capacity,bytes
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 5368709120-53687091200
+  - name: kubernetes,persistentvolume,phase
+    DataType: String
+    ValueType: Constant
+    Value: Bound
+  - name: kubernetes,persistentvolume,storage_class
+    DataType: String
+    ValueType: Constant
+    Value: longhorn
+  - name: kubernetes,persistentvolume,name
+    DataType: String
+    ValueType: Constant
+    Value: pvc-06dafa06-b408-485f-8982-721e55aca5c6
+  - name: ecs,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.0.0
+  - name: service,type
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes
+  - name: service,address
+    DataType: String
+    ValueType: Constant
+    Value: http://kube-state-metrics.kube-system:8080/metrics
+  - name: event,dataset
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes.persistentvolume
+  - name: event,module
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes
+  - name: event,duration
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 2835368-28353680
+  - name: cluster_identifiers
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: component
+    DataType: String
+    ValueType: Constant
+    Value: kube-state-metrics
+  - name: agent,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.0
+  - name: agent,ephemeral_id
+    DataType: String
+    ValueType: Constant
+    Value: 8f37b49a-39d9-45ac-ab9e-7648d5fd92a1
+  - name: agent,id
+    DataType: String
+    ValueType: Constant
+    Value: 50c8df2a-d875-4bc5-98de-c33473d9451c
+  - name: agent,name
+    DataType: String
+    ValueType: Constant
+    Value: e2e-72-51
+  - name: agent,type
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat

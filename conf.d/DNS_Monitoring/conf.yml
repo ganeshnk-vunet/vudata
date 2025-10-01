@@ -1,0 +1,23 @@
+enabled: true
+uniquekey:
+  name: "host"
+  DataType: IPv4
+  ValueType: "RandomFixed"
+  Value: "10.10.10.1"
+  NumUniqKey: 80000
+
+period: 1s
+
+timestamp:
+  name: "timestamp"
+  type: "epoch_in_seconds"
+
+
+output.kafka:
+  enabled: true
+  topic: "dns-metrics-input"  
+
+
+
+
+Include_sub_modules: [dns_query]

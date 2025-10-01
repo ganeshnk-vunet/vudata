@@ -1,0 +1,91 @@
+group:
+- name: good
+  fields:
+  - name: fields,avg_obj_size
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 10-500
+  - name: fields,collections
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 10-1000
+  - name: fields,data_size
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 5000000-50000000
+  - name: fields,fs_total_size
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 44999007846-449990078460
+  - name: fields,fs_used_size
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 6080894566-60808945660
+  - name: fields,index_size
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 100000-200000
+  - name: fields,indexes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: fields,num_extents
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: fields,objects
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-500000
+  - name: fields,ok
+    DataType: Uint64
+    ValueType: Constant
+    Value: 1
+  - name: fields,storage_size
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 10-10000000
+  - name: fields,type
+    DataType: String
+    ValueType: Constant
+    Value: db_stat
+  - name: name
+    DataType: String
+    ValueType: Constant
+    Value: mongodb_db_stats
+  - name: tags,db_name
+    DataType: String
+    ValueType: Constant
+    Value: local
+  - name: tags,host
+    DataType: String
+    ValueType: Constant
+    Value: telegraf-mongodb-1-1-1-1-649b8b6485-67r9r
+  - name: tags,hostname
+    DataType: String
+    ValueType: Constant
+    Value: 164.52.213.222:27017
+  - name: tags,interval
+    DataType: String
+    ValueType: Constant
+    Value: 60s
+  - name: tags,node_type
+    DataType: String
+    ValueType: Constant
+    Value: PRI
+  - name: tags,rs_name
+    DataType: String
+    ValueType: Constant
+    Value: rs0
+  - name: tags,topic_name
+    DataType: String
+    ValueType: Constant
+    Value: mongo-metrics-input
+  - name: tags,vublock_name
+    DataType: String
+    ValueType: Constant
+    Value: MongoDB
+  - name: timestamp
+    DataType: DateTime
+    ValueType: Current
+    Value: "epoch_in_seconds"

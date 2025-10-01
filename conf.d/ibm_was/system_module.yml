@@ -1,0 +1,83 @@
+uniquekey:
+  # Unique key will be based on host IP and connection pool name to ensure that each entry is distinct.
+  name: host,Name
+  DataType: String
+  ValueType: RandomFixed
+  Value: "nodeagent\\d{1}"
+  NumUniqKey: 5
+
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: CPUUsageSinceServerStarted_max
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 10-100
+  - name: CPUUsageSinceServerStarted_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 36038-360380
+  - name: Node
+    DataType: String
+    ValueType: RandomFixed
+    Value: "e2e-82-222Node\\d{2}"
+  - name: ServerIP
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: CPUUsageSinceServerStarted_mean
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-100
+  - name: CPUUsageSinceLastMeasurement
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: Host
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: Time
+    DataType: DateTime
+    ValueType: Current
+    Value: datetime_rfc3339
+  - name: Process
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey
+  - name: Name
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey
+  - name: FreeMemory
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 2126706-21267060
+  - name: ProcessType
+    DataType: String
+    ValueType: Constant
+    Value: NodeAgent
+  - name: HostDisplayName
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: StatisticType
+    DataType: String
+    ValueType: Constant
+    Value: systemModule
+  - name: Cell
+    DataType: String
+    ValueType: RandomFixed
+    Value: "e2e-82-222Cell\\d{2}"

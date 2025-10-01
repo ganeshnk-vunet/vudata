@@ -1,0 +1,56 @@
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: applicationIP
+    DataType: String
+    ValueType: Constant
+    Value: 172.16.102.231
+  - name: tenant_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: Type
+    DataType: String
+    ValueType: Constant
+    Value: Application
+  - name: ApplicationName
+    DataType: String
+    ValueType: RandomFixed
+    Value: "services-\\d{1}"
+    NumUniqKey: 3  
+  - name: applicationport
+    DataType: Uint64
+    ValueType: RandomFixed
+    Value: "7001-50000"
+  - name: ServerName
+    DataType: String
+    ValueType: Constant
+    Value: AdminServer
+  - name: APP_Health
+    DataType: String
+    ValueType: Enumeration
+    Value: "HEALTH_OK:99, HEALTH_NOT_OK:1" 
+  - name: source_id
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: bu_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: target
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey

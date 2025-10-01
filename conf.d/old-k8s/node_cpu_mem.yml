@@ -1,0 +1,130 @@
+uniquekey:
+    name: kubernetes,node,name
+    DataType: String
+    ValueType: RandomFixed
+    Value: "e2e-72-\\d{2}"
+    NumUniqKey: 5
+
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: '@metadata,beat'
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: '@metadata,type'
+    DataType: String
+    ValueType: Constant
+    Value: _doc
+  - name: '@metadata,version'
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.0
+  - name: event,duration
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 119705-1197050
+  - name: event,dataset
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes.system
+  - name: event,module
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes
+  - name: metricset,period
+    DataType: Uint64
+    ValueType: FromLocal
+    Value: period
+  - name: metricset,name
+    DataType: String
+    ValueType: Constant
+    Value: system
+  - name: service,type
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes
+  - name: service,address
+    DataType: String
+    ValueType: Constant
+    Value: https://e2e-72-47:10250/stats/summary
+  - name: kubernetes,node,name
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey    
+  - name: kubernetes,system,container
+    DataType: String
+    ValueType: Constant
+    Value: kubelet
+  - name: kubernetes,system,cpu,usage,nanocores
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 3983263-39832630
+  - name: kubernetes,system,cpu,usage,core,ns
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 4244285870000-42442858700000
+  - name: kubernetes,system,memory,majorpagefaults
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 9-90
+  - name: kubernetes,system,memory,usage,bytes
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 11658854-116588540
+  - name: kubernetes,system,memory,workingset,bytes
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 10692608-106926080
+  - name: kubernetes,system,memory,rss,bytes
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 7964672-79646720
+  - name: kubernetes,system,memory,pagefaults
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 709629-7096290
+  - name: kubernetes,system,start_time
+    DataType: String
+    ValueType: Constant
+    Value: '2024-11-29T06:49:53Z'
+  - name: cluster_identifiers
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: agent,ephemeral_id
+    DataType: String
+    ValueType: Constant
+    Value: c0bd24de-87c3-4442-9fe9-97e3836b9cce
+  - name: agent,id
+    DataType: String
+    ValueType: Constant
+    Value: 57de9a68-e333-4123-bf0f-77348dd25525
+  - name: agent,name
+    DataType: String
+    ValueType: Constant
+    Value: e2e-72-47
+  - name: agent,type
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: agent,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.0
+  - name: ecs,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.0.0

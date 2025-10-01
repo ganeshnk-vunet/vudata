@@ -1,0 +1,28 @@
+enabled: true
+uniquekey:
+  name: "host"
+  DataType: IPv4
+  ValueType: "RandomFixed"
+  Value: "192.168.1.1"
+  NumUniqKey: 20000
+period: 1s
+#LogsPerSec: 600
+#MBPerDay: 100
+
+# Add the timestamp field name and type. Type could be epoch_in_seconds, epoch_in_ms or datetime_rfc3339
+timestamp:
+  name: timestamp
+  type: epoch_in_seconds
+
+output.kafka:
+  enabled: true
+  topic: "snmp-cisco-l3switch"
+
+output.file:
+  enabled: false
+
+# Include following yml files from this directory.. To include all, please use ‘*’
+#Include_sub_modules: [memory]
+#Include_sub_modules: [interface, cpu, memory, system_details, temperature]
+Include_sub_modules: [cpu, memory, temperature]
+

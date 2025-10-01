@@ -1,0 +1,307 @@
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: '@metadata,beat'
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: '@metadata,type'
+    DataType: String
+    ValueType: Constant
+    Value: _doc
+  - name: '@metadata,version'
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.0
+  - name: agent,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.0
+  - name: agent,ephemeral_id
+    DataType: String
+    ValueType: Constant
+    Value: 8f37b49a-39d9-45ac-ab9e-7648d5fd92a1
+  - name: agent,id
+    DataType: String
+    ValueType: Constant
+    Value: 50c8df2a-d875-4bc5-98de-c33473d9451c
+  - name: agent,name
+    DataType: String
+    ValueType: Constant
+    Value: e2e-72-51
+  - name: agent,type
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: ecs,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.0.0
+  - name: metricset,period
+    DataType: Uint64
+    ValueType: FromLocal
+    Value: period
+  - name: metricset,name
+    DataType: String
+    ValueType: Constant
+    Value: state_container
+  - name: service,type
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes
+  - name: service,address
+    DataType: String
+    ValueType: Constant
+    Value: http://kube-state-metrics.kube-system:8080/metrics
+  - name: kubernetes,labels,app
+    DataType: String
+    ValueType: Constant
+    Value: longhorn-driver-deployer
+  - name: kubernetes,labels,app_kubernetes_io/instance
+    DataType: String
+    ValueType: Constant
+    Value: longhorn
+  - name: kubernetes,labels,app_kubernetes_io/managed-by
+    DataType: String
+    ValueType: Constant
+    Value: Helm
+  - name: kubernetes,labels,app_kubernetes_io/name
+    DataType: String
+    ValueType: Constant
+    Value: longhorn
+  - name: kubernetes,labels,app_kubernetes_io/version
+    DataType: String
+    ValueType: Constant
+    Value: v1.5.1
+  - name: kubernetes,labels,helm_sh/chart
+    DataType: String
+    ValueType: Constant
+    Value: longhorn-1.5.1
+  - name: kubernetes,labels,organization
+    DataType: String
+    ValueType: Constant
+    Value: vunet
+  - name: kubernetes,labels,pod-template-hash
+    DataType: String
+    ValueType: Constant
+    Value: 6dc5b75694
+  - name: kubernetes,namespace_uid
+    DataType: String
+    ValueType: Constant
+    Value: f6ab1a5e-a621-44c9-ad55-309ad3938cd9
+  - name: kubernetes,deployment,name
+    DataType: String
+    ValueType: Constant
+    Value: longhorn-driver-deployer
+  - name: kubernetes,namespace_labels,name
+    DataType: String
+    ValueType: Constant
+    Value: longhorn
+  - name: kubernetes,namespace_labels,kubernetes_io/metadata_name
+    DataType: String
+    ValueType: Constant
+    Value: longhorn
+  - name: kubernetes,container,status,phase
+    DataType: String
+    ValueType: Constant
+    Value: running
+  - name: kubernetes,container,status,restarts
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: kubernetes,container,status,ready
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: kubernetes,container,id
+    DataType: String
+    ValueType: Constant
+    Value: containerd://9338676350fdee2d8d8033c5a83ea1133257b02796a3b8ca72acddfc92227b8d
+  - name: kubernetes,container,name
+    DataType: String
+    ValueType: Constant
+    Value: longhorn-driver-deployer
+  - name: kubernetes,namespace
+    DataType: String
+    ValueType: Constant
+    Value: longhorn
+  - name: kubernetes,pod,ip
+    DataType: String
+    ValueType: Constant
+    Value: 10.32.1.28
+  - name: kubernetes,pod,name
+    DataType: String
+    ValueType: Constant
+    Value: longhorn-driver-deployer-6dc5b75694-n84xd
+  - name: kubernetes,pod,name
+    DataType: String
+    ValueType: Constant
+    Value: kube-metrics-kube-state-metrics-759f66dc8c-mpfsc   
+  - name: kubernetes,pod,uid
+    DataType: String
+    ValueType: Constant
+    Value: 0959320d-d11e-46dc-9527-f243007433b7
+  - name: kubernetes,node,labels,kurl_sh/cluster
+    DataType: String
+    ValueType: Boolean
+    Value: 'true'
+  - name: kubernetes,node,labels,kubernetes_io/arch
+    DataType: String
+    ValueType: Constant
+    Value: amd64
+  - name: kubernetes,node,labels,kubernetes_io/os
+    DataType: String
+    ValueType: Constant
+    Value: linux
+  - name: kubernetes,node,labels,snmpheartbeat
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,vublockstore
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,TelegrafSNMPTrap
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,alert
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,scheduler
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,webserver
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,TelegrafHTTPPoller
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,node_longhorn_io/create-default-disk
+    DataType: String
+    ValueType: Constant
+    Value: config
+  - name: kubernetes,node,labels,clickhouse
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,worker
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,reporter
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,vuHTTPPoller
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,renderer
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,mlflow
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,broker
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,nairobi
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,beta_kubernetes_io/arch
+    DataType: String
+    ValueType: Constant
+    Value: amd64
+  - name: kubernetes,node,labels,snmptrap
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,beta_kubernetes_io/os
+    DataType: String
+    ValueType: Constant
+    Value: linux
+  - name: kubernetes,node,labels,timescaledb
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,labels,kubernetes_io/hostname
+    DataType: String
+    ValueType: Constant
+    Value: e2e-72-47
+  - name: kubernetes,node,labels,zookeeper
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,node,hostname
+    DataType: String
+    ValueType: Constant
+    Value: e2e-72-47
+  - name: kubernetes,node,name
+    DataType: String
+    ValueType: Constant
+    Value: e2e-72-47
+  - name: kubernetes,node,name
+    DataType: String
+    ValueType: Constant
+    Value: e2e-72-49   
+  - name: kubernetes,node,uid
+    DataType: String
+    ValueType: Constant
+    Value: aa1b1356-70ec-4b71-949d-dce756bc4608
+  - name: kubernetes,replicaset,name
+    DataType: String
+    ValueType: Constant
+    Value: longhorn-driver-deployer-6dc5b75694
+  - name: event,dataset
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes.container
+  - name: event,module
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes
+  - name: event,duration
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 3140344-31403440
+  - name: cluster_identifiers
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: container,runtime
+    DataType: String
+    ValueType: Constant
+    Value: containerd
+  - name: container,image,name
+    DataType: String
+    ValueType: Constant
+    Value: docker.io/longhornio/longhorn-manager:v1.5.1
+  - name: container,id
+    DataType: String
+    ValueType: Constant
+    Value: 9338676350fdee2d8d8033c5a83ea1133257b02796a3b8ca72acddfc92227b8d
+  - name: component
+    DataType: String
+    ValueType: Constant
+    Value: kube-state-metrics

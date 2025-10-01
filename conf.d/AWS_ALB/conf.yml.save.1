@@ -1,0 +1,25 @@
+enabled: true
+
+uniquekey:
+  name: "host"
+  DataType: IPv4
+  ValueType: "RandomFixed"
+  Value: 10.10.10.1
+  NumUniqKey: 34000
+
+period: 1s
+
+timestamp:
+  name: "@timestamp"
+  type: datetime_  
+
+output.file:
+  enabled: false
+  path: ./tmp/aws-alb/
+  filename: alb.json
+  rotate_every_mb: 1
+  max_files: 5
+
+Include_sub_modules: [cloudwatch_aws_application_elb]
+
+

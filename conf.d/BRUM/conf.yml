@@ -1,0 +1,28 @@
+enabled: true
+
+uniquekey:
+  name: "host"
+  DataType: IPv4
+  ValueType: "RandomFixed"
+  Value: "192.168.1.1"
+  NumUniqKey: 40000
+period: 1s
+
+timestamp:
+  name: "@timestamp"
+  type: datetime_rfc3339
+output.kafka:
+  enabled: true
+  topic: "rum-input"
+output.file:
+  enabled: false
+  path: ./tmp/BRUM/
+  filename: BRUM.json
+  rotate_every_mb: 1
+  max_files: 5 #Once the number of files have reached max_files limit, it will overwrite the 1st file
+
+
+    # Include following yml files from this directory.. To include all, please use '*'
+Include_sub_modules:
+  [metrics]
+

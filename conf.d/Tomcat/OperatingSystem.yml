@@ -1,0 +1,124 @@
+# -------------------------
+# vuDataSim Configuration
+# -------------------------
+# uniquekey:
+#   name: host
+#   DataType: String
+#   ValueType: RandomFixed
+#   Value: 172.16.68.100-172.16.68.200   # random IP range for hosts
+#   NumUniqKey: 5
+
+group:
+- name: good
+  fields:
+    # Metadata (avoid constant)
+    - name: tenant_id
+      DataType: String
+      ValueType: Enumeration
+      Value: "1:100"   # mostly tenant 1, but variety possible
+
+    - name: bu_id
+      DataType: String
+      ValueType: Enumeration
+      Value: "1:100"
+
+    - name: application_name
+      DataType: String
+      ValueType: Enumeration
+      Value: "IBMB:80,IBMA:20"
+
+    - name: vublock_name
+      DataType: String
+      ValueType: Constant
+      Value: ""
+
+    # Dynamic time
+    - name: Time
+      DataType: DateTime
+      ValueType: Current
+      Value: "datetime_rfc3339"
+
+    # Host fields (from UniqueKey)
+    - name: Host
+      DataType: String
+      ValueType: FromLocal
+      Value: UniqueKey
+    - name: host
+      DataType: String
+      ValueType: FromLocal
+      Value: UniqueKey
+    - name: source_id
+      DataType: String
+      ValueType: FromLocal
+      Value: UniqueKey
+    - name: target
+      DataType: String
+      ValueType: FromLocal
+      Value: UniqueKey
+
+    # System Info
+    - name: KeyPropertyListType
+      DataType: String
+      ValueType: Enumeration
+      Value: "OperatingSystem:100"
+
+    - name: ObjectName
+      DataType: String
+      ValueType: Constant
+      Value: "java.lang:type=OperatingSystem:100"
+
+    # OS Metrics
+    - name: OpenFileDescriptorCount
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 50-500
+
+    - name: CommittedVirtualMemorySize
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 1000000000-20000000000
+
+    - name: FreePhysicalMemorySize
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 40000000-500000000
+
+    - name: SystemLoadAverage
+      DataType: Float32
+      ValueType: RandomRange
+      Value: 0.0-5.0
+
+    - name: ProcessCpuLoad
+      DataType: Float32
+      ValueType: RandomRange
+      Value: 0.0-1.0
+
+    - name: TotalPhysicalMemorySize
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 8000000000-64000000000
+
+    - name: ProcessCpuTime
+      DataType: Uint64
+      ValueType: RandomEverIncreasing
+      Value: 10000000000-200000000000
+
+    - name: MaxFileDescriptorCount
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 100000-2000000
+
+    - name: SystemCpuLoad
+      DataType: Float32
+      ValueType: RandomRange
+      Value: 0.0-1.0
+
+    - name: TotalSwapSpaceSize
+      DataType: Uint64
+      ValueType: Enumeration
+      Value: "0:80,4294967296:20"   # mostly 0, sometimes nonzero
+
+    - name: FreeSwapSpaceSize
+      DataType: Uint64
+      ValueType: Enumeration
+      Value: "0:90,1073741824:10"   # mostly 0, sometimes small swap
