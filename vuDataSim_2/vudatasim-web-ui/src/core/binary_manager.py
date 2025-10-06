@@ -239,10 +239,18 @@ class ProcessManager:
     def list_binaries(self) -> list:
         """List available binaries"""
         binaries = []
-        for binary_name in os.listdir(BIN_DIR):
-            binary_path = BIN_DIR / binary_name
-            if binary_path.is_file() and os.access(binary_path, os.X_OK):
-                binaries.append(binary_name)
+        if not BIN_DIR.exists():
+            logger.info(f"Local bin directory does not exist: {BIN_DIR}")
+            return binaries
+        
+        try:
+            for binary_name in os.listdir(BIN_DIR):
+                binary_path = BIN_DIR / binary_name
+                if binary_path.is_file() and os.access(binary_path, os.X_OK):
+                    binaries.append(binary_name)
+        except Exception as e:
+            logger.error(f"Error listing local binaries: {e}")
+        
         return binaries
 
     def cleanup_finished_processes(self):
@@ -262,10 +270,13 @@ class ProcessManager:
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
         try:
+            # Expand the tilde in the SSH key path
+            expanded_key_path = os.path.expanduser(REMOTE_SSH_KEY_PATH)
+            
             ssh.connect(
                 REMOTE_HOST,
                 username=REMOTE_USER,
-                key_filename=REMOTE_SSH_KEY_PATH,
+                key_filename=expanded_key_path,
                 timeout=10
             )
             return ssh
@@ -277,16 +288,20 @@ class ProcessManager:
         """List available binaries on remote host"""
         try:
             ssh = self._get_ssh_client()
-            stdin, stdout, stderr = ssh.exec_command(f"ls {REMOTE_BINARY_DIR}")
+            # Use ls -l to get detailed file info and filter only executable files
+            _, stdout, _ = ssh.exec_command(f"find {REMOTE_BINARY_DIR} -maxdepth 1 -type f -executable -printf '%f\\n'")
 
             binaries = []
             for line in stdout:
                 binary_name = line.strip()
-                if binary_name and not binary_name.startswith('.'):
+                # Filter out empty lines, hidden files, and invalid characters
+                if (binary_name and 
+                    not binary_name.startswith('.') and 
+                    binary_name.replace('_', '').replace('-', '').isalnum()):
                     binaries.append(binary_name)
 
             ssh.close()
-            return binaries
+            return sorted(binaries)  # Return sorted list for consistent ordering
 
         except Exception as e:
             logger.error(f"Error listing remote binaries: {e}")
@@ -310,23 +325,49 @@ class ProcessManager:
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             remote_log_file = f"/tmp/vudatasim_{binary_name}_{timestamp}.log"
 
-            # Build command with timeout
+            # Build command to run binary in background with proper execution
             binary_path = f"{REMOTE_BINARY_DIR}/{binary_name}"
+            
+            # Check if binary exists and make it executable
+            check_binary_cmd = f"test -f {binary_path} && echo 'exists' || echo 'not_found'"
+            _, stdout_check, _ = ssh.exec_command(check_binary_cmd)
+            binary_exists = stdout_check.read().decode().strip()
+            
+            if binary_exists != 'exists':
+                raise FileNotFoundError(f"Binary {binary_name} not found at {binary_path}")
+            
+            # Make sure binary is executable
+            make_executable_cmd = f"chmod +x {binary_path}"
+            ssh.exec_command(make_executable_cmd)
+            
+            # Build the complete command with proper background execution
+            # Change to binary directory and run with ./ prefix (as user typically does)
+            # Also add some debug info to the log file
             if timeout > 0:
-                command = f"timeout {timeout}s {binary_path} > {remote_log_file} 2>&1"
+                # Use timeout with nohup for proper background execution
+                command = f'cd {REMOTE_BINARY_DIR} && echo "Starting {binary_name} with timeout {timeout}s at $(date)" > {remote_log_file} && nohup timeout {timeout}s ./{binary_name} >> {remote_log_file} 2>&1 & echo $!'
             else:
-                command = f"{binary_path} > {remote_log_file} 2>&1"
+                # Use nohup for proper background execution without timeout
+                command = f'cd {REMOTE_BINARY_DIR} && echo "Starting {binary_name} at $(date)" > {remote_log_file} && nohup ./{binary_name} >> {remote_log_file} 2>&1 & echo $!'
 
-            # Execute command in background
-            stdin, stdout, stderr = ssh.exec_command(command)
-
-            # Get PID of the background process
-            pid_command = "echo $!"
-            stdin_pid, stdout_pid, stderr_pid = ssh.exec_command(pid_command)
-            pid = stdout_pid.read().decode().strip()
+            # Execute the command and get the PID immediately
+            _, stdout, stderr = ssh.exec_command(command)
+            
+            # Read the PID from stdout (echo $! output)
+            pid_output = stdout.read().decode().strip()
+            stderr_output = stderr.read().decode().strip()
+            
+            if stderr_output:
+                logger.warning(f"Remote command stderr: {stderr_output}")
+            
+            if not pid_output or not pid_output.isdigit():
+                raise RuntimeError(f"Failed to get valid PID. Output: '{pid_output}', Stderr: '{stderr_output}'")
+            
+            pid = pid_output
 
             run_id = f"remote_{binary_name}_{int(time.time())}"
 
+            # Store process info immediately
             self.processes[f"remote_{binary_name}"] = {
                 "ssh": ssh,
                 "run_id": run_id,
@@ -337,6 +378,20 @@ class ProcessManager:
                 "pid": pid,
                 "is_remote": True
             }
+
+            # Wait a moment to ensure process has started, then verify
+            time.sleep(1.0)
+            
+            # Verify the process is actually running
+            check_cmd = f"kill -0 {pid} 2>/dev/null && echo 'running' || echo 'not_running'"
+            _, stdout_check, _ = ssh.exec_command(check_cmd)
+            process_status = stdout_check.read().decode().strip()
+            
+            if process_status != "running":
+                # Process failed to start, clean up
+                if f"remote_{binary_name}" in self.processes:
+                    del self.processes[f"remote_{binary_name}"]
+                raise RuntimeError(f"Process with PID {pid} is not running after start. Check binary path and permissions.")
 
             logger.info(f"Started remote {binary_name} with PID {pid}, run_id: {run_id}")
             return {
@@ -352,7 +407,7 @@ class ProcessManager:
             return {
                 "success": False,
                 "error": str(e),
-                "message": f"Failed to start remote {binary_name}"
+                "message": f"Failed to start remote {binary_name}: {str(e)}"
             }
 
     def stop_remote_binary(self, binary_name: str) -> Dict[str, Any]:
@@ -427,12 +482,17 @@ class ProcessManager:
 
         try:
             # Check if process is still running on remote host
-            ssh = self._get_ssh_client()
+            # Reuse existing SSH connection if available, otherwise create new one
+            ssh = process_info.get("ssh")
+            if not ssh or not ssh.get_transport() or not ssh.get_transport().is_active():
+                ssh = self._get_ssh_client()
+                process_info["ssh"] = ssh
+            
             pid = process_info.get("pid")
 
             if pid:
                 # Check if PID exists
-                stdin, stdout, stderr = ssh.exec_command(f"kill -0 {pid} 2>/dev/null && echo 'running' || echo 'stopped'")
+                _, stdout, _ = ssh.exec_command(f"kill -0 {pid} 2>/dev/null && echo 'running' || echo 'stopped'")
                 status = stdout.read().decode().strip()
 
                 if status == "running":
@@ -497,7 +557,7 @@ class ProcessManager:
         finally:
             try:
                 ssh.close()
-            except:
+            except Exception:
                 pass
 
     def get_remote_logs(self, binary_name: str) -> str:

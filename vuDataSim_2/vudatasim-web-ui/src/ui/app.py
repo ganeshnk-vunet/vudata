@@ -15,7 +15,8 @@ sys.path.append(str(Path(__file__).resolve().parent.parent))
 
 from core.config import (
     PRIMARY_BINARY, SUPPORTED_BINARIES, DEFAULT_TIMEOUT,
-    STREAMLIT_PORT, STREAMLIT_ADDRESS, LOG_FILE, LOGS_DIR
+    STREAMLIT_PORT, STREAMLIT_ADDRESS, LOG_FILE, LOGS_DIR,
+    REMOTE_HOST, REMOTE_USER, REMOTE_TIMEOUT
 )
 from core.binary_manager import process_manager
 from core.yaml_editor import yaml_editor
@@ -191,7 +192,7 @@ def main():
 
     # Main pages
     main_pages = [
-        "Dashboard", "Binary Control", "Remote Binary Control", "Module Browser", "Submodule Editor",
+        "Dashboard", "Binary Control", "Remote Binary Control", "Cluster Manager", "Module Browser", "Submodule Editor",
         "EPS Tuner", "Auto-Tuner", "Configuration Editor", "Diff Preview",
         "Live EPS Monitor", "Logs & Audit", "Backup Manager", "System Status"
     ]
@@ -209,6 +210,8 @@ def main():
         show_binary_control()
     elif page == "Remote Binary Control":
         show_remote_binary_control()
+    elif page == "Cluster Manager":
+        show_cluster_manager()
     elif page == "Module Browser":
         show_module_browser()
     elif page == "Submodule Editor":
@@ -309,7 +312,8 @@ def show_binary_control():
         return
 
     if not available_binaries:
-        st.error("No binaries found in bin/ directory")
+        st.warning("No local binaries found in bin/ directory")
+        st.info(f"💡 **Tip**: Use the **Remote Binary Control** page from the sidebar to control binaries on the remote VM ({REMOTE_HOST})")
         return
 
     default_index = 0
@@ -427,13 +431,20 @@ def show_remote_binary_control():
     # Remove the emoji prefix for actual binary name
     actual_binary_name = binary_name.replace("🔗 ", "")
 
-    # Current status
-    status = process_manager.get_remote_status(actual_binary_name)
+    # Current status with error handling
+    try:
+        status = process_manager.get_remote_status(actual_binary_name)
+    except Exception as e:
+        st.error(f"Error getting remote status: {e}")
+        status = {"status": "error", "message": str(e)}
 
     col1, col2, col3, col4 = st.columns(4)
 
     with col1:
-        if st.button("🔄 Refresh Status"):
+        auto_refresh = st.checkbox("🔄 Auto-refresh", value=False, help="Automatically refresh status every 3 seconds")
+        if st.button("🔄 Refresh Status") or auto_refresh:
+            if auto_refresh:
+                time.sleep(3)
             st.rerun()
 
     with col2:
@@ -456,10 +467,14 @@ def show_remote_binary_control():
                 with st.spinner("Starting remote binary..."):
                     result = process_manager.start_remote_binary(actual_binary_name, timeout)
                     if result.get("success"):
-                        st.success(result.get("message", "Started"))
+                        st.success(f"✅ {result.get('message', 'Started')} (PID: {result.get('pid', 'unknown')})")
+                        # Give the UI a moment to process the success message
+                        time.sleep(0.5)
                         st.rerun()
                     else:
-                        st.error(result.get("message", "Failed to start"))
+                        st.error(f"❌ {result.get('message', 'Failed to start')}")
+                        if result.get("error"):
+                            st.error(f"Details: {result.get('error')}")
         else:
             st.button("▶️ Start", disabled=True)
 
@@ -520,6 +535,39 @@ def show_remote_binary_control():
         if st.button("🔙 Back to Control"):
             st.session_state.show_remote_logs = False
             st.rerun()
+
+
+def show_cluster_manager():
+    """Show the cluster management interface"""
+    from ui.cluster_ui import (
+        render_cluster_overview,
+        render_node_management, 
+        render_config_sync,
+        render_config_browser
+    )
+    
+    st.header("🌐 Cluster Configuration Manager")
+    st.markdown("Centralized management for vuDataSim configurations across multiple nodes")
+    
+    # Navigation tabs
+    tab1, tab2, tab3, tab4 = st.tabs([
+        "📊 Overview", 
+        "⚙️ Node Management", 
+        "🔄 Config Sync", 
+        "📁 Config Browser"
+    ])
+    
+    with tab1:
+        render_cluster_overview()
+    
+    with tab2:
+        render_node_management()
+    
+    with tab3:
+        render_config_sync()
+    
+    with tab4:
+        render_config_browser()
 
 
 def show_module_browser():
@@ -1341,7 +1389,7 @@ def show_live_eps_monitor():
         host = st.text_input("ClickHouse Host", value="164.52.213.158", help="IP address of the ClickHouse server")
 
     with col2:
-        username = st.text_input("SSH Username", value="vunet", help="SSH username for connection")
+        username = st.text_input("SSH Username", value=REMOTE_USER, help="SSH username for connection")
 
     with col3:
         # For simplicity, assume key-based auth, no password input for security

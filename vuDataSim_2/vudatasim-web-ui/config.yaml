@@ -1,0 +1,30 @@
+backup:
+  retention_days: 7
+binaries:
+  primary_binary: vuDataSim
+  supported_binaries:
+  - vuDataSim
+  - RakvuDataSim
+  - finalvudatasim
+  - gvudatsim
+eps:
+  default_unique_key: 1
+  max_unique_key: 1000000000
+logging:
+  log_backup_count: 5
+  log_file: vudatasim-webui.log
+  log_max_size: 10485760
+network:
+  remote_host: 216.48.191.10
+  remote_user: vunet
+  streamlit_address: 0.0.0.0
+  streamlit_port: 8501
+paths:
+  local_backups_dir: backups
+  local_logs_dir: logs
+  remote_binary_dir: /home/vunet/vuDataSim/vuDataSim/bin/
+  remote_ssh_key: ~/.ssh/id_rsa
+process:
+  default_timeout: 300
+  graceful_shutdown_timeout: 10
+  remote_timeout: 300

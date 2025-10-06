@@ -38,3 +38,10 @@ LOG_BACKUP_COUNT = 5
 
 # Backup configuration
 BACKUP_RETENTION_DAYS = 7
+
+# Remote SSH configuration for binary execution
+REMOTE_HOST = "216.48.191.10"
+REMOTE_USER = "vunet"
+REMOTE_SSH_KEY_PATH = "~/.ssh/id_rsa"  # Update this path as needed
+REMOTE_BINARY_DIR = "/home/vunet/vuDataSim/vuDataSim/bin"
+REMOTE_TIMEOUT = 300  # 5 minutes default for remote execution
