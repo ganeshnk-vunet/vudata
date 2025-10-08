@@ -1,0 +1,104 @@
+# Date/Time for which data is generated - for real time or past time
+data_generation_time:
+  type: real-time
+
+# Using the following config, you can generate the data for past-time.. In this case, data
+# gets generated continuously and sent with the older timestamps
+#data_generation_time:
+#  type: past-time
+#  start_time: “08:10:2024 17:01:19”
+#  end_time: “08:11::2024 17:01:18”
+
+# Logging configuration for Data Simulator
+# level:       Log level - Could be error, info or debug
+# console:     Console logging
+# file:        File logging
+# directory:   Directory path where log files are created
+# filename:    Log Filename
+# maxSize:     Max size of the log file
+# maxBackups:  Number of backup files
+# maxAge:      Amount of days for which file is kept
+logging:
+  level: error
+  console: false
+  file: true
+  directory: /home/vunet/vuDataSim/vuDataSim/logs/
+  filename: vudatasim.log
+  maxSize: 10
+  maxBackups: 5
+  maxAge: 1
+
+output.kafka:
+  enabled: true
+  # initial brokers for reading cluster metadata
+  #hosts: ["13.235.20.147:31092"]
+  #  hosts: ["e2e-82-181:443","e2e-83-234:443","e2e-83-134:443"]
+  hosts: ["164.52.213.181:9094"]
+  #hosts: ["kafka-cluster-cp-kafka.e2e.internal:443"]
+  ssl: true # Set to true if Kafka SSL is enabled
+  ssl_certificate_authorities: /home/vunet/data_sim/vudatasim/vuDataSim/certs/vunet-ca-cert.pem
+  ssl_verification_mode: no_verify # certificate Set to certificate to enable sercure verification, Set to no_verify otherwise
+
+  # message topic selection + partitioning
+  # topic_name must be defined by individual folders conf.yml
+  partition.round_robin:
+    reachable_only: false
+
+  required_acks: 1
+  compression: gzip
+  max_message_bytes: 1000000
+
+  # filename can be defined by individual folders conf.yml as well
+output.file:
+  enabled: false
+  path: “/tmp/
+  filename: vudatasim.json
+  rotate_every_mb: 100
+  max_files: 5 #Once the number of files have reached max_files limit, it will overwrite the 1st file
+
+# The above output config can be updated for every directory based on their needs
+
+# Add the folders/directories for which you want to generate data. Please use ‘All’ if you want to generate data for all sources (folders)
+include_module_dirs:
+  AzureStorageBlob:
+    enabled: false
+  CiscoIoSSwitch:
+    enabled: false
+  Nginx:
+    enabled: false
+  Apache:
+    enabled: false
+  Mssql:
+    enabled: false
+  LinuxMonitor:
+    enabled: false
+  exampleLogs:
+    enabled: false
+  WebLogic:
+    enabled: false
+  Azure_API_Management:
+    enabled: false
+  K8s:
+    enabled: false
+  Tomcat:
+    enabled: true
+  BRUM:
+    enabled: false
+  AWS_ALB:
+    enabled: false
+  Traces:
+    enabled: false
+  MongoDB:
+    enabled: false
+  SyntheticBrowserMonitoring:
+    enabled: false
+  Azure_Firewall:
+    enabled: false
+  DNS_Monitoring:
+    enabled: false
+  Azure_Redis_Cache:
+    enabled: false
+  ServiceMonitor:
+    enabled: false
+  IBMMQ:
+    enabled: false

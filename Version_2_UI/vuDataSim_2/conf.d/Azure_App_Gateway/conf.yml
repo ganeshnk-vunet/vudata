@@ -1,0 +1,37 @@
+enabled: true
+uniquekey:
+  name: "resource_name"
+  DataType: String
+  ValueType: RandomFixed
+  Value: "ContosoVunetGateway_\\d{2}"
+  NumUniqKey: 3
+  
+period: 180s
+
+# Add the timestamp field name and type. Type could be epoch_in_seconds, epoch_in_ms or datetime_rfc3339
+#timestamp:
+#  name: timestamp
+#  type: epoch_in_ms
+
+output.kafka:
+  enabled: true
+  topic: "azure-app-input"
+
+Include_sub_modules: [bytes_received,
+  bytes_sent,
+  client_rtt,
+  client_tls_protocol,
+  currentcapacityunits,
+  currentcomputeunits,
+  currentconnections,
+  estimatedbilledcapacity,
+  failed_request,
+  fixedbillablecapacity,
+  healthyhost, 
+  newconnectionpersecond,
+  requestperhealthyhost,
+  response_status,
+  throughput,
+  total_request,
+  total_time,
+  unhealthyhost]

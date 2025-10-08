@@ -1,0 +1,247 @@
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: '@metadata,beat'
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: '@metadata,type'
+    DataType: String
+    ValueType: Constant
+    Value: _doc
+  - name: '@metadata,version'
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.4
+  - name: topic_name
+    DataType: String
+    ValueType: Constant
+    Value: apache-metrics-input
+  - name: sport
+    DataType: String
+    ValueType: Constant
+    Value: '8085'
+  - name: source_id
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: target
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: event,dataset
+    DataType: String
+    ValueType: Constant
+    Value: apache.status
+  - name: event,module
+    DataType: String
+    ValueType: Constant
+    Value: apache
+  - name: event,duration
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 340000-3400000
+  - name: metricset,period
+    DataType: Uint64
+    ValueType: FromLocal
+    Value: period
+  - name: metricset,name
+    DataType: String
+    ValueType: Constant
+    Value: status
+  - name: apache,status,bytes_per_request
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 700-7000
+  - name: apache,status,cpu,user
+    DataType: Float32
+    ValueType: RandomEverIncreasing
+    Value: 10-1000
+  - name: apache,status,cpu,system
+    DataType: Float32
+    ValueType: RandomEverIncreasing
+    Value: 10-1000
+  - name: apache,status,cpu,children_user
+    DataType: Float32
+    ValueType: RandomEverIncreasing
+    Value: 0-100
+  - name: apache,status,cpu,children_system
+    DataType: Float32
+    ValueType: RandomEverIncreasing
+    Value: 0-100
+  - name: apache,status,cpu,load
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0.0-0.7
+  - name: apache,status,total_accesses
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 900-9000
+  - name: apache,status,uptime,server_uptime
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 200-400
+  - name: apache,status,uptime,uptime
+    DataType: Uint64
+    ValueType: EvaluatedValue
+    Value: "apache,status,uptime,server_uptime * 1"
+  - name: apache,status,connections,total
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 10-30
+  - name: apache,status,connections,async,closing
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: apache,status,connections,async,writing
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: apache,status,connections,async,keep_alive
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: apache,status,requests_per_sec
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-100
+  - name: apache,status,hostname
+    DataType: String
+    ValueType: Constant
+    Value: 172.16.68.179:8085
+  - name: apache,status,total_kbytes
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 600-6000
+  - name: apache,status,load,1
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-10
+  - name: apache,status,load,5
+    DataType: Float32
+    ValueType: EvaluatedValue
+    Value: "apache,status,load,1 * 1"
+  - name: apache,status,load,15
+    DataType: Uint64
+    ValueType: EvaluatedValue
+    Value: "apache,status,load,1 * 1"
+  - name: apache,status,scoreboard,sending_reply
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: apache,status,scoreboard,logging
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: apache,status,scoreboard,idle_cleanup
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: apache,status,scoreboard,starting_up
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: apache,status,scoreboard,keepalive
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: apache,status,scoreboard,total
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 50-100
+  - name: apache,status,scoreboard,reading_request
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: apache,status,scoreboard,closing_connection
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: apache,status,scoreboard,gracefully_finishing
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: apache,status,scoreboard,open_slot
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: apache,status,scoreboard,waiting_for_connection
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: apache,status,scoreboard,dns_lookup
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: apache,status,bytes_per_sec
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 2000-20000
+  - name: apache,status,workers,busy
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 10-70
+  - name: apache,status,workers,idle
+    DataType: Uint64
+    ValueType: EvaluatedValue
+    Value: "100 - apache,status,workers,busy"
+  - name: vublock_name
+    DataType: String
+    ValueType: Constant
+    Value: apache
+  - name: service,address
+    DataType: String
+    ValueType: Constant
+    Value: http://172.16.68.179:8085/server-status?auto=
+  - name: service,type
+    DataType: String
+    ValueType: Constant
+    Value: apache
+  - name: ecs,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.0.0
+  - name: agent,name
+    DataType: String
+    ValueType: Constant
+    Value: e2e-97-241
+  - name: agent,type
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: agent,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.4
+  - name: agent,ephemeral_id
+    DataType: String
+    ValueType: Constant
+    Value: 0334291c-e80c-4e7c-88cd-f802aa243b56
+  - name: agent,id
+    DataType: String
+    ValueType: Constant
+    Value: 131748f7-7c03-4738-b6f8-ab47d892d12e
+
+output.kafka:
+  enabled: true
+  topic: "apache-metrics-input"
+
+output.file:
+  enabled: false
+  path: ./tmp/apache/
+  filename: status.log
+  rotate_every_mb: 1
+  max_files: 5    #Once the number of files have reached max_files limit, it will overwrite the 1st file
+

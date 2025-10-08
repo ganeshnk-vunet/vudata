@@ -1,0 +1,139 @@
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: '@metadata,beat'
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: '@metadata,type'
+    DataType: String
+    ValueType: Constant
+    Value: _doc
+  - name: '@metadata,version'
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.4
+  - name: metricset,name
+    DataType: String
+    ValueType: Constant
+    Value: socket
+  - name: metricset,period
+    DataType: Uint64
+    ValueType: FromLocal
+    Value: period
+  - name: network,type
+    DataType: String
+    ValueType: Constant
+    Value: ipv4
+  - name: network,iana_number
+    DataType: String
+    ValueType: Constant
+    Value: '4'
+  - name: network,direction
+    DataType: String
+    ValueType: Constant
+    Value: ingress
+  - name: topic_name
+    DataType: String
+    ValueType: Constant
+    Value: linux-monitor-input
+  - name: ecs,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.0.0
+  - name: agent,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.4
+  - name: agent,ephemeral_id
+    DataType: String
+    ValueType: Constant
+    Value: 8d589b57-d52d-4509-b66a-e2f742758bfb
+  - name: agent,id
+    DataType: String
+    ValueType: Constant
+    Value: 7bdf95c8-4046-41ed-9bd7-eb03ca9ddc74
+  - name: agent,name
+    DataType: String
+    ValueType: Constant
+    Value: e2e-97-245
+  - name: agent,type
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: user,id
+    DataType: String
+    ValueType: Constant
+    Value: '33'
+  - name: user,name
+    DataType: String
+    ValueType: Constant
+    Value: www-data
+  - name: user,full_name
+    DataType: String
+    ValueType: Constant
+    Value: www-data
+  - name: source,ip
+    DataType: String
+    ValueType: Constant
+    Value: 164.52.200.135
+  - name: source,port
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 20000-60000
+  - name: service,type
+    DataType: String
+    ValueType: Constant
+    Value: system
+  - name: system,socket,local,ip
+    DataType: String
+    ValueType: Constant
+    Value: 216.48.180.245
+  - name: system,socket,local,port
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1000-10000
+  - name: system,socket,remote,ip
+    DataType: String
+    ValueType: Constant
+    Value: 164.52.200.135
+  - name: system,socket,remote,port
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 20000-60000
+  - name: vublock_name
+    DataType: String
+    ValueType: Constant
+    Value: linux-monitor
+  - name: destination,ip
+    DataType: String
+    ValueType: Constant
+    Value: 216.48.180.245
+  - name: destination,port
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1000-10000
+  - name: event,dataset
+    DataType: String
+    ValueType: Constant
+    Value: system.socket
+  - name: event,module
+    DataType: String
+    ValueType: Constant
+    Value: system
+  - name: event,duration
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 10000-100000

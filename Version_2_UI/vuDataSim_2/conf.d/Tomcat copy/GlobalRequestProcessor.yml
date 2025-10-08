@@ -1,0 +1,104 @@
+uniquekey:
+  name: host
+  DataType: String
+  ValueType: RandomFixed
+  Value: 172.16.68.168
+  NumUniqKey: 1
+
+group:
+- name: good
+  fields:
+    - name: tenant_id
+      DataType: String
+      ValueType: Constant
+      Value: '1'
+
+    - name: bu_id
+      DataType: String
+      ValueType: Constant
+      Value: '1'
+
+    - name: application_name
+      DataType: String
+      ValueType: Constant
+      Value: IBMB
+
+    - name: Host
+      DataType: String
+      ValueType: FromLocal
+      Value: "UniqueKey"
+
+    - name: host
+      DataType: String
+      ValueType: FromLocal
+      Value: "UniqueKey"
+
+    - name: source_id
+      DataType: String
+      ValueType: FromLocal
+      Value: "UniqueKey"
+
+    - name: target
+      DataType: String
+      ValueType: FromLocal
+      Value: "UniqueKey"
+
+    - name: maxTime
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 199-1990
+
+    - name: requestCount
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 179-1796
+
+    - name: bytesSent
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 48122-481228
+
+    - name: bytesReceived
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 11620-116207
+
+    - name: processingTime
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 28869-288697
+
+    - name: ObjectName
+      DataType: String
+      ValueType: Constant
+      Value: Catalina:type=GlobalRequestProcessor,name="http-nio-18080"
+
+    - name: KeyPropertyListName
+      DataType: String
+      ValueType: Constant
+      Value: '"http-nio-18080"'
+
+    - name: KeyPropertyListType
+      DataType: String
+      ValueType: Constant
+      Value: GlobalRequestProcessor
+
+    - name: modelerType
+      DataType: String
+      ValueType: Constant
+      Value: org.apache.coyote.RequestGroupInfo
+
+    - name: vublock_name
+      DataType: String
+      ValueType: Constant
+      Value: ""
+
+    - name: Time
+      DataType: String
+      ValueType: Constant
+      Value: 2025-08-25T16:08:52.908+0530
+
+    - name: errorCount
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-1

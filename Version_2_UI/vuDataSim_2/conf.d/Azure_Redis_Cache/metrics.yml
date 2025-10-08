@@ -1,0 +1,128 @@
+group:
+- name: good
+  fields:
+  - name: fields,average
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 2096-20960
+  - name: fields,count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,maximum
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 2096-20960
+  - name: fields,minimum
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 2096-20960
+  - name: fields,timeStamp
+    DataType: String
+    ValueType: Constant
+    Value: '2025-09-02T07:44:00Z'
+  - name: fields,total
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 2096-20960
+
+  - name: name
+    DataType: String
+    ValueType: Enumeration
+    Value: "azure_monitor_microsoft_cache_redis_99th_percentile_latency:1.59,azure_monitor_microsoft_cache_redis_connected_clients__shard_0_:1.59,azure_monitor_microsoft_cache_redis_total_operations__shard_0_:1.59,azure_monitor_microsoft_cache_redis_cache_hits__shard_0_:1.59,azure_monitor_microsoft_cache_redis_cache_misses__shard_0_:1.59,azure_monitor_microsoft_cache_redis_gets__shard_0_:1.59,azure_monitor_microsoft_cache_redis_sets__shard_0_:1.59,azure_monitor_microsoft_cache_redis_operations_per_second__shard_0_:1.59,azure_monitor_microsoft_cache_redis_evicted_keys__shard_0_:1.59,azure_monitor_microsoft_cache_redis_total_keys__shard_0_:1.59,azure_monitor_microsoft_cache_redis_expired_keys__shard_0_:1.59,azure_monitor_microsoft_cache_redis_used_memory__shard_0_:1.59,azure_monitor_microsoft_cache_redis_used_memory_rss__shard_0_:1.59,azure_monitor_microsoft_cache_redis_server_load__shard_0_:1.59,azure_monitor_microsoft_cache_redis_cache_write__shard_0_:1.59,azure_monitor_microsoft_cache_redis_cache_read__shard_0_:1.59,azure_monitor_microsoft_cache_redis_cpu__shard_0_:1.59,azure_monitor_microsoft_cache_redis_connected_clients:1.59,azure_monitor_microsoft_cache_redis_connected_clients_using_microsoft_entra_token__instance_based___preview_:1.59,azure_monitor_microsoft_cache_redis_total_operations:1.59,azure_monitor_microsoft_cache_redis_cache_hits:1.59,azure_monitor_microsoft_cache_redis_cache_misses:1.59,azure_monitor_microsoft_cache_redis_cache_miss_rate:1.59,azure_monitor_microsoft_cache_redis_gets:1.59,azure_monitor_microsoft_cache_redis_sets:1.59,azure_monitor_microsoft_cache_redis_operations_per_second:1.59,azure_monitor_microsoft_cache_redis_evicted_keys:1.59,azure_monitor_microsoft_cache_redis_total_keys:1.59,azure_monitor_microsoft_cache_redis_expired_keys:1.59,azure_monitor_microsoft_cache_redis_used_memory:1.59,azure_monitor_microsoft_cache_redis_used_memory_percentage:1.59,azure_monitor_microsoft_cache_redis_used_memory_rss:1.59,azure_monitor_microsoft_cache_redis_server_load:1.59,azure_monitor_microsoft_cache_redis_cache_write:1.59,azure_monitor_microsoft_cache_redis_cache_read:1.59,azure_monitor_microsoft_cache_redis_cpu:1.59,azure_monitor_microsoft_cache_redis_cache_latency_microseconds__preview_:1.59,azure_monitor_microsoft_cache_redis_errors:1.59,azure_monitor_microsoft_cache_redis_connected_clients__instance_based_:1.59,azure_monitor_microsoft_cache_redis_total_operations___instance_based_:1.59,azure_monitor_microsoft_cache_redis_cache_hits__instance_based_:1.59,azure_monitor_microsoft_cache_redis_cache_misses__instance_based_:1.59,azure_monitor_microsoft_cache_redis_gets__instance_based_:1.59,azure_monitor_microsoft_cache_redis_sets__instance_based_:1.59,azure_monitor_microsoft_cache_redis_operations_per_second__instance_based_:1.59,azure_monitor_microsoft_cache_redis_evicted_keys__instance_based_:1.59,azure_monitor_microsoft_cache_redis_total_keys__instance_based_:1.59,azure_monitor_microsoft_cache_redis_expired_keys__instance_based_:1.59,azure_monitor_microsoft_cache_redis_used_memory__instance_based_:1.59,azure_monitor_microsoft_cache_redis_used_memory_percentage__instance_based_:1.59,azure_monitor_microsoft_cache_redis_used_memory_rss__instance_based_:1.59,azure_monitor_microsoft_cache_redis_server_load__instance_based_:1.59,azure_monitor_microsoft_cache_redis_cache_write__instance_based_:1.59,azure_monitor_microsoft_cache_redis_cache_read__instance_based_:1.59,azure_monitor_microsoft_cache_redis_cpu__instance_based_:1.59,azure_monitor_microsoft_cache_redis_connections_created_per_second__instance_based_:1.59,azure_monitor_microsoft_cache_redis_connections_closed_per_second__instance_based_:1.59"
+
+
+
+  - name: tags,host
+    DataType: String
+    ValueType: Constant
+    Value: telegraf-azure-redis-cache-1-1-1-1-f7976fd9-f5scv
+  - name: tags,namespace
+    DataType: String
+    ValueType: Constant
+    Value: Microsoft.Cache/Redis
+  - name: tags,resource_group
+    DataType: String
+    ValueType: Constant
+    Value: vunet-auto
+  - name: tags,resource_name
+    DataType: String
+    ValueType: Constant
+    Value: vunet
+  - name: tags,resource_region
+    DataType: String
+    ValueType: Constant
+    Value: centralindia
+  - name: tags,subscription_id
+    DataType: String
+    ValueType: Constant
+    Value: e9b87239-7fe2-42de-a1a9-b4ea97bc949b
+  - name: tags,unit
+    DataType: String
+    ValueType: Constant
+    Value: Count
+  - name: '@debug_metadata,data_stream'
+    DataType: String
+    ValueType: Constant
+    Value: azure-redis-cache-input
+  - name: fields,average
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 3766-37660
+  - name: fields,count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,maximum
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 3766-37660
+  - name: fields,minimum
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 3766-37660
+  - name: fields,timeStamp
+    DataType: String
+    ValueType: Constant
+    Value: '2025-09-02T07:44:00Z'
+  - name: fields,total
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 3766-37660
+  - name: tags,host
+    DataType: String
+    ValueType: Constant
+    Value: telegraf-azure-redis-cache-1-1-1-1-f7976fd9-f5scv
+  - name: tags,namespace
+    DataType: String
+    ValueType: Constant
+    Value: Microsoft.Cache/Redis
+  - name: tags,resource_group
+    DataType: String
+    ValueType: Constant
+    Value: vunet-auto
+  - name: tags,resource_name
+    DataType: String
+    ValueType: Constant
+    Value: vunet-redis2
+  - name: tags,resource_region
+    DataType: String
+    ValueType: Constant
+    Value: centralindia
+  - name: tags,subscription_id
+    DataType: String
+    ValueType: Constant
+    Value: e9b87239-7fe2-42de-a1a9-b4ea97bc949b
+  - name: tags,unit
+    DataType: String
+    ValueType: Constant
+    Value: Count
+  - name: '@debug_metadata,data_stream'
+    DataType: String
+    ValueType: Constant
+    Value: azure-redis-cache-input
+
+  - name: timestamp
+    DataType: Int64
+    ValueType: RandomRange
+    Value: 1741618500-1741618600

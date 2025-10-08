@@ -1,0 +1,90 @@
+group:
+- name: good
+  fields:
+  - name: fields,@timestamp
+    DataType: DateTime
+    ValueType: Current
+    Value: ISO_8601
+  - name: fields,period
+    DataType: Uint64
+    ValueType: FromLocal
+    Value: period
+  - name: fields,system_name
+    DataType: String
+    ValueType: RandomFixed
+    Value: "Cisco-Switch-\\d{2}"
+  - name: fields,system_description
+    DataType: String
+    ValueType: Constant
+    Value: Cisco IOS Software, 7200 Software (C7200-ADVIPSERVICESK9-M)
+  - name: fields,system_contact
+    DataType: String
+    ValueType: Constant
+    Value: 'info@vunetsystems.com '
+  - name: fields,system_location
+    DataType: String
+    ValueType: Constant
+    Value: Bengaluru
+  - name: fields,system_uptime
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 200-400
+  - name: name
+    DataType: String
+    ValueType: Constant
+    Value: system-details
+  - name: tags,bu_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: tags,index
+    DataType: String
+    ValueType: Constant
+    Value: '0'
+  - name: tags,host
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: tags,message_key
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: tags,src_host
+    DataType: String
+    ValueType: Constant
+    Value: '"nmspa-pr06"'
+  - name: tags,src_instance
+    DataType: String
+    ValueType: Constant
+    Value: telegraf-snmp-1-1-2
+  - name: tags,tenant_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: tags,type
+    DataType: String
+    ValueType: Constant
+    Value: snmp
+  - name: tags,data_type
+    DataType: String
+    ValueType: Constant
+    Value: system-details-data
+  - name: tags,vendor_name
+    DataType: String
+    ValueType: Constant
+    Value: cisco
+  - name: tags,device_type
+    DataType: String
+    ValueType: Constant
+    Value: l3switch
+  - name: tags,topic_of
+    DataType: String
+    ValueType: Constant
+    Value: snmp-generic-data
+
+output.kafka:
+  enabled: true
+  topic: "snmp-generic-data"
+
+output.file:
+  enabled: false

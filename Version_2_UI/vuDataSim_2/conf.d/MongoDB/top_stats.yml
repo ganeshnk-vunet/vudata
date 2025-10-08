@@ -1,0 +1,123 @@
+group:
+- name: good
+  fields:
+  - name: fields,commands_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10000
+  - name: fields,commands_time
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10000000
+  - name: fields,get_more_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10000
+  - name: fields,get_more_time
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10000000
+  - name: fields,insert_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10000
+  - name: fields,insert_time
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10000000
+  - name: fields,queries_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10000
+  - name: fields,queries_time
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10000000
+  - name: fields,read_lock_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10000
+  - name: fields,read_lock_time
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10000000
+  - name: fields,remove_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10000
+  - name: fields,remove_time
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10000000
+  - name: fields,total_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10000
+  - name: fields,total_time
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10000000
+  - name: fields,type
+    DataType: String
+    ValueType: Constant
+    Value: top_stat
+  - name: fields,update_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10000
+  - name: fields,update_time
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10000000
+  - name: fields,write_lock_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10000
+  - name: fields,write_lock_time
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10000000
+  - name: name
+    DataType: String
+    ValueType: Constant
+    Value: mongodb_top_stats
+  - name: tags,collection
+    DataType: String
+    ValueType: Constant
+    Value: config.system.sessions
+  - name: tags,db_name
+    DataType: String
+    ValueType: Constant
+    Value: local
+  - name: tags,host
+    DataType: String
+    ValueType: Constant
+    Value: telegraf-mongodb-1-1-1-1-649b8b6485-67r9r
+  - name: tags,hostname
+    DataType: String
+    ValueType: Constant
+    Value: 164.52.213.222:27018
+  - name: tags,interval
+    DataType: String
+    ValueType: Constant
+    Value: 60s
+  - name: tags,node_type
+    DataType: String
+    ValueType: Constant
+    Value: PRI
+  - name: tags,rs_name
+    DataType: String
+    ValueType: Constant
+    Value: rs0
+  - name: tags,topic_name
+    DataType: String
+    ValueType: Constant
+    Value: mongo-metrics-input
+  - name: tags,vublock_name
+    DataType: String
+    ValueType: Constant
+    Value: MongoDB
+  - name: timestamp
+    DataType: DateTime
+    ValueType: Current
+    Value: "epoch_in_seconds"

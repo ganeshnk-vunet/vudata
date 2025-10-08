@@ -1,0 +1,44 @@
+group:
+  - name: success
+    logfile: LogFormat.txt
+    fields:
+      - name: accessTime
+        DataType: DateTime
+        ValueType: Current
+        Value: datetime_clf
+      - name: accessMethod
+        DataType: String
+        ValueType: "Enumeration"
+        Value: "GET:90,POST:8,PUT:1,DELETE:1"
+      - name: remoteIP
+        DataType: IPv4
+        ValueType: RandomRange
+        Value: "192.168.10.1-192.168.10.255"
+      - name: accessURI
+        DataType: String
+        ValueType: "RandomRange"
+        Value: "/abcd/aa23/xyz_\\d{3}"
+      - name: respCode
+        DataType: Uint32
+        ValueType: "Enumeration"
+        Value: "200:90,404:5,403:2,500:3"
+      - name: bytes
+        DataType: Uint32
+        ValueType: "RandomRange"
+        Value: "100-3000"
+      - name: time
+        DataType: Uint32
+        ValueType: "RandomRange"
+        Value: "200-3000"
+
+output.kafka:
+  enabled: true
+  topic: "apache-logs-input" 
+
+output.file:
+  enabled: false
+  path: ./tmp/apache/
+  filename: access.log
+  rotate_every_mb: 1
+  max_files: 5    #Once the number of files have reached max_files limit, it will overwrite the 1st file
+

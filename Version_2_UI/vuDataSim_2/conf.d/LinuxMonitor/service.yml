@@ -1,0 +1,140 @@
+uniquekey:
+  # You can not override the key but you can create a new key in combination
+  # of previous and new ones. The following config will make sure that tool
+  # generate document for host and pid combination for each host IP & PID
+  name: system,service,name
+  DataType: String
+  ValueType: RandomFixed
+  Value: "grub-\\d{2}"
+  NumUniqKey: 1
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: '@metadata,beat'
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: '@metadata,type'
+    DataType: String
+    ValueType: Constant
+    Value: _doc
+  - name: '@metadata,version'
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.4
+  - name: process,exit_code
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: process,pid
+    DataType: Uint64
+    ValueType: RandomFixed
+    Value: 10000-30000
+  - name: metricset,name
+    DataType: String
+    ValueType: Constant
+    Value: service
+  - name: metricset,period
+    DataType: Uint64
+    ValueType: FromLocal
+    Value: period
+  - name: vublock_name
+    DataType: String
+    ValueType: Constant
+    Value: linux-monitor
+  - name: agent,type
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: agent,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.4
+  - name: agent,ephemeral_id
+    DataType: String
+    ValueType: Constant
+    Value: 8d589b57-d52d-4509-b66a-e2f742758bfb
+  - name: agent,id
+    DataType: String
+    ValueType: Constant
+    Value: 7bdf95c8-4046-41ed-9bd7-eb03ca9ddc74
+  - name: agent,name
+    DataType: String
+    ValueType: Constant
+    Value: e2e-97-245
+  - name: event,dataset
+    DataType: String
+    ValueType: Constant
+    Value: system.service
+  - name: event,module
+    DataType: String
+    ValueType: Constant
+    Value: system
+  - name: event,duration
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 30000-300000
+  - name: service,type
+    DataType: String
+    ValueType: Constant
+    Value: system
+  - name: system,service,load_state
+    DataType: String
+    ValueType: Constant
+    Value: loaded
+  - name: system,service,state
+    DataType: String
+    ValueType: Constant
+    Value: inactive
+  - name: system,service,sub_state
+    DataType: String
+    ValueType: Constant
+    Value: dead
+  - name: system,service,unit_file,state
+    DataType: String
+    ValueType: Constant
+    Value: enabled
+  - name: system,service,unit_file,vendor_preset
+    DataType: String
+    ValueType: Constant
+    Value: enabled
+  - name: system,service,exec_code
+    DataType: String
+    ValueType: Constant
+    Value: exited
+  - name: system,service,state_since
+    DataType: String
+    ValueType: Constant
+    Value: '2024-05-11T01:31:27.298Z'
+  - name: system,service,name
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey
+  - name: systemd,unit
+    DataType: String
+    ValueType: Constant
+    Value: grub-common.service
+  - name: systemd,fragment_path
+    DataType: String
+    ValueType: Constant
+    Value: /lib/systemd/system/grub-common.service
+  - name: topic_name
+    DataType: String
+    ValueType: Constant
+    Value: linux-monitor-input
+  - name: ecs,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.0.0

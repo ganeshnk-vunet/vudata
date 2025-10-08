@@ -1,0 +1,88 @@
+uniquekey:
+  # You can not override the key but you can create a new key in combination
+  # of previous and new ones. The following config will make sure that tool
+  # generate document for host and pid combination for each host IP & PID
+  name: fields,sql_instance
+  DataType: String
+  ValueType: RandomFixed
+  Value: "mssql-(21|22|23|24)"
+  NumUniqKey: 3
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: fields,db_buffer_MB
+    DataType: String
+    ValueType: RandomRange
+    Value: 1-10
+  - name: fields,db_buffer_bytes
+    DataType: String
+    ValueType: RandomRange
+    Value: 1771929-17719290
+  - name: fields,db_buffer_pages
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 216-2160
+  - name: fields,db_buffer_percent
+    DataType: String
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,measurement
+    DataType: String
+    ValueType: Constant
+    Value: mem-stats
+  - name: fields,metrics_group
+    DataType: String
+    ValueType: Constant
+    Value: query_analytics
+  - name: fields,query_type
+    DataType: String
+    ValueType: Constant
+    Value: mem-stats
+  - name: fields,server_name
+    DataType: String
+    ValueType: Constant
+    Value: mssql-500
+  - name: fields,sql_instance
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey
+  - name: fields,total_buffer
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 81636-816360
+  - name: name
+    DataType: String
+    ValueType: Constant
+    Value: mem-stats
+  - name: tags,host
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: tags,source_id
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: tags,src_host
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: tags,src_instance
+    DataType: String
+    ValueType: Constant
+    Value: mssql-polling-1-1-1-1
+  - name: tags,target
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey  

@@ -1,0 +1,299 @@
+uniquekey:
+    name: kubernetes,node,name
+    DataType: String
+    ValueType: RandomFixed
+    Value: "e2e-72-\\d{2}"
+    NumUniqKey: 5
+
+
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: '@metadata,beat'
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: '@metadata,type'
+    DataType: String
+    ValueType: Constant
+    Value: _doc
+  - name: '@metadata,version'
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.0
+  - name: metricset,period
+    DataType: Uint64
+    ValueType: FromLocal
+    Value: period
+  - name: metricset,name
+    DataType: String
+    ValueType: Constant
+    Value: node
+  - name: service,address
+    DataType: String
+    ValueType: Constant
+    Value: https://e2e-72-51:10250/stats/summary
+  - name: service,type
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes
+  - name: kubernetes,node,start_time
+    DataType: String
+    ValueType: Constant
+    Value: '2024-11-29T06:51:16Z'
+  - name: kubernetes,node,cpu,usage,core,ns
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 169409424367300-1694094243673000
+  - name: kubernetes,node,cpu,usage,nanocores
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 156310234-1563102340
+  - name: kubernetes,node,memory,pagefaults
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1202005625-12020056250
+  - name: kubernetes,node,memory,majorpagefaults
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 3089-30890
+  - name: kubernetes,node,memory,total,bytes
+    DataType: Uint64
+    ValueType: RandomFixed
+    Value: 74364903420    
+  - name: kubernetes,node,memory,available,bytes
+    DataType: Uint64
+    ValueType: EvaluatedValue
+    Value: "kubernetes,node,memory,total,bytes - kubernetes,node,memory,usage,bytes"
+  - name: kubernetes,node,memory,usage,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 7089993318-70899933180
+  - name: kubernetes,node,memory,workingset,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1992096153-19920961530
+  - name: kubernetes,node,memory,rss,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 720438886-7204388860
+  - name: kubernetes,node,fs,available,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 4491107532-44911075320
+  - name: kubernetes,node,fs,capacity,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 19363697868-193636978680
+  - name: kubernetes,node,fs,used,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 14870912614-148709126140
+  - name: kubernetes,node,fs,inodes,used
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 184427-1844270
+  - name: kubernetes,node,fs,inodes,free
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 2218644-22186440
+  - name: kubernetes,node,fs,inodes,count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 2403072-24030720
+  - name: kubernetes,node,runtime,imagefs,used,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 6197878784-61978787840
+  - name: kubernetes,node,runtime,imagefs,available,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 4491107532-44911075320
+  - name: kubernetes,node,runtime,imagefs,capacity,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 19363697868-193636978680
+  - name: kubernetes,node,name 
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey
+  - name: kubernetes,node,name
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey  
+  - name: kubernetes,node,network,tx,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 309619692266-3096196922660
+  - name: kubernetes,node,network,tx,errors
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: kubernetes,node,network,rx,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 117464404307-1174644043070
+  - name: kubernetes,node,network,rx,errors
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: kubernetes,labels,kurl_sh/cluster
+    DataType: String
+    ValueType: Boolean
+    Value: 'true'
+  - name: kubernetes,labels,node_longhorn_io/create-default-disk
+    DataType: String
+    ValueType: Constant
+    Value: config
+  - name: kubernetes,labels,kafka-connect
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,labels,minio-tenant
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,labels,node-role_kubernetes_io/master
+    DataType: String
+    ValueType: Constant
+    Value: ''
+  - name: kubernetes,labels,node-role_kubernetes_io/control-plane
+    DataType: String
+    ValueType: Constant
+    Value: ''
+  - name: kubernetes,labels,kubernetes_io/hostname
+    DataType: String
+    ValueType: Constant
+    Value: e2e-72-51
+  - name: kubernetes,labels,kubernetes_io/os
+    DataType: String
+    ValueType: Constant
+    Value: linux
+  - name: kubernetes,labels,beta_kubernetes_io/os
+    DataType: String
+    ValueType: Constant
+    Value: linux
+  - name: kubernetes,labels,mlflow
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,labels,notification
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,labels,worker
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,labels,scheduler
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,labels,keycloak
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,labels,syslog
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,labels,node_kubernetes_io/exclude-from-external-load-balancers
+    DataType: String
+    ValueType: Constant
+    Value: ''
+  - name: kubernetes,labels,vublock-o
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,labels,vublock
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,labels,generic
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,labels,redis
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,labels,TelegrafHeartbeat
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,labels,beta_kubernetes_io/arch
+    DataType: String
+    ValueType: Constant
+    Value: amd64
+  - name: kubernetes,labels,netflow
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,labels,kubernetes_io/arch
+    DataType: String
+    ValueType: Constant
+    Value: amd64
+  - name: kubernetes,labels,TelegrafSyslog
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,labels,webserver
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: kubernetes,labels,clickhouse
+    DataType: String
+    ValueType: Boolean
+    Value: 'True'
+  - name: cluster_identifiers
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: agent,name
+    DataType: String
+    ValueType: Constant
+    Value: e2e-72-51
+  - name: agent,type
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: agent,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.0
+  - name: agent,ephemeral_id
+    DataType: String
+    ValueType: Constant
+    Value: 1ee8363f-12d9-4cdd-8458-942893375560
+  - name: agent,id
+    DataType: String
+    ValueType: Constant
+    Value: f85f0f44-0533-4c81-9038-12c9701fcc85
+  - name: ecs,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.0.0
+  - name: event,dataset
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes.node
+  - name: event,module
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes
+  - name: event,duration
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 129074-1290740

@@ -1,0 +1,120 @@
+# -------------------------
+# vuDataSim Configuration
+# -------------------------
+uniquekey:
+  name: host
+  DataType: String
+  ValueType: RandomFixed
+  Value: 172.16.68.168
+  NumUniqKey: 1
+
+group:
+- name: good
+  fields:
+    # Standard metadata
+    - name: tenant_id
+      DataType: String
+      ValueType: Constant
+      Value: '1'
+
+    - name: Verbose
+      DataType: String
+      ValueType: Constant
+      Value: false
+
+    - name: vublock_name
+      DataType: String
+      ValueType: Constant
+      Value: ""
+
+    - name: Host
+      DataType: String
+      ValueType: FromLocal
+      Value: "UniqueKey"
+
+    - name: host
+      DataType: String
+      ValueType: FromLocal
+      Value: "UniqueKey"
+
+    - name: source_id
+      DataType: String
+      ValueType: FromLocal
+      Value: "UniqueKey"
+
+    - name: target
+      DataType: String
+      ValueType: FromLocal
+      Value: "UniqueKey"
+
+    - name: Time
+      DataType: DateTime
+      ValueType: Constant
+      Value: "2025-08-25T16:08:52.828+0530"
+
+    - name: KeyPropertyListType
+      DataType: String
+      ValueType: Constant
+      Value: "Memory"
+
+    - name: ObjectName
+      DataType: String
+      ValueType: Constant
+      Value: "java.lang:type=Memory"
+
+    - name: ObjectPendingFinalizationCount
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-0
+
+    # NonHeapMemoryUsage
+    - name: NonHeapMemoryUsage,init
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 766771-7667710
+
+    - name: NonHeapMemoryUsage,committed
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 18939904-189399040
+
+    - name: NonHeapMemoryUsage,max
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 1-10
+
+    - name: NonHeapMemoryUsage,used
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 18478002-184780024
+
+    - name: bu_id
+      DataType: String
+      ValueType: Constant
+      Value: '1'
+
+    # HeapMemoryUsage
+    - name: HeapMemoryUsage,init
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 48234496-482344960
+
+    - name: HeapMemoryUsage,committed
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 20132659-201326592
+
+    - name: HeapMemoryUsage,max
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 770074214-7700742144
+
+    - name: HeapMemoryUsage,used
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 13894297-138942976
+
+    - name: application_name
+      DataType: String
+      ValueType: Constant
+      Value: IBMB

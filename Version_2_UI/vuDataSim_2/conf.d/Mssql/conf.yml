@@ -1,0 +1,87 @@
+enabled: true
+uniquekey:
+  name: "host"
+  DataType: IPv4
+  ValueType: "RandomFixed"
+  Value: "10.10.10.1"
+  NumUniqKey: 509
+period: 1s
+
+output.kafka:
+  enabled: true
+  topic: "mssql-telegraf"
+
+# Add the timestamp field name and type. Type could be epoch_in_seconds, epoch_in_ms or datetime_rfc3339
+timestamp:
+  name: timestamp
+  type: epoch_in_seconds
+
+output.file:
+  path: ./tmp/mssql-monitring
+  filename: mssql_telegraf.json
+  rotate_every_mb: 1
+  max_files: 5 #Once the number of files have reached max_files limit, it will overwrite the 1st file
+
+# Include following yml files from this directory.. To include all, please use ‘*’
+Include_sub_modules:
+  [
+    cpu_Stats,
+    db_uptime,
+    hard_cluster,
+    hard_cluster_member,
+    mem_stats,
+    session_details,
+    sql_server_performance_Full_Scans_sec,
+    sql_server_volume_space,
+    sqlserver_cpu,
+    sqlserver_database_io,
+    sqlserver_memory_clerks_1_SOS Node,
+    sqlserver_memory_clerks_2_SQL Storage Engine,
+    sqlserver_memory_clerks_3_SQL Plans,
+    sqlserver_memory_clerks_4_Schema Manager _User Store_,
+    sqlserver_memory_clerks_5_SQL Reservations,
+    sqlserver_memory_clerks_6_Log Pool,
+    sqlserver_memory_clerks_7_SQL Plans,
+    sqlserver_performance_10_Data File_s_ Size _KB_,
+    sqlserver_performance_11_Active Transactions,
+    sqlserver_performance_12_Page life expectancy,
+    sqlserver_performance_13_Log Flush Wait Time_Total,
+    sqlserver_performance_13_Log Flush Wait Time_master,
+    sqlserver_performance_13_Log Flush Wait Time_msdb,
+    sqlserver_performance_14_Transactions_sec,
+    sqlserver_performance_15_Log File_s_ Used Size _KB_,
+    sqlserver_performance_16_Log File_s_ Size _KB_,
+    sqlserver_performance_17_Log Flushes_sec_master,
+    sqlserver_performance_17_Log Flushes_sec_msdb,
+    sqlserver_performance_17_Log Flushes_sec_total,
+    sqlserver_performance_18_User Connections,
+    sqlserver_performance_19_Logouts_sec,
+    sqlserver_performance_20_Logins_sec,
+    sqlserver_performance_20_Number of Deadlocks_sec,
+    sqlserver_performance_21_Lock Waits_sec,
+    sqlserver_performance_22_Lock Timeouts_sec,
+    sqlserver_performance_23_Lock Timeouts _timeout _ 0__sec,
+    sqlserver_performance_24_Target Server Memory _KB_,
+    sqlserver_performance_25_Total Server Memory _KB_,
+    sqlserver_performance_26_CPU usage _,
+    sqlserver_performance_27_Used memory _KB_,
+    sqlserver_performance_28_Errors_sec,
+    sqlserver_performance_29_Batch Requests_sec,
+    sqlserver_performance_2_Page_Splits_sec,
+    sqlserver_performance_30_CPU usage _,
+    sqlserver_performance_31_Query,
+    sqlserver_performance_32_SQL Re-Compilations_sec,
+    sqlserver_performance_33_SQL Compilations_sec,
+    sqlserver_performance_3_Buffer_cache_hit_ratio,
+    sqlserver_performance_4_Lazy_writes_sec,
+    sqlserver_performance_5_Page_life_expectancy,
+    sqlserver_performance_6_Page_lookups_sec,
+    sqlserver_performance_7_Page_reads_sec,
+    sqlserver_performance_8_Page_writes_sec,
+    sqlserver_performance_9_Log_Bytes_Flushed_sec_master,
+    sqlserver_performance_9_Log_Bytes_flushed_sec_msdb,
+    sqlserver_performance_9_Log_Bytes_flushed_sec_total,
+    sqlserver_recent_backup,
+    sqlserver_request,
+    sqlserver_wait_stats,
+  ]

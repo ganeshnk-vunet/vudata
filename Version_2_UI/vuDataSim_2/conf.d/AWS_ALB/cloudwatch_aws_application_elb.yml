@@ -1,0 +1,128 @@
+group:
+- name: good
+  fields:
+  - name: fields,active_connection_count_maximum
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,active_connection_count_sum
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,http_code_elb_4xx_count_sum
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,http_code_elb_503_count_sum
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,http_code_elb_5xx_count_sum
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,new_connection_count_sum
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,processed_bytes_sum
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 279-2790
+  - name: fields,request_count_sum
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,request_count_per_target_sum
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,anomalous_host_count_maximum
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: fields,anomalous_host_count_sum
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: fields,healthy_host_count_minimum
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: fields,healthy_state_dns_minimum
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: fields,healthy_state_routing_minimum
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: fields,mitigated_host_count_maximum
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: fields,mitigated_host_count_sum
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: fields,un_healthy_host_count_maximum
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: fields,unhealthy_state_dns_maximum
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: fields,unhealthy_state_routing_maximum
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: fields,http_code_target_2xx_count_sum
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,http_code_target_4xx_count_sum
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,target_response_time_average
+    DataType: Float64
+    ValueType: RandomRange
+    Value: 0.0001-0.01
+  - name: fields,target_response_time_maximum
+    DataType: Float64
+    ValueType: RandomRange
+    Value: 0.0001-0.01
+  - name: name
+    DataType: String
+    ValueType: Constant
+    Value: cloudwatch_aws_application_elb
+  - name: tags,host
+    DataType: String
+    ValueType: Constant
+    Value: telegraf-aws-alb-1-1-1-1-86584cf76c-pqwcg
+  - name: tags,interval
+    DataType: String
+    ValueType: Constant
+    Value: '5'
+  - name: tags,load_balancer
+    DataType: String
+    ValueType: Constant
+    Value: app/docker-app-alb/ed92117e029a52fa
+  - name: tags,o11ysource_name
+    DataType: String
+    ValueType: Constant
+    Value: AWS ALB
+  - name: tags,region
+    DataType: String
+    ValueType: Constant
+    Value: us-east-1
+  - name: tags,topic_name
+    DataType: String
+    ValueType: Constant
+    Value: aws-alb-metrics-input
+  - name: tags,target_group
+    DataType: String
+    ValueType: Constant
+    Value: targetgroup/docker-app-tg/1ce8a53ccf9e056c
+
