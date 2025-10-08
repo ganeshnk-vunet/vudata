@@ -1,0 +1,204 @@
+group:
+- name: good
+  fields:
+  - name: attributes,db.connection_string
+    DataType: String
+    ValueType: Constant
+    Value: mysql://localhost:3306
+  - name: attributes,db.name
+    DataType: String
+    ValueType: Constant
+    Value: internet_banking
+  - name: attributes,db.operation
+    DataType: String
+    ValueType: Constant
+    Value: SELECT
+  - name: attributes,db.sql.table
+    DataType: String
+    ValueType: Constant
+    Value: internet_banking
+  - name: attributes,db.statement
+    DataType: String
+    ValueType: Constant
+    Value: select * from `internet_banking`.`users` where ?=?
+  - name: attributes,db.system
+    DataType: String
+    ValueType: Constant
+    Value: mysql
+  - name: attributes,db.user
+    DataType: String
+    ValueType: Constant
+    Value: root
+  - name: attributes,destination
+    DataType: String
+    ValueType: Constant
+    Value: mysql
+  - name: attributes,instrumentation_library_name
+    DataType: String
+    ValueType: Constant
+    Value: io.opentelemetry.jdbc
+  - name: attributes,library
+    DataType: String
+    ValueType: Constant
+    Value: mysql
+  - name: attributes,server.address
+    DataType: String
+    ValueType: Constant
+    Value: localhost
+  - name: attributes,server.port
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 330-3300
+  - name: attributes,service
+    DataType: String
+    ValueType: Constant
+    Value: ibmb-api
+  - name: attributes,site
+    DataType: String
+    ValueType: Constant
+    Value: default
+  - name: attributes,thread.id
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: attributes,thread.name
+    DataType: String
+    ValueType: Constant
+    Value: main
+  - name: durationNano
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 308121-3081210
+  - name: is_root_span
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: resource,application
+    DataType: String
+    ValueType: Constant
+    Value: IBMB
+  - name: resource,env
+    DataType: String
+    ValueType: Constant
+    Value: PROD
+  - name: resource,host.name
+    DataType: String
+    ValueType: Constant
+    Value: e2e-97-237
+  - name: resource,service.name
+    DataType: String
+    ValueType: Constant
+    Value: ibmb-api
+  - name: spanId
+    DataType: String
+    ValueType: Constant
+    Value: 36531174dff3dd15
+  - name: span_end_time
+    DataType: String
+    ValueType: Constant
+    Value: '2025-08-28T07:13:12.476473865Z'
+  - name: span_kind
+    DataType: String
+    ValueType: Constant
+    Value: SPAN_KIND_CLIENT
+  - name: span_name
+    DataType: String
+    ValueType: Constant
+    Value: SELECT internet_banking.internet_banking
+  - name: span_start_time
+    DataType: String
+    ValueType: Constant
+    Value: '2025-08-28T07:13:12.473392648Z'
+  - name: status,code
+    DataType: String
+    ValueType: Constant
+    Value: Unset
+  - name: traceId
+    DataType: String
+    ValueType: Constant
+    Value: e50c67fa508fd8821f57634719109d65
+  - name: parentSpanId
+    DataType: String
+    ValueType: Constant
+    Value: ''
+  - name: timestamp
+    DataType: String
+    ValueType: Constant
+    Value: '2025-08-28T07:13:12.476473865Z'
+  - name: attributes,http.method
+    DataType: String
+    ValueType: Constant
+    Value: GET
+  - name: attributes,http.request.method
+    DataType: String
+    ValueType: Constant
+    Value: GET
+  - name: attributes,http.response.status_code
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 200-500
+  - name: attributes,http.status_code
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 200-500
+  - name: attributes,network.protocol.version
+    DataType: String
+    ValueType: Constant
+    Value: '1.1'
+  - name: attributes,server.port
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 80-8080
+  - name: attributes,url.full
+    DataType: String
+    ValueType: Constant
+    Value: http://localhost:4000/ifsc/DENB954682
+  - name: attributes,span_name
+    DataType: String
+    ValueType: Constant
+    Value: GET /ibmb/accounts/{number}/balance
+  - name: attributes,span_kind
+    DataType: String
+    ValueType: Constant
+    Value: SPAN_KIND_SERVER
+  - name: attributes,spanId
+    DataType: String
+    ValueType: Constant
+    Value: d590c640f29e3248
+  - name: attributes,traceId
+    DataType: String
+    ValueType: Constant
+    Value: 57b8b8b9da61529f3c1e7d7e70b5f754
+  - name: attributes,span_start_time
+    DataType: String
+    ValueType: Constant
+    Value: '2025-08-28T07:13:14.145145075Z'
+  - name: attributes,span_end_time
+    DataType: String
+    ValueType: Constant
+    Value: '2025-08-28T07:13:15.019907916Z'
+  - name: attributes,span_kind
+    DataType: String
+    ValueType: Constant
+    Value: SPAN_KIND_SERVER
+  - name: attributes,span_name
+    DataType: String
+    ValueType: Constant
+    Value: GET /ibmb/accounts/{number}/balance
+  - name: resource,application
+    DataType: String
+    ValueType: Constant
+    Value: IBMB
+  - name: resource,env
+    DataType: String
+    ValueType: Constant
+    Value: PROD
+  - name: resource,host.name
+    DataType: String
+    ValueType: Constant
+    Value: e2e-97-237
+  - name: resource,service.name
+    DataType: String
+    ValueType: Constant
+    Value: ibmb-api
+

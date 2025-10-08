@@ -1,0 +1,145 @@
+uniquekey:
+  # You can not override the key but you can create a new key in combination
+  # of previous and new ones. The following config will make sure that tool
+  # generate document for host and pid combination for each host IP & PID
+  name: system,network,name
+  DataType: String
+  ValueType: RandomFixed
+  Value: "ether-\\d{2}"
+  NumUniqKey: 1
+
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: '@metadata,beat'
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: '@metadata,type'
+    DataType: String
+    ValueType: Constant
+    Value: _doc
+  - name: '@metadata,version'
+    DataType: String
+    ValueType: Constant
+    Value: 8.12.2
+  - name: metricset,name
+    DataType: String
+    ValueType: Constant
+    Value: network
+  - name: metricset,period
+    DataType: Uint64
+    ValueType: "FromLocal"
+    Value: "period"
+  - name: bu_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: tenant_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: vublock_name
+    DataType: String
+    ValueType: Constant
+    Value: linux-monitor
+  - name: topic_name
+    DataType: String
+    ValueType: Constant
+    Value: linux-monitor-input
+  - name: source_id
+    DataType: String
+    ValueType: Constant
+    Value: 172.16.102.231
+  - name: event,dataset
+    DataType: String
+    ValueType: Constant
+    Value: system.network
+  - name: event,module
+    DataType: String
+    ValueType: Constant
+    Value: system
+  - name: event,duration
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 10000-100000
+  - name: service,type
+    DataType: String
+    ValueType: Constant
+    Value: system
+  - name: agent,ephemeral_id
+    DataType: String
+    ValueType: Constant
+    Value: 5ae03f0f-8a1a-4de2-aea4-eeb28fba67a3
+  - name: agent,id
+    DataType: String
+    ValueType: Constant
+    Value: b17f5610-6c0e-418d-a090-cc50ecaf7439
+  - name: agent,name
+    DataType: String
+    ValueType: Constant
+    Value: e2e-68-106
+  - name: agent,type
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: agent,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.12.2
+  - name: ecs,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.0.0
+  - name: system,network,out,bytes
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 10000-1000000
+  - name: system,network,out,errors
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 0-10
+  - name: system,network,out,dropped
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: system,network,out,packets
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 1000-10000
+  - name: system,network,name
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey
+  - name: system,network,speed
+    DataType: Uint64
+    ValueType: Constant
+    Value: 100
+  - name: system,network,in,errors
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 0-10
+  - name: system,network,in,dropped
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: system,network,in,bytes
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 100000-1000000
+  - name: system,network,in,packets
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 1000-10000

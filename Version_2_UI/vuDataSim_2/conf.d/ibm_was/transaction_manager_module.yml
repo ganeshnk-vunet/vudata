@@ -1,0 +1,75 @@
+uniquekey:
+  # Unique key will be based on host IP and connection pool name to ensure that each entry is distinct.
+  name: host,Name
+  DataType: String
+  ValueType: RandomFixed
+  Value: "Application_Server\\d{1}"
+  NumUniqKey: 5
+  
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: Node
+    DataType: String
+    ValueType: RandomFixed
+    Value: "e2e-82-222Node\\d{2}"
+  - name: ServerIP
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: Host
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: Time
+    DataType: DateTime
+    ValueType: Current
+    Value: datetime_rfc3339
+  - name: Process
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey
+  - name: Name
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey
+  - name: ProcessType
+    DataType: String
+    ValueType: Constant
+    Value: ManagedProcess
+  - name: RolledbackCount
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: CommittedCount
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1-10
+  - name: HostDisplayName
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: StatisticType
+    DataType: String
+    ValueType: Constant
+    Value: transactionModule
+  - name: ActiveCount
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: Cell
+    DataType: String
+    ValueType: RandomFixed
+    Value: "e2e-82-222Cell\\d{2}"

@@ -1,0 +1,83 @@
+uniquekey:
+  # Unique key will be based on host IP and connection pool name to ensure that each entry is distinct.
+  name: host,Name
+  DataType: String
+  ValueType: RandomFixed
+  Value: "Application-Server\\d{2}"
+  NumUniqKey: 5
+
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: Node
+    DataType: String
+    ValueType: RandomFixed
+    Value: "e2e-82-222Node\\d{2}"
+  - name: ServerIP
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: Host
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: Time
+    DataType: DateTime
+    ValueType: Current
+    Value: datetime_rfc3339
+  - name: Process
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey
+  - name: Name
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey
+  - name: FreeMemory
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1029-10290
+  - name: ProcessCpuUsage
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: ProcessType
+    DataType: String
+    ValueType: Constant
+    Value: NodeAgent
+  - name: HeapSize_current
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 7417-74170
+  - name: UsedMemory
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 6388-63880
+  - name: HostDisplayName
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: UpTime
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 36051-360510
+  - name: StatisticType
+    DataType: String
+    ValueType: Constant
+    Value: jvmRuntimeModule
+  - name: Cell
+    DataType: String
+    ValueType: RandomFixed
+    Value: "e2e-82-222Cell\\d{2}"

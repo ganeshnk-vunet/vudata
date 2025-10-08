@@ -1,0 +1,32 @@
+group:
+  - name: success
+    logfile: /home/dell/Documents/vuDataSim/vuDataSim-Add-support-for-Logs-generation-2/conf.d/exampleLogs/LogFormat.txt # Log format Path
+    fields:
+      - name: txnType
+        DataType: String
+        ValueType: "Constant"
+        Value: "Debit"
+      - name: bytes
+        DataType: Float32
+        ValueType: "RandomRange"
+        Value: "0.01-0.1"
+      - name: clientIP
+        DataType: String
+        ValueType: "Constant"
+        Value: "10.10.10.1"
+      - name: amount
+        DataType: Uint32
+        ValueType: "RandomRange"
+        Value: "200-20000"
+      - name: txnId
+        DataType: Float32
+        ValueType: "RandomRange"
+        Value: "100-10000"
+      - name: destAccount
+        DataType: Float32
+        ValueType: "RandomRange"
+        Value: "1000-2000"
+      - name: respCode
+        DataType: Uint32
+        ValueType: "Constant"
+        Value: "200"

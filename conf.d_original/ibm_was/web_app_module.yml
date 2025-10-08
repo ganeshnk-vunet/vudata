@@ -1,0 +1,91 @@
+uniquekey:
+  # Unique key will be based on host IP and connection pool name to ensure that each entry is distinct.
+  name: host,Name
+  DataType: String
+  ValueType: RandomFixed
+  Value: "Application_Server\\d{1}"
+  NumUniqKey: 5
+
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: webAppModule.servlets.responseTime_mean
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 12-120
+  - name: Node
+    DataType: String
+    ValueType: RandomFixed
+    Value: "e2e-82-222Node\\d{2}"
+  - name: ServerIP
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: Host
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: Time
+    DataType: DateTime
+    ValueType: Current
+    Value: datetime_rfc3339
+  - name: Process
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey
+  - name: webAppModule.servlets.responseTime_min
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 4-40
+  - name: Name
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey
+  - name: ProcessType
+    DataType: String
+    ValueType: Constant
+    Value: ManagedProcess
+  - name: StatisticSubTypeLevel2
+    DataType: String
+    ValueType: Constant
+    Value: webAppModule.servlets
+  - name: webAppModule.servlets.totalRequests
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 21-210
+  - name: HostDisplayName
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: webAppModule.servlets.responseTime_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 12-120
+  - name: StatisticType
+    DataType: String
+    ValueType: Constant
+    Value: webAppModule
+  - name: StatisticSubTypeLevel1
+    DataType: String
+    ValueType: RandomFixed
+    Value: "DefaultApplication.ear#DefaultWebApplication.war\\d{2}"
+  - name: Cell
+    DataType: String
+    ValueType: RandomFixed
+    Value: "e2e-82-222Cell\\d{2}"
+  - name: webAppModule.servlets.responseTime_max
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 39-390

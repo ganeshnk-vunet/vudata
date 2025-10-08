@@ -1,0 +1,122 @@
+group:
+- name: good
+  fields:
+  - name: level
+    DataType: String
+    ValueType: Constant
+    Value: info
+
+  - name: message,Event,AppName
+    DataType: String
+    ValueType: Constant
+    Value: vuBank
+
+  - name: message,Event,Custom_Data,Event_Status
+    DataType: String
+    ValueType: Constant
+    Value: ''
+
+  - name: message,Event,Custom_Data,Module
+    DataType: String
+    ValueType: Constant
+    Value: ''
+
+  - name: message,Event,Detail
+    DataType: String
+    ValueType: Constant
+    Value: Browser closed and test completed
+
+  - name: message,Event,Environment
+    DataType: String
+    ValueType: Constant
+    Value: Prod
+
+  - name: message,Event,Error_Code
+    DataType: String
+    ValueType: Constant
+    Value: ''
+
+  - name: message,Event,Error_Description
+    DataType: String
+    ValueType: Constant
+    Value: ''
+
+  - name: message,Event,Global_Identifier
+    DataType: String
+    ValueType: RandomFixed
+    Value: uuid
+
+  - name: message,Event,Header
+    DataType: String
+    ValueType: Constant
+    Value: Completion
+
+  - name: message,Event,Location
+    DataType: String
+    ValueType: Constant
+    Value: India
+
+  - name: message,Event,Metrics
+    DataType: Object
+    ValueType: Constant
+    Value: "{}"
+
+  - name: message,Event,Name
+    DataType: String
+    ValueType: Constant
+    Value: VuMaps-AccountTransfer-To-Rahjesh
+
+  - name: message,Event,Screenshot
+    DataType: String
+    ValueType: Constant
+    Value: ''
+
+  - name: message,Event,ServerName
+    DataType: String
+    ValueType: Constant
+    Value: E2E-Dev-Staging
+
+  - name: message,Event,Span_Identifier
+    DataType: String
+    ValueType: RandomFixed
+    Value: uuid
+
+  - name: message,Event,Step_No
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+
+  - name: message,Event,SubType
+    DataType: String
+    ValueType: Constant
+    Value: ''
+
+  - name: message,Event,TimeZone
+    DataType: String
+    ValueType: Constant
+    Value: Asia/Calcutta
+
+  - name: message,Event,Timestamp
+    DataType: DateTime
+    ValueType: Current
+    Value: datetime_rfc3339
+
+  - name: message,Event,Trace_Identifier
+    DataType: String
+    ValueType: RandomFixed
+    Value: uuid
+
+  - name: message,Event,Type
+    DataType: String
+    ValueType: Constant
+    Value: ''
+
+  - name: message,Event,URLNavigated
+    DataType: String
+    ValueType: Constant
+    Value: http://vubank2.vunetsystems.com/login
+
+  - name: timestamp
+    DataType: DateTime
+    ValueType: Current
+    Value: datetime_rfc3339

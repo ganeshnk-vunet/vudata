@@ -1,0 +1,144 @@
+uniquekey:
+  # You can not override the key but you can create a new key in combination
+  # of previous and new ones. The following config will make sure that tool
+  # generate document for host and pid combination for each host IP & PID
+  name: fields,name
+  DataType: String
+  ValueType: RandomFixed
+  Value: "ether-\\d{2}"
+  NumUniqKey: 1
+
+group:
+- name: good
+  fields:
+  - name: fields,@timestamp
+    DataType: DateTime
+    ValueType: Current
+    Value: ISO_8601
+  - name: fields,if_admin_status
+    DataType: String
+    ValueType: Constant
+    Value: UP
+  - name: fields,if_description
+    DataType: String
+    ValueType: RandomFixed
+    Value: "port-\\d{2}"
+  - name: fields,if_alias
+    DataType: String
+    ValueType: EvaluatedValue
+    Value: fields,if_description
+  - name: fields,if_index
+    DataType: Uint32
+    ValueType: RandomFixed
+    Value: 1-100
+  - name: fields,in_dropped
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 0-100
+  - name: fields,in_errors
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 0-100
+  - name: fields,in_octet_32
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 5000-50000
+  - name: fields,in_octets
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 5000-50000
+  - name: fields,interface_status
+    DataType: String
+    ValueType: Constant
+    Value: UP
+  - name: fields,name
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey
+  - name: fields,out_dropped
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 0-100
+  - name: fields,out_errors
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 0-100
+  - name: fields,out_octet_32
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 5000-50000
+  - name: fields,out_octets
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 5000-50000
+  - name: fields,period
+    DataType: Uint64
+    ValueType: FromLocal
+    Value: period
+  - name: fields,speed
+    DataType: Uint64
+    ValueType: Constant
+    Value: 100000
+  - name: fields,system_name
+    DataType: String
+    ValueType: RandomFixed
+    Value: "Cisco-Switch-\\d{2}"
+  - name: fields,ip_address
+    DataType: IPv4
+    ValueType: RandomFixed
+    Value: 10.0.0.1-10.0.0.255
+  - name: name
+    DataType: String
+    ValueType: Constant
+    Value: interface-health-data
+  - name: tags,bu_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: tags,host
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: tags,index
+    DataType: String
+    ValueType: Constant
+    Value: '2'
+  - name: tags,message_key
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: tags,src_host
+    DataType: String
+    ValueType: Constant
+    Value: "nmspa-pr06"
+  - name: tags,src_instance
+    DataType: String
+    ValueType: Constant
+    Value: telegraf-snmp-1-1-2
+  - name: tags,tenant_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: tags,type
+    DataType: String
+    ValueType: Constant
+    Value: snmp
+  - name: tags,data_type
+    DataType: String
+    ValueType: Constant
+    Value: interface-health-data
+  - name: tags,vendor_name
+    DataType: String
+    ValueType: Constant
+    Value: cisco
+  - name: tags,device_type
+    DataType: String
+    ValueType: Constant
+    Value: l3switch
+
+output.kafka:
+  enabled: true
+  topic: "snmp-generic-data"
+
+output.file:
+  enabled: false

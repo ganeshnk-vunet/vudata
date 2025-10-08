@@ -1,0 +1,30 @@
+enabled: true
+uniquekey:
+  name: "host"
+  DataType: IPv4
+  ValueType: "RandomFixed"
+  Value: 10.10.10.1
+  NumUniqKey: 60000
+
+period: 1s
+
+# Add the timestamp field name and type. Type could be epoch_in_seconds, epoch_in_ms or datetime_rfc3339
+# timestamp:
+#   name: "@timestamp"
+#   type: datetime_rfc3339
+
+output.kafka:
+  enabled: true
+  topic: "synthetic-browserjourney-monitoring-insights"
+
+output.file:
+  enabled: false
+  path: ./tmp/synthetic-browserjourney-monitoring-insights
+  filename: synthetic-browserjourney-monitoring-insights.json
+  rotate_every_mb: 1
+  max_files: 5 #Once the number of files have reached max_files limit, it will overwrite the 1st file
+
+# Include following yml files from this directory
+Include_sub_modules: [
+  metrics
+]

@@ -1,0 +1,120 @@
+uniquekey:
+  name: host
+  DataType: String
+  ValueType: RandomFixed
+  Value: 172.16.68.168
+  NumUniqKey: 1
+
+
+group:
+- name: good
+  fields:
+    - name: tenant_id
+      DataType: String
+      ValueType: Constant
+      Value: '1'
+
+    - name: vublock_name
+      DataType: String
+      ValueType: Constant
+      Value: ''
+
+    - name: Host
+      DataType: String
+      ValueType: Constant
+      Value: 172.16.68.168
+
+    - name: memoryBeforeGc,0,init
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 255590-2555900
+
+    - name: memoryBeforeGc,0,committed
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 3814195-38141950
+
+    - name: memoryBeforeGc,0,max
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 12290867-122908670
+
+    - name: memoryBeforeGc,0,used
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 3588121-35881210
+
+    - name: memoryUsageAfterGc,0,init
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 255590-2555900
+
+    - name: memoryUsageAfterGc,0,committed
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 3814195-38141950
+
+    - name: memoryUsageAfterGc,0,max
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 12290867-122908670
+
+    - name: memoryUsageAfterGc,0,used
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 3588121-35881210
+
+    - name: KeyPropertyListType
+      DataType: String
+      ValueType: Constant
+      Value: GarbageCollector_MemoryUsage
+
+    - name: gcStartTimestamp
+      DataType: String
+      ValueType: Constant
+      Value: 2025-08-25T16:08:52.849+0530
+
+    - name: gcEndTimestamp
+      DataType: String
+      ValueType: Constant
+      Value: 2025-08-25T16:08:52.852+0530
+
+    - name: ObjectName
+      DataType: String
+      ValueType: Constant
+      Value: java.lang:name=G1 Young Generation,type=GarbageCollector
+
+    - name: target
+      DataType: String
+      ValueType: Constant
+      Value: 172.16.68.168
+
+    - name: application_name
+      DataType: String
+      ValueType: Constant
+      Value: IBMB
+
+    - name: host
+      DataType: String
+      ValueType: Constant
+      Value: 172.16.68.168
+
+    - name: KeyPropertyListName
+      DataType: String
+      ValueType: Constant
+      Value: G1 Young Generation
+
+    - name: MemoryPoolName
+      DataType: String
+      ValueType: Constant
+      Value: CodeHeap 'profiled nmethods'
+
+    - name: source_id
+      DataType: String
+      ValueType: Constant
+      Value: 172.16.68.168
+
+    - name: bu_id
+      DataType: String
+      ValueType: Constant
+      Value: '1'

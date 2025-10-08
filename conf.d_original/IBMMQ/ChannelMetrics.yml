@@ -1,0 +1,231 @@
+group:
+- name: good
+  fields:
+  - name: Port
+    DataType: String
+    ValueType: Constant
+    Value: '1721'
+  - name: MQIACH_LONG_RETRIES_LEFT
+    DataType: Uint64
+    ValueType: Constant
+    Value: 99999999
+  - name: ChannelStatus
+    DataType: Uint64
+    ValueType: Constant
+    Value: 3
+  - name: MQIACH_STOP_REQUESTED
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: MQIACH_EXIT_TIME_INDICATOR
+    DataType: String
+    ValueType: Constant
+    Value: "[0,0]"
+  - name: MQIACH_NETWORK_TIME_INDICATOR
+    DataType: String
+    ValueType: Constant
+    Value: "[0,0]"
+  - name: ChannelStartTime
+    DataType: String
+    ValueType: Constant
+    Value: 00.03.00
+  - name: MQIACH_BATCH_SIZE
+    DataType: Uint64
+    ValueType: Constant
+    Value: 50
+  - name: BuffersSent
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 20-2000000
+  - name: MQIACH_MCA_STATUS
+    DataType: Uint64
+    ValueType: Constant
+    Value: 3
+  - name: MQCACH_LOCAL_ADDRESS
+    DataType: String
+    ValueType: Constant
+    Value: 10.192.26.21(57788)
+  - name: MQIACH_SHORT_RETRIES_LEFT
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: MQIACH_BYTES_RCVD/MQIACH_BYTES_RECEIVED
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 20000-20000000
+  - name: Messages
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-500000
+  - name: QmgrName
+    DataType: String
+    ValueType: Constant
+    Value: CCFDCP1
+  - name: MQIACH_CURRENT_MSGS
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: MQCACH_LAST_LUWID
+    DataType: String
+    ValueType: Constant
+    Value: '0000000000000000'
+  - name: MQCACH_SSL_CERT_ISSUER_NAME
+    DataType: String
+    ValueType: Constant
+    Value: ""
+  - name: ChannelName
+    DataType: String
+    ValueType: Enumeration
+    Value: "CCFDCP1.TO.RBLCCP01:25,CCFDCP1.CHL:25,CCFDCP2.CHL:25,RBLCC01.CCAPPQMGRU12:25"
+  - name: MQCACH_SSL_KEY_RESET_DATE
+    DataType: String
+    ValueType: Constant
+    Value: ""
+  - name: MQIACH_CURRENT_SEQ_NUMBER/MQIACH_CURRENT_SEQUENCE_NUMBER
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-2000000
+  - name: StatisticType
+    DataType: String
+    ValueType: Constant
+    Value: ChannelMetrics
+  - name: MQIACH_CHANNEL_INSTANCE_TYPE
+    DataType: Uint64
+    ValueType: Constant
+    Value: 1011
+  - name: LastMessageTime
+    DataType: String
+    ValueType: Constant
+    Value: 02.53.35
+  - name: BytesSent
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 10000-20000000
+  - name: MQIACH_NPM_SPEED
+    DataType: Uint64
+    ValueType: Constant
+    Value: 2
+  - name: MQIACH_LAST_SEQ_NUMBER/MQIACH_LAST_SEQUENCE_NUMBER
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: MQIACH_MSG_COMPRESSION
+    DataType: String
+    ValueType: Constant
+    Value: "[0,0]"
+  - name: ChannelStartDate
+    DataType: String
+    ValueType: Constant
+    Value: '2025-09-09'
+  - name: MQCACH_REMOTE_PRODUCT
+    DataType: String
+    ValueType: Constant
+    Value: MQMM
+  - name: MQIACH_HB_INTERVAL
+    DataType: Uint64
+    ValueType: Constant
+    Value: 300
+  - name: MQIA_MONITORING_CHANNEL
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  # - name: Time
+  #   DataType: String
+  #   ValueType: Constant
+  #   Value: 2025-09-11T02:53:35.819+0530
+  - name: ConnectionName
+    DataType: String
+    ValueType: Constant
+    Value: 127.0.0.1
+  - name: MQIACH_SECURITY_PROTOCOL
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: MQCACH_MCA_JOB_NAME
+    DataType: String
+    ValueType: Constant
+    Value: 000027CA00000001
+  - name: MQCACH_SSL_CIPHER_SPEC
+    DataType: String
+    ValueType: Constant
+    Value: ""
+  - name: MQCACH_XMIT_Q_NAME
+    DataType: String
+    ValueType: Constant
+    Value: RBLCCP01
+  - name: DisplayName
+    DataType: String
+    ValueType: Constant
+    Value: Credit Card MQ
+  - name: MQIACH_SSL_KEY_RESETS
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0
+  - name: MQIACH_BATCHES
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 30000-50000
+  - name: ChanneSubState
+    DataType: Uint64
+    ValueType: Constant
+    Value: 300
+  - name: LastMessageDate
+    DataType: String
+    ValueType: Constant
+    Value: '2025-09-11'
+  - name: MQIACH_BATCH_SIZE_INDICATOR
+    DataType: String
+    ValueType: Constant
+    Value: "[0,0]"
+  - name: MQIACH_COMPRESSION_TIME
+    DataType: String
+    ValueType: Constant
+    Value: "[0,0]"
+  - name: MQCACH_SSL_KEY_RESET_TIME
+    DataType: String
+    ValueType: Constant
+    Value: ""
+  - name: Host
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: MQCACH_REMOTE_VERSION
+    DataType: String
+    ValueType: Constant
+    Value: 09030020
+  - name: target
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: MQIACH_HDR_COMPRESSION
+    DataType: String
+    ValueType: Constant
+    Value: "[0,0]"
+  - name: MQCA_REMOTE_Q_MGR_NAME
+    DataType: String
+    ValueType: Constant
+    Value: RBLCCP01
+  - name: MQIACH_BUFFERS_RCVD/MQIACH_BUFFERS_RECEIVED
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 10-500000
+  - name: MQCACH_CURRENT_LUWID
+    DataType: String
+    ValueType: Constant
+    Value: 2421BF68A39E8840
+  - name: MQIACH_COMPRESSION_RATE
+    DataType: String
+    ValueType: Constant
+    Value: "[0,0]"
+  - name: MQIACH_XMITQ_TIME_INDICATOR
+    DataType: String
+    ValueType: Constant
+    Value: "[0,0]"
+  - name: ChannelType
+    DataType: Uint64
+    ValueType: Enumeration
+    Value: "3:50,7:50"
+  - name: MQIACH_INDOUBT_STATUS
+    DataType: Uint64
+    ValueType: Constant
+    Value: 0

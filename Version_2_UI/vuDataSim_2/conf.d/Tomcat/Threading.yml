@@ -1,0 +1,93 @@
+# -------------------------
+# vuDataSim Configuration
+# -------------------------
+uniquekey:
+  name: host
+  DataType: String
+  ValueType: RandomFixed
+  Value: 172.16.68.100-172.16.68.200
+  NumUniqKey: 1
+
+group:
+- name: good
+  fields:
+    # Metadata
+    - name: tenant_id
+      DataType: String
+      ValueType: Constant
+      Value: "1"
+
+    - name: bu_id
+      DataType: String
+      ValueType: Constant
+      Value: "1"
+
+    - name: application_name
+      DataType: String
+      ValueType: Constant
+      Value: "IBMB"
+
+    # vublock name (empty)
+    - name: vublock_name
+      DataType: String
+      ValueType: Constant
+      Value: ""
+
+    # Core Threading metrics
+    - name: TotalStartedThreadCount
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 50-100
+
+    - name: PeakThreadCount
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 30-80
+
+    - name: ThreadCount
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 20-70
+
+    # Dynamic time
+    - name: Time
+      DataType: DateTime
+      ValueType: Current
+      Value: "datetime_rfc3339"
+
+    # Array of AllThreadIds
+    - name: AllThreadIds
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 1-100
+      period: list
+      ListLength: 20-60    # Generate 20 to 60 thread IDs per sample
+
+    # Identifiers
+    - name: KeyPropertyListType
+      DataType: String
+      ValueType: Constant
+      Value: "Threading"
+
+    - name: ObjectName
+      DataType: String
+      ValueType: Constant
+      Value: "java.lang:type=Threading"
+
+    # Host Fields
+    - name: Host
+      DataType: String
+      ValueType: FromLocal
+      Value: UniqueKey
+    - name: host
+      DataType: String
+      ValueType: FromLocal
+      Value: UniqueKey
+    - name: source_id
+      DataType: String
+      ValueType: FromLocal
+      Value: UniqueKey
+    - name: target
+      DataType: String
+      ValueType: FromLocal
+      Value: UniqueKey

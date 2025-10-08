@@ -1,0 +1,108 @@
+# -------------------------
+# vuDataSim Configuration: JSP Monitor
+# -------------------------
+# uniquekey:
+#   name: host
+#   DataType: String
+#   ValueType: RandomFixed
+#   Value: 172.16.68.168
+#   NumUniqKey: 1
+
+group:
+- name: good
+  fields:
+    # Standard metadata
+    - name: tenant_id
+      DataType: String
+      ValueType: Enumeration
+      Value: "1:100"
+
+    - name: bu_id
+      DataType: String
+      ValueType: Enumeration
+      Value: "1:100"
+
+    - name: application_name
+      DataType: String
+      ValueType: Enumeration
+      Value: "IBMB:100"
+
+    # vublock name (empty string)
+    - name: vublock_name
+      DataType: String
+      ValueType: Constant
+      Value: ""
+
+    # Dynamic timestamp
+    - name: "@timestamp"
+      DataType: DateTime
+      ValueType: Current
+      Value: "datetime_rfc3339"
+
+    # Constant time field
+    - name: Time
+      DataType: DateTime
+      ValueType: Constant
+      Value: "2025-08-25T16:08:52.832+0530"
+
+    # Host fields
+    - name: Host
+      DataType: String
+      ValueType: FromLocal
+      Value: "UniqueKey"
+
+    - name: host
+      DataType: String
+      ValueType: FromLocal
+      Value: "UniqueKey"
+
+    - name: source_id
+      DataType: String
+      ValueType: FromLocal
+      Value: "UniqueKey"
+
+    - name: target
+      DataType: String
+      ValueType: FromLocal
+      Value: "UniqueKey"
+
+    # JSP monitor fields
+    - name: KeyPropertyListType
+      DataType: String
+      ValueType: Constant
+      Value: "JspMonitor"
+
+    - name: ObjectName
+      DataType: String
+      ValueType: Constant
+      Value: "Catalina:type=JspMonitor,WebModule=//localhost/manager,name=jsp,J2EEApplication=none,J2EEServer=none"
+
+    - name: modelerType
+      DataType: String
+      ValueType: Constant
+      Value: "org.apache.jasper.servlet.JspServlet"
+
+    - name: KeyPropertyListName
+      DataType: String
+      ValueType: Constant
+      Value: "jsp"
+
+    - name: jspQueueLength
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-100
+
+    - name: jspCount
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-10
+
+    - name: jspReloadCount
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-10
+
+    - name: jspUnloadCount
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-10

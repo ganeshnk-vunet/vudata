@@ -1,0 +1,172 @@
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: '@metadata,beat'
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: '@metadata,type'
+    DataType: String
+    ValueType: Constant
+    Value: _doc
+  - name: '@metadata,version'
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.0
+  - name: event,dataset
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes.event
+  - name: event,module
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes
+  - name: service,type
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes
+  - name: agent,ephemeral_id
+    DataType: String
+    ValueType: Constant
+    Value: 8f37b49a-39d9-45ac-ab9e-7648d5fd92a1
+  - name: agent,id
+    DataType: String
+    ValueType: Constant
+    Value: 50c8df2a-d875-4bc5-98de-c33473d9451c
+  - name: agent,name
+    DataType: String
+    ValueType: Constant
+    Value: e2e-72-51
+  - name: agent,type
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: agent,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.0
+  - name: metricset,name
+    DataType: String
+    ValueType: Constant
+    Value: event
+  - name: kubernetes,event,source,host
+    DataType: String
+    ValueType: Constant
+    Value: e2e-72-50
+  - name: kubernetes,event,source,component
+    DataType: String
+    ValueType: Constant
+    Value: kubelet
+  - name: kubernetes,event,involved_object,api_version
+    DataType: String
+    ValueType: Constant
+    Value: v1
+  - name: kubernetes,event,involved_object,resource_version
+    DataType: String
+    ValueType: Constant
+    Value: '22978686'
+  - name: kubernetes,event,involved_object,name
+    DataType: String
+    ValueType: Constant
+    Value: fluentbit-fluent-bit-fqjxf
+  - name: kubernetes,event,involved_object,kind
+    DataType: String
+    ValueType: Constant
+    Value: Pod
+  - name: kubernetes,event,involved_object,uid
+    DataType: String
+    ValueType: Constant
+    Value: dfcdda77-74d5-4267-bfbe-b38f4cbf2e20
+  - name: kubernetes,event,metadata,uid
+    DataType: String
+    ValueType: Constant
+    Value: 66d957e4-964c-4629-be81-ba4ec611f0b2
+  - name: kubernetes,event,metadata,resource_version
+    DataType: String
+    ValueType: Constant
+    Value: '28401038'
+  - name: kubernetes,event,metadata,timestamp,created
+    DataType: String
+    ValueType: Constant
+    Value: '2024-11-29T08:40:00.000Z'
+  - name: kubernetes,event,metadata,name
+    DataType: String
+    ValueType: Constant
+    Value: fluentbit-fluent-bit-fqjxf.180c63b85e6decfc
+  - name: kubernetes,event,metadata,namespace
+    DataType: String
+    ValueType: Constant
+    Value: vsmaps
+  - name: kubernetes,event,metadata,namespace
+    DataType: String
+    ValueType: Constant
+    Value: longhorn    
+  - name: kubernetes,event,metadata,self_link
+    DataType: String
+    ValueType: Constant
+    Value: ''
+  - name: kubernetes,event,metadata,generate_name
+    DataType: String
+    ValueType: Constant
+    Value: ''
+  - name: kubernetes,event,timestamp,first_occurrence
+    DataType: String
+    ValueType: Constant
+    Value: '2024-11-29T08:40:00.000Z'
+  - name: kubernetes,event,timestamp,last_occurrence
+    DataType: String
+    ValueType: Constant
+    Value: '2024-12-13T06:14:30.000Z'
+  - name: kubernetes,event,message
+    DataType: String
+    ValueType: Constant
+    Value: 'Readiness probe failed: HTTP probe failed with statuscode: 500'
+  - name: kubernetes,event,reason
+    DataType: String
+    ValueType: Constant
+    Value: Unhealthy
+  - name: kubernetes,event,type
+    DataType: String
+    ValueType: Constant
+    Value: Warning
+  - name: kubernetes,event,count
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 13597-135970
+  - name: component
+    DataType: String
+    ValueType: Constant
+    Value: kube-state-metrics
+  - name: cluster_identifiers
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: ecs,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.0.0
+  - name: kubernetes,pod,name
+    DataType: String
+    ValueType: Constant
+    Value: syslog-6b7b8955df-twndm
+  - name: kubernetes,pod,name
+    DataType: String
+    ValueType: Constant
+    Value: kube-controller-manager-e2e-72-51
+  - name: kubernetes,statefulset,name
+    DataType: String
+    ValueType: Constant
+    Value: airflow-scheduler    
+

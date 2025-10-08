@@ -1,0 +1,109 @@
+uniquekey:
+  # You can not override the key but you can create a new key in combination
+  # of previous and new ones. The following config will make sure that tool
+  # generate document for host and pid combination for each host IP & PID
+  name: fields,sql_instance
+  DataType: String
+  ValueType: RandomFixed
+  Value: "mssql-2[2-4]"
+  NumUniqKey: 3
+ 
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: fields,database_name
+    DataType: String
+    ValueType: Constant
+    Value: master
+  - name: fields,file_type
+    DataType: String
+    ValueType: Constant
+    Value: ROWS
+  - name: fields,logical_filename
+    DataType: String
+    ValueType: Constant
+    Value: master
+  - name: fields,measurement
+    DataType: String
+    ValueType: Constant
+    Value: sqlserver_database_io
+  - name: fields,physical_filename
+    DataType: String
+    ValueType: Constant
+    Value: /var/opt/mssql/data/master.mdf
+  - name: fields,read_bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 296550-2965500
+  - name: fields,read_latency_ms
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 7-70
+  - name: fields,reads
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 4-40
+  - name: fields,rg_read_stall_ms
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,rg_write_stall_ms
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,server_name
+    DataType: String
+    ValueType: Constant
+    Value: mssql-500
+  - name: fields,sql_instance
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey
+  - name: fields,write_bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 3121971-31219710
+  - name: fields,write_latency_ms
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 304-3040
+  - name: fields,writes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 329-3290
+  - name: name
+    DataType: String
+    ValueType: Constant
+    Value: sqlserver_database_io
+  - name: tags,host
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: tags,source_id
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: tags,src_host
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: tags,src_instance
+    DataType: String
+    ValueType: Constant
+    Value: mssql-polling-1-1-1-1
+  - name: tags,target
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey  

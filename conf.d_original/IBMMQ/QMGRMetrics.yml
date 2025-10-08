@@ -1,0 +1,47 @@
+group:
+- name: good
+  fields:
+  - name: QmgrStartTime
+    DataType: String
+    ValueType: Constant
+    Value: 23.37.19
+  - name: ConnectionCount
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 10-2000
+  - name: QmgrName
+    DataType: String
+    ValueType: Constant
+    Value: EBANKPROD2QMGR
+  - name: StatisticType
+    DataType: String
+    ValueType: Constant
+    Value: QMGRMetrics
+  - name: ServerIP
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: Port
+    DataType: String
+    ValueType: Constant
+    Value: "2021"
+  - name: QmgrStartDate
+    DataType: String
+    ValueType: Constant
+    Value: '2025-09-08'
+  - name: DisplayName
+    DataType: String
+    ValueType: Constant
+    Value: EBank MQ
+  - name: Host
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  # - name: Time
+  #   DataType: String
+  #   ValueType: Constant
+  #   Value: 2025-09-11T02:57:59.067+0530
+  - name: QmgrStatus
+    DataType: Uint64
+    ValueType: Constant
+    Value: 2

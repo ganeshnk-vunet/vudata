@@ -1,0 +1,24 @@
+enabled: true
+uniquekey:
+  name: "resource_name"
+  DataType: String
+  ValueType: RandomFixed
+  Value: "VunetLoadbalancer_\\d{2}"
+  NumUniqKey: 3
+  
+period: 180s
+
+# Add the timestamp field name and type. Type could be epoch_in_seconds, epoch_in_ms or datetime_rfc3339
+#timestamp:
+#  name: timestamp
+#  type: epoch_in_ms
+
+output.kafka:
+  enabled: true
+  topic: "azure-loadbalancer-input"
+
+Include_sub_modules: [bytes_count,
+data_path_availability,
+health_probe_status,
+packet_count,
+syn_count]

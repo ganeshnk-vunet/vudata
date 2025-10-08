@@ -1,0 +1,59 @@
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: applicationIP
+    DataType: String
+    ValueType: Constant
+    Value: 172.16.102.231
+  - name: tenant_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: User
+    DataType: String
+    ValueType: Constant
+    Value: <WLS Kernel>
+  - name: applicationport
+    DataType: Uint64
+    ValueType: RandomFixed
+    Value: "7001-50000"
+  - name: ServicedRequestTotalCount
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 2631-26310
+  - name: Name
+    DataType: String
+    ValueType: Constant
+    Value: '[STANDBY] ExecuteThread: ''0'' for queue: ''weblogic.kernel.Default (self-tuning)'''
+  - name: target
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: Type
+    DataType: String
+    ValueType: Constant
+    Value: ThreadDetails
+  - name: ServerName
+    DataType: String
+    ValueType: Constant
+    Value: AdminServer
+  - name: source_id
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: bu_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'

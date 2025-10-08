@@ -1,0 +1,174 @@
+uniquekey:
+  # You can not override the key but you can create a new key in combination
+  # of previous and new ones. The following config will make sure that tool
+  # generate document for host and pid combination for each host IP & PID
+  name: fields,sql_instance
+  DataType: String
+  ValueType: RandomFixed
+  Value: "mssql-2[2-4]"
+  NumUniqKey: 3
+ 
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: fields,client_host_name
+    DataType: String
+    ValueType: Constant
+    Value: mssql-polling-1-1-1-1-868cdbc86-nnr4q
+  - name: fields,command
+    DataType: String
+    ValueType: Constant
+    Value: EXECUTE
+  - name: fields,cpu_time_ms
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,database_name
+    DataType: String
+    ValueType: Constant
+    Value: tempdb
+  - name: fields,granted_query_memory_pages
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,logical_reads
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 9-90
+  - name: fields,login_name
+    DataType: String
+    ValueType: Constant
+    Value: vusmart
+  - name: fields,measurement
+    DataType: String
+    ValueType: Constant
+    Value: sqlserver_requests
+  - name: fields,open_transaction
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,percent_complete
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,program_name
+    DataType: String
+    ValueType: Constant
+    Value: go-mssqldb
+  - name: fields,request_id
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,server_name
+    DataType: String
+    ValueType: Constant
+    Value: mssql-500
+  - name: fields,session_db_name
+    DataType: String
+    ValueType: Constant
+    Value: tempdb
+  - name: fields,session_id
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 5-50
+  - name: fields,sql_instance
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey
+  - name: fields,statement_text
+    DataType: String
+    ValueType: Constant
+    Value: 'DECLARE @SqlStatement AS nvarchar(max), @MajorMinorVersion AS int = CAST(PARSENAME(CAST(SERVERPROPERTY(''ProductVersion'')
+      AS nvarchar),4) AS int)*100 + CAST(PARSENAME(CAST(SERVERPROPERTY(''ProductVersion'')
+      AS nvarchar),3) AS int); DECLARE @PCounters TABLE ([object_name] nvarchar(128),
+      [counter_name] nvarchar(128), [instance_name] nvarchar(128), [cntr_value] bigint,
+      [cntr_type] int, PRIMARY KEY([object_name], [counter_name], [instance_name]));
+      WITH PerfCounters AS (SELECT DISTINCT RTRIM(spi.[object_name]) [object_name],
+      RTRIM(spi.[counter_name]) [counter_name], RTRIM(spi.[instance_name]) AS [instance_name],
+      CAST(spi.[cntr_value] AS bigint) AS [cntr_value], spi.[cntr_type] FROM sys.dm_os_performance_counters
+      AS spi WHERE counter_name IN (''SQL Compilations/sec'',''SQL Re-Compilations/sec'',''User
+      Connections'',''Batch Requests/sec'',''Logouts/sec'',''Logins/sec'',''Page Splits/sec'',''Page
+      lookups/sec'',''Page reads/sec'',''Page writes/sec'',''Lazy writes/sec'',''Page
+      life expectancy'',''Log File(s) Size (KB)'',''Log File(s) Used Size (KB)'',''Data
+      File(s) Size (KB)'',''Transactions/sec'',''Active Transactions'',''Buffer cache
+      hit ratio'',''Buffer cache hit ratio base'',''Total Server Memory (KB)'',''Target
+      Server Memory (KB)'',''Log Flushes/sec'',''Log Flush Wait Time'',''Log Bytes
+      Flushed/sec'',''CPU usage %'',''Used memory (KB)'',''Full Scans/sec'') OR (spi.[object_name]
+      LIKE ''%User Settable%'' OR spi.[object_name] LIKE ''%SQL Errors%'' OR spi.[object_name]
+      LIKE ''%Batch Resp Statistics%'') OR (spi.[instance_name] IN (''_Total'') AND
+      spi.[counter_name] IN (''Lock Timeouts/sec'',''Lock Timeouts (timeout > 0)/sec'',''Number
+      of Deadlocks/sec'',''Lock Waits/sec'',''Latch Waits/sec''))) INSERT INTO @PCounters
+      SELECT * FROM PerfCounters; SELECT ''sqlserver_performance'' AS [measurement],
+      REPLACE(@@SERVERNAME, ''\\\\'', '':'') AS [server_name], @@SERVICENAME AS [sql_instance],
+      pc.[counter_name] AS [counter], CASE pc.[instance_name] WHEN ''_Total'' THEN
+      ''Total'' ELSE ISNULL(pc.[instance_name],'''') END AS [instance], CAST(CASE
+      WHEN pc.[cntr_type] = 537003264 AND pc1.[cntr_value] > 0 THEN (pc.[cntr_value]
+      * 1.0) / (pc1.[cntr_value] * 1.0) * 100 ELSE pc.[cntr_value] END AS float(10))
+      AS [value], CAST(pc.[cntr_type] AS varchar(25)) AS [counter_type] FROM @PCounters
+      AS pc LEFT OUTER JOIN @PCounters AS pc1 ON (pc.[counter_name] = REPLACE(pc1.[counter_name],''
+      base'','''') OR pc.[counter_name] = REPLACE(pc1.[counter_name],'' base'',''
+      (ms)'')) AND pc.[object_name] = pc1.[object_name] AND pc.[instance_name] = pc1.[instance_name]
+      AND pc1.[counter_name] LIKE ''%base'' WHERE pc.[counter_name] NOT LIKE ''% base''
+      OPTION(RECOMPILE);
+
+      '
+  - name: fields,status
+    DataType: String
+    ValueType: Constant
+    Value: runnable
+  - name: fields,total_elapsed_time_ms
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,transaction_isolation_level
+    DataType: String
+    ValueType: Constant
+    Value: 2-Read Committed
+  - name: fields,wait_resource
+    DataType: String
+    ValueType: Constant
+    Value: ''
+  - name: fields,wait_time_ms
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,writes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: name
+    DataType: String
+    ValueType: Constant
+    Value: sqlserver_requests
+  - name: tags,host
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: tags,source_id
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: tags,src_host
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: tags,src_instance
+    DataType: String
+    ValueType: Constant
+    Value: mssql-polling-1-1-1-1
+  - name: tags,target
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey  

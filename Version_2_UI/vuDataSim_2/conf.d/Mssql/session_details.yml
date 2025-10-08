@@ -1,0 +1,128 @@
+uniquekey:
+  # You can not override the key but you can create a new key in combination
+  # of previous and new ones. The following config will make sure that tool
+  # generate document for host and pid combination for each host IP & PID
+  name: fields,sql_instance
+  DataType: String
+  ValueType: RandomFixed
+  Value: "mssql-2[2-4]"
+  NumUniqKey: 3
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: fields,connection_start_time
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 173199055842300000-1731990558423000000
+  - name: fields,cpu_time_ms
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,database_name
+    DataType: String
+    ValueType: Constant
+    Value: master
+  - name: fields,exectime
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 173277900000700000-1732779000007000000
+  - name: fields,host_name
+    DataType: String
+    ValueType: Constant
+    Value: mssql-polling-1-1-1-1-868cdbc86-nnr4q
+  - name: fields,last_request_end_time
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 173277900001300000-1732779000013000000
+  - name: fields,last_request_start_time
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 173277900001300000-1732779000013000000
+  - name: fields,login_name
+    DataType: String
+    ValueType: Constant
+    Value: vusmart
+  - name: fields,login_time
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 173277900000300000-1732779000003000000
+  - name: fields,measurement
+    DataType: String
+    ValueType: Constant
+    Value: session-details
+  - name: fields,memory_usage_kb
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,metrics_group
+    DataType: String
+    ValueType: Constant
+    Value: query_analytics
+  - name: fields,program_name
+    DataType: String
+    ValueType: Constant
+    Value: go-mssqldb
+  - name: fields,query_type
+    DataType: String
+    ValueType: Constant
+    Value: session-details
+  - name: fields,server_name
+    DataType: String
+    ValueType: Constant
+    Value: mssql-500
+  - name: fields,session_id
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 5-50
+  - name: fields,session_status
+    DataType: String
+    ValueType: Constant
+    Value: running
+  - name: fields,sql_instance
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey
+  - name: fields,task_state
+    DataType: String
+    ValueType: Constant
+    Value: RUNNING
+  - name: fields,total_elapsed_time_ms
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: name
+    DataType: String
+    ValueType: Constant
+    Value: session-details
+  - name: tags,host
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: tags,source_id
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: tags,src_host
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: tags,src_instance
+    DataType: String
+    ValueType: Constant
+    Value: mssql-polling-1-1-1-1
+  - name: tags,target
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey  

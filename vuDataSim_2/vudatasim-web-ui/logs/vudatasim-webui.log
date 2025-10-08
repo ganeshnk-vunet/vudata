@@ -1,0 +1,1039 @@
+2025-10-03 15:42:47,477 - core.eps_calculator - ERROR - Error listing modules: [Errno 2] No such file or directory: '/home/vunet/vuDataSim_2/conf.d'
+2025-10-03 15:47:43,834 - core.eps_calculator - ERROR - Error listing modules: [Errno 2] No such file or directory: '/home/vunet/vuDataSim_2/conf.d'
+2025-10-03 15:48:03,527 - core.eps_calculator - ERROR - Error listing modules: [Errno 2] No such file or directory: '/home/vunet/vuDataSim_2/conf.d'
+2025-10-03 15:48:04,979 - core.binary_manager - INFO - Local bin directory does not exist: /home/vunet/vuDataSim_2/bin
+2025-10-03 15:48:12,897 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 15:48:12,978 - core.binary_manager - ERROR - Failed to connect to remote host 216.48.191.10: [Errno 2] No such file or directory: '~/.ssh/id_rsa'
+2025-10-03 15:48:12,979 - core.binary_manager - ERROR - Error listing remote binaries: [Errno 2] No such file or directory: '~/.ssh/id_rsa'
+2025-10-03 15:48:53,657 - core.eps_calculator - ERROR - Error listing modules: [Errno 2] No such file or directory: '/home/vunet/vuDataSim_2/conf.d'
+2025-10-03 15:48:55,913 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 15:48:55,967 - core.binary_manager - ERROR - Failed to connect to remote host 216.48.191.10: [Errno 2] No such file or directory: '~/.ssh/id_rsa'
+2025-10-03 15:48:55,967 - core.binary_manager - ERROR - Error listing remote binaries: [Errno 2] No such file or directory: '~/.ssh/id_rsa'
+2025-10-03 15:50:16,771 - core.clickhouse_monitor - INFO - Connected to ClickHouse at 10.32.3.50:9000, database: monitoring
+2025-10-03 15:50:16,794 - core.clickhouse_monitor - INFO - Disconnected from ClickHouse server
+2025-10-03 15:50:19,390 - core.clickhouse_monitor - INFO - Connected to ClickHouse at 10.32.3.50:9000, database: monitoring
+2025-10-03 15:50:19,401 - core.clickhouse_monitor - INFO - Disconnected from ClickHouse server
+2025-10-03 15:50:25,547 - core.clickhouse_monitor - INFO - Connected to ClickHouse at 10.32.3.50:9000, database: monitoring
+2025-10-03 15:50:25,560 - core.clickhouse_monitor - INFO - Disconnected from ClickHouse server
+2025-10-03 15:50:28,116 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 15:50:28,171 - core.binary_manager - ERROR - Failed to connect to remote host 216.48.191.10: [Errno 2] No such file or directory: '~/.ssh/id_rsa'
+2025-10-03 15:50:28,171 - core.binary_manager - ERROR - Error listing remote binaries: [Errno 2] No such file or directory: '~/.ssh/id_rsa'
+2025-10-03 15:53:32,877 - core.eps_calculator - ERROR - Error listing modules: [Errno 2] No such file or directory: '/home/vunet/vuDataSim_2/conf.d'
+2025-10-03 15:53:35,183 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 15:53:35,388 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 15:53:46,256 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 15:53:46,454 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 15:53:48,986 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 15:53:49,192 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 15:53:49,453 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 15:53:49,676 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 15:55:47,936 - core.eps_calculator - ERROR - Error listing modules: [Errno 2] No such file or directory: '/home/vunet/vuDataSim_2/conf.d'
+2025-10-03 15:55:48,012 - core.eps_calculator - ERROR - Error listing modules: [Errno 2] No such file or directory: '/home/vunet/vuDataSim_2/conf.d'
+2025-10-03 15:55:54,483 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 15:55:54,702 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 15:56:02,579 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 15:56:02,770 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 15:57:55,823 - core.eps_calculator - ERROR - Error listing modules: [Errno 2] No such file or directory: '/home/vunet/vuDataSim_2/conf.d'
+2025-10-03 15:58:01,112 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 15:58:01,336 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 15:58:06,005 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 15:58:06,210 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 15:58:32,753 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 15:58:32,960 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 15:58:33,130 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 15:58:33,326 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 15:58:33,498 - core.binary_manager - INFO - Started remote vuDataSim with PID , run_id: remote_vuDataSim_1759487313
+2025-10-03 15:58:33,561 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 15:58:33,768 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 15:58:33,967 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 15:58:34,175 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:00:49,894 - core.eps_calculator - ERROR - Error listing modules: [Errno 2] No such file or directory: '/home/vunet/vuDataSim_2/conf.d'
+2025-10-03 16:00:53,257 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:00:53,499 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:01:43,962 - core.eps_calculator - ERROR - Error listing modules: [Errno 2] No such file or directory: '/home/vunet/vuDataSim_2/conf.d'
+2025-10-03 16:01:46,281 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:01:46,495 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:01:49,980 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:01:50,177 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:01:51,721 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:01:51,932 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:01:52,112 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:01:52,310 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:01:52,450 - core.binary_manager - INFO - Started remote vuDataSim with PID , run_id: remote_vuDataSim_1759487512
+2025-10-03 16:01:52,511 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:01:52,708 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:01:52,850 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:01:53,045 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:01:54,388 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:01:54,598 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:01:54,929 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:01:55,126 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:01:55,151 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:01:55,344 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:01:55,494 - core.binary_manager - INFO - Started remote vuDataSim with PID , run_id: remote_vuDataSim_1759487515
+2025-10-03 16:01:55,543 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:01:55,758 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:01:55,905 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:01:56,119 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:02:30,836 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:02:31,042 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:02:31,197 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:02:31,393 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:02:31,408 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:02:31,610 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:02:31,782 - core.binary_manager - INFO - Started remote vuDataSim with PID , run_id: remote_vuDataSim_1759487551
+2025-10-03 16:02:31,842 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:02:32,035 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:02:32,183 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:02:32,377 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:07:04,032 - core.eps_calculator - ERROR - Error listing modules: [Errno 2] No such file or directory: '/home/vunet/vuDataSim_2/conf.d'
+2025-10-03 16:07:06,573 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:07:06,769 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:07:09,562 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:07:09,751 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:07:12,220 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:07:12,416 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:07:12,579 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:07:12,770 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:07:44,646 - core.eps_calculator - ERROR - Error listing modules: [Errno 2] No such file or directory: '/home/vunet/vuDataSim_2/conf.d'
+2025-10-03 16:07:46,847 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:07:47,043 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:07:50,655 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:07:50,879 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:07:52,110 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:07:52,323 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:07:54,487 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:07:54,692 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:07:54,905 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:07:55,124 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:07:55,577 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:07:55,794 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:07:55,994 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:07:56,200 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:08:04,334 - core.binary_manager - WARNING - Remote command stderr: bash: line 1: 32969 Killed                  nohup timeout 300s ./vuDataSim >> /tmp/vudatasim_vuDataSim_20251003_160712.log 2>&1
+2025-10-03 16:08:04,846 - core.binary_manager - ERROR - Failed to start remote vuDataSim: Process with PID 32967 is not running after start
+2025-10-03 16:08:09,725 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:08:09,749 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:08:10,060 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:08:10,066 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:08:10,464 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:08:10,659 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:08:21,470 - core.binary_manager - ERROR - Failed to start remote vuDataSim: Process with PID 34526 is not running after start
+2025-10-03 16:14:35,225 - core.eps_calculator - ERROR - Error listing modules: [Errno 2] No such file or directory: '/home/vunet/vuDataSim_2/conf.d'
+2025-10-03 16:14:37,263 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:14:37,462 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:14:40,538 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:14:40,750 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:14:42,157 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:14:42,360 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:14:42,559 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:14:42,772 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:14:45,234 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:14:45,426 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:14:45,589 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:14:45,806 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:14:45,947 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:14:46,146 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:14:55,595 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:14:55,809 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:14:56,120 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:14:56,323 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:14:56,589 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:14:56,780 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:14:56,909 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:14:57,129 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:14:57,292 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:14:57,478 - core.binary_manager - ERROR - Failed to start remote vuDataSim: 'NoneType' object has no attribute 'open_session'
+2025-10-03 16:14:57,541 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:14:57,786 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:14:57,985 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:14:58,148 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:14:58,350 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:15:01,062 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:15:01,278 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:15:01,443 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:15:01,662 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:15:01,892 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:15:02,108 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:15:02,267 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:15:02,508 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:15:03,908 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:15:04,101 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:15:04,290 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:15:04,494 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:15:04,722 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:15:04,922 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-03 16:15:05,066 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-03 16:15:05,259 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-06 10:49:57,337 - core.eps_calculator - ERROR - Error listing modules: [Errno 2] No such file or directory: '/home/vunet/vuDataSim_2/conf.d'
+2025-10-06 10:49:59,772 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-06 10:49:59,965 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-06 10:50:03,309 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-06 10:50:03,508 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-06 10:50:06,890 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-06 10:50:07,090 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-06 10:50:07,276 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-06 10:50:07,486 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-06 10:50:29,257 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-06 10:50:29,460 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-06 10:50:29,682 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-06 10:50:29,883 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-06 10:50:42,234 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-06 10:50:42,429 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-06 10:50:48,026 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-06 10:50:48,219 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-06 10:50:48,736 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-06 10:50:48,934 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-06 10:50:54,809 - core.binary_manager - WARNING - Remote command stderr: bash: line 1: 61662 Killed                  nohup timeout 300s ./vuDataSim >> /tmp/vudatasim_vuDataSim_20251006_105007.log 2>&1
+2025-10-06 10:50:55,827 - core.binary_manager - ERROR - Failed to start remote vuDataSim: Process with PID 61660 is not running after start. Check binary path and permissions.
+2025-10-06 10:50:59,582 - core.eps_calculator - ERROR - Error listing modules: [Errno 2] No such file or directory: '/home/vunet/vuDataSim_2/conf.d'
+2025-10-06 10:51:01,949 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-06 10:51:02,153 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-06 10:51:02,795 - core.binary_manager - INFO - Local bin directory does not exist: /home/vunet/vuDataSim_2/bin
+2025-10-06 10:57:36,379 - core.eps_calculator - ERROR - Error listing modules: [Errno 2] No such file or directory: '/home/vunet/vuDataSim_2/conf.d'
+2025-10-06 10:57:41,085 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-06 10:57:41,299 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-06 10:57:41,913 - core.binary_manager - INFO - Local bin directory does not exist: /home/vunet/vuDataSim_2/bin
+2025-10-06 10:57:43,919 - core.eps_calculator - ERROR - Error listing modules: [Errno 2] No such file or directory: '/home/vunet/vuDataSim_2/conf.d'
+2025-10-06 11:31:11,030 - core.eps_calculator - ERROR - Error listing modules: [Errno 2] No such file or directory: '/home/vunet/vuDataSim_2/conf.d'
+2025-10-06 11:31:35,459 - core.eps_calculator - ERROR - Error listing modules: [Errno 2] No such file or directory: '/home/vunet/vuDataSim_2/conf.d'
+2025-10-06 11:31:36,696 - core.binary_manager - INFO - Local bin directory does not exist: /home/vunet/vuDataSim_2/bin
+2025-10-06 11:31:37,813 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-06 11:31:38,018 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-06 11:32:39,220 - core.eps_calculator - ERROR - Error listing modules: [Errno 2] No such file or directory: '/home/vunet/vuDataSim_2/conf.d'
+2025-10-06 11:32:41,496 - core.eps_calculator - ERROR - Error listing modules: [Errno 2] No such file or directory: '/home/vunet/vuDataSim_2/conf.d'
+2025-10-06 11:40:41,159 - core.binary_manager - INFO - Local bin directory does not exist: /home/vunet/vuDataSim_2/bin
+2025-10-06 11:40:44,092 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-06 11:40:44,306 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-06 11:40:50,377 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-06 11:40:50,579 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-06 11:41:51,524 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-06 11:41:51,722 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-06 11:41:52,412 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-06 11:41:52,597 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-06 11:41:52,778 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-06 11:41:52,960 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-06 11:42:09,543 - core.binary_manager - WARNING - Remote command stderr: bash: line 1: 50853 Killed                  nohup timeout 300s ./vuDataSim >> /tmp/vudatasim_vuDataSim_20251006_114152.log 2>&1
+2025-10-06 11:42:10,555 - core.binary_manager - ERROR - Failed to start remote vuDataSim: Process with PID 50851 is not running after start. Check binary path and permissions.
+2025-10-06 11:43:45,433 - core.eps_calculator - ERROR - Error listing modules: [Errno 2] No such file or directory: '/home/vunet/vuDataSim_2/conf.d'
+2025-10-06 11:44:39,451 - core.eps_calculator - ERROR - Error listing modules: [Errno 2] No such file or directory: '/home/vunet/vuDataSim_2/conf.d'
+2025-10-06 11:44:45,923 - core.clickhouse_monitor - INFO - Connected to ClickHouse at 10.32.3.50:9000, database: monitoring
+2025-10-06 11:44:45,957 - core.clickhouse_monitor - INFO - Disconnected from ClickHouse server
+2025-10-06 11:44:48,557 - core.clickhouse_monitor - INFO - Connected to ClickHouse at 10.32.3.50:9000, database: monitoring
+2025-10-06 11:44:48,567 - core.clickhouse_monitor - INFO - Disconnected from ClickHouse server
+2025-10-06 11:46:03,199 - core.clickhouse_monitor - INFO - Connected to ClickHouse at 10.32.3.50:9000, database: monitoring
+2025-10-06 11:46:03,209 - core.clickhouse_monitor - INFO - Disconnected from ClickHouse server
+2025-10-06 11:53:09,338 - core.eps_calculator - ERROR - Error listing modules: [Errno 2] No such file or directory: '/home/vunet/vuDataSim_2/conf.d'
+2025-10-06 11:53:42,736 - core.yaml_editor - ERROR - Error reading submodule config LinuxMonitor/filesystem: while constructing a mapping
+  in "<unicode string>", line 114, column 5:
+      - name: system,filesystem,used,pct
+        ^ (line: 114)
+found duplicate key "ValueType" with value "EvaluatedValue" (original value: "RandomRange")
+  in "<unicode string>", line 117, column 5:
+        ValueType: "EvaluatedValue"
+        ^ (line: 117)
+
+To suppress this check see:
+    https://yaml.dev/doc/ruamel.yaml/api/#Duplicate_keys
+
+2025-10-06 11:53:42,736 - core.eps_calculator - ERROR - Error reading submodule config for LinuxMonitor/filesystem: while constructing a mapping
+  in "<unicode string>", line 114, column 5:
+      - name: system,filesystem,used,pct
+        ^ (line: 114)
+found duplicate key "ValueType" with value "EvaluatedValue" (original value: "RandomRange")
+  in "<unicode string>", line 117, column 5:
+        ValueType: "EvaluatedValue"
+        ^ (line: 117)
+
+To suppress this check see:
+    https://yaml.dev/doc/ruamel.yaml/api/#Duplicate_keys
+
+2025-10-06 11:53:43,156 - core.yaml_editor - ERROR - Error reading module config AzureStorageBlob: string index out of range
+2025-10-06 11:53:43,156 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_cpu: string index out of range
+2025-10-06 11:53:43,157 - core.eps_calculator - ERROR - Error reading module config for AzureStorageBlob: string index out of range
+2025-10-06 11:53:43,157 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_cpu: string index out of range
+2025-10-06 11:53:43,165 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_database_io: 'NoneType' object has no attribute 'anchor'
+2025-10-06 11:53:43,165 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_database_io: 'NoneType' object has no attribute 'anchor'
+2025-10-06 11:53:43,172 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_memory_clerks_1_SOS Node: mapping values are not allowed here
+  in "<unicode string>", line 59, column 16:
+      - name: tags,target
+            ^ (line: 59)
+2025-10-06 11:53:43,173 - core.yaml_editor - ERROR - Error reading submodule config AzureStorageBlob/Azure_Account_e2elatency: string index out of range
+2025-10-06 11:53:43,173 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_memory_clerks_1_SOS Node: mapping values are not allowed here
+  in "<unicode string>", line 59, column 16:
+      - name: tags,target
+            ^ (line: 59)
+2025-10-06 11:53:43,173 - core.eps_calculator - ERROR - Error reading submodule config for AzureStorageBlob/Azure_Account_e2elatency: string index out of range
+2025-10-06 11:53:43,223 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_memory_clerks_4_Schema Manager _User Store_: 'NoneType' object has no attribute 'anchor'
+2025-10-06 11:53:43,224 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_memory_clerks_4_Schema Manager _User Store_: 'NoneType' object has no attribute 'anchor'
+2025-10-06 11:53:43,285 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_performance_10_Data File_s_ Size _KB_: string index out of range
+2025-10-06 11:53:43,285 - core.yaml_editor - ERROR - Error reading submodule config AzureStorageBlob/Azure_Table_e2elatency: pop from empty list
+2025-10-06 11:53:43,285 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_performance_10_Data File_s_ Size _KB_: string index out of range
+2025-10-06 11:53:43,285 - core.eps_calculator - ERROR - Error reading submodule config for AzureStorageBlob/Azure_Table_e2elatency: pop from empty list
+2025-10-06 11:53:43,322 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_performance_13_Log Flush Wait Time_Total: while scanning a simple key
+  in "<unicode string>", line 63, column 5:
+        Value: sqlserver_performance
+                                ^ (line: 63)
+could not find expected ':'
+  in "<unicode string>", line 64, column 3:
+      - name: tags,host
+      ^ (line: 64)
+2025-10-06 11:53:43,322 - core.yaml_editor - ERROR - Error reading submodule config CiscoIoSSwitch/cpu: string index out of range
+2025-10-06 11:53:43,322 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_performance_13_Log Flush Wait Time_Total: while scanning a simple key
+  in "<unicode string>", line 63, column 5:
+        Value: sqlserver_performance
+                                ^ (line: 63)
+could not find expected ':'
+  in "<unicode string>", line 64, column 3:
+      - name: tags,host
+      ^ (line: 64)
+2025-10-06 11:53:43,322 - core.eps_calculator - ERROR - Error reading submodule config for CiscoIoSSwitch/cpu: string index out of range
+2025-10-06 11:53:43,468 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_performance_18_User Connections: while parsing a block mapping
+  in "<unicode string>", line 2, column 3:
+    - name: good
+      ^ (line: 2)
+expected <block end>, but found '<block mapping start>'
+  in "<unicode string>", line 168, column 5:
+      - name: apache,status,scoreboard,c ... 
+        ^ (line: 168)
+2025-10-06 11:53:43,469 - core.yaml_editor - ERROR - Error reading submodule config Apache/status: string index out of range
+2025-10-06 11:53:43,469 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_performance_18_User Connections: while parsing a block mapping
+  in "<unicode string>", line 2, column 3:
+    - name: good
+      ^ (line: 2)
+expected <block end>, but found '<block mapping start>'
+  in "<unicode string>", line 168, column 5:
+      - name: apache,status,scoreboard,c ... 
+        ^ (line: 168)
+2025-10-06 11:53:43,469 - core.eps_calculator - ERROR - Error reading submodule config for Apache/status: string index out of range
+2025-10-06 11:53:43,517 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_performance_20_Number of Deadlocks_sec: 'NoneType' object has no attribute 'anchor'
+2025-10-06 11:53:43,517 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_performance_20_Number of Deadlocks_sec: 'NoneType' object has no attribute 'anchor'
+2025-10-06 11:53:43,585 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_performance_24_Target Server Memory _KB_: while parsing a block mapping
+  in "<unicode string>", line 70, column 5:
+      - name: fields,sql_instance
+        ^ (line: 70)
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 73, column 5:
+        Value: SubModuleUniqueKey
+        ^ (line: 73)
+2025-10-06 11:53:43,585 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_database_io: string index out of range
+2025-10-06 11:53:43,585 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_performance_24_Target Server Memory _KB_: while parsing a block mapping
+  in "<unicode string>", line 70, column 5:
+      - name: fields,sql_instance
+        ^ (line: 70)
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 73, column 5:
+        Value: SubModuleUniqueKey
+        ^ (line: 73)
+2025-10-06 11:53:43,585 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_database_io: string index out of range
+2025-10-06 11:53:43,597 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_performance_25_Total Server Memory _KB_: 'NoneType' object has no attribute 'anchor'
+2025-10-06 11:53:43,597 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_performance_25_Total Server Memory _KB_: 'NoneType' object has no attribute 'anchor'
+2025-10-06 11:53:43,646 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_performance_28_Errors_sec: while parsing a block mapping
+  in "<unicode string>", line 58, column 5:
+      - name: tags,src_host
+        ^ (line: 58)
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 59, column 15:
+        DataType: String
+                  ^ (line: 59)
+2025-10-06 11:53:43,646 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_memory_clerks_6_Log Pool: string index out of range
+2025-10-06 11:53:43,647 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_performance_28_Errors_sec: while parsing a block mapping
+  in "<unicode string>", line 58, column 5:
+      - name: tags,src_host
+        ^ (line: 58)
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 59, column 15:
+        DataType: String
+                  ^ (line: 59)
+2025-10-06 11:53:43,647 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_memory_clerks_6_Log Pool: string index out of range
+2025-10-06 11:53:43,684 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_performance_30_CPU usage _: mapping values are not allowed here
+  in "<unicode string>", line 71, column 13:
+        DataType: String
+                ^ (line: 71)
+2025-10-06 11:53:43,684 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_performance_11_Active Transactions: 0
+2025-10-06 11:53:43,684 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_performance_30_CPU usage _: mapping values are not allowed here
+  in "<unicode string>", line 71, column 13:
+        DataType: String
+                ^ (line: 71)
+2025-10-06 11:53:43,685 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_performance_11_Active Transactions: 0
+2025-10-06 11:53:43,718 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_performance_33_SQL Compilations_sec: expected a single document in the stream
+  in "<unicode string>", line 71, column 10:
+      - name: tags,src_instance
+                     ^ (line: 71)
+but found another document
+  in "<unicode string>", line 72, column 15:
+        DataType: String
+                  ^ (line: 72)
+2025-10-06 11:53:43,718 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_performance_13_Log Flush Wait Time_master: string index out of range
+2025-10-06 11:53:43,719 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_performance_13_Log Flush Wait Time_master: string index out of range
+2025-10-06 11:53:43,719 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_performance_33_SQL Compilations_sec: expected a single document in the stream
+  in "<unicode string>", line 71, column 10:
+      - name: tags,src_instance
+                     ^ (line: 71)
+but found another document
+  in "<unicode string>", line 72, column 15:
+        DataType: String
+                  ^ (line: 72)
+2025-10-06 11:53:43,744 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_performance_3_Buffer_cache_hit_ratio: mapping values are not allowed here
+  in "<unicode string>", line 55, column 14:
+        ValueType: Constant
+                 ^ (line: 55)
+2025-10-06 11:53:43,744 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_performance_15_Log File_s_ Used Size _KB_: string index out of range
+2025-10-06 11:53:43,744 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_performance_3_Buffer_cache_hit_ratio: mapping values are not allowed here
+  in "<unicode string>", line 55, column 14:
+        ValueType: Constant
+                 ^ (line: 55)
+2025-10-06 11:53:43,744 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_performance_15_Log File_s_ Used Size _KB_: string index out of range
+2025-10-06 11:53:43,750 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_performance_4_Lazy_writes_sec: while parsing a block mapping
+  in "<unicode string>", line 12, column 3:
+    - name: good
+      ^ (line: 12)
+expected <block end>, but found '<block mapping start>'
+  in "<unicode string>", line 46, column 5:
+      - name: fields,sql_instance
+        ^ (line: 46)
+2025-10-06 11:53:43,751 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_performance_16_Log File_s_ Size _KB_: while parsing a block node
+expected the node content, but found '<stream start>'
+  in "None", line 1, column 1:
+    
+    ^ (line: 1)
+2025-10-06 11:53:43,751 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_performance_4_Lazy_writes_sec: while parsing a block mapping
+  in "<unicode string>", line 12, column 3:
+    - name: good
+      ^ (line: 12)
+expected <block end>, but found '<block mapping start>'
+  in "<unicode string>", line 46, column 5:
+      - name: fields,sql_instance
+        ^ (line: 46)
+2025-10-06 11:53:43,751 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_performance_16_Log File_s_ Size _KB_: while parsing a block node
+expected the node content, but found '<stream start>'
+  in "None", line 1, column 1:
+    
+    ^ (line: 1)
+2025-10-06 11:53:43,809 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_performance_20_Logins_sec: expected a single document in the stream
+  in "<unicode string>", line 71, column 15:
+        DataType: String
+                  ^ (line: 71)
+but found another document
+  in "<unicode string>", line 72, column 16:
+        ValueType: Constant
+                   ^ (line: 72)
+2025-10-06 11:53:43,809 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_performance_7_Page_reads_sec: string index out of range
+2025-10-06 11:53:43,810 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_performance_20_Logins_sec: expected a single document in the stream
+  in "<unicode string>", line 71, column 15:
+        DataType: String
+                  ^ (line: 71)
+but found another document
+  in "<unicode string>", line 72, column 16:
+        ValueType: Constant
+                   ^ (line: 72)
+2025-10-06 11:53:43,810 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_performance_7_Page_reads_sec: string index out of range
+2025-10-06 11:53:43,829 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_performance_9_Log_Bytes_Flushed_sec_master: 'NoneType' object has no attribute 'anchor'
+2025-10-06 11:53:43,829 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_performance_9_Log_Bytes_Flushed_sec_master: 'NoneType' object has no attribute 'anchor'
+2025-10-06 11:53:43,836 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_performance_9_Log_Bytes_flushed_sec_msdb: 'NoneType' object has no attribute 'anchor'
+2025-10-06 11:53:43,837 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_performance_9_Log_Bytes_flushed_sec_msdb: 'NoneType' object has no attribute 'anchor'
+2025-10-06 11:53:43,867 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_recent_backup: while parsing a block mapping
+  in "<unicode string>", line 12, column 3:
+    - name: good
+      ^ (line: 12)
+expected <block end>, but found '<block mapping start>'
+  in "<unicode string>", line 54, column 5:
+      - name: name
+        ^ (line: 54)
+2025-10-06 11:53:43,867 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_performance_26_CPU usage _: string index out of range
+2025-10-06 11:53:43,868 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_recent_backup: while parsing a block mapping
+  in "<unicode string>", line 12, column 3:
+    - name: good
+      ^ (line: 12)
+expected <block end>, but found '<block mapping start>'
+  in "<unicode string>", line 54, column 5:
+      - name: name
+        ^ (line: 54)
+2025-10-06 11:53:43,868 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_performance_26_CPU usage _: string index out of range
+2025-10-06 11:53:43,894 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_wait_stats: while parsing a block mapping
+  in "<unicode string>", line 58, column 5:
+      - name: tags,host
+        ^ (line: 58)
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 59, column 14:
+      - name: fields,wait_type
+        ^ (line: 59)
+2025-10-06 11:53:43,894 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_performance_28_Errors_sec: string index out of range
+2025-10-06 11:53:43,894 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_wait_stats: while parsing a block mapping
+  in "<unicode string>", line 58, column 5:
+      - name: tags,host
+        ^ (line: 58)
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 59, column 14:
+      - name: fields,wait_type
+        ^ (line: 59)
+2025-10-06 11:53:43,894 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_performance_28_Errors_sec: string index out of range
+2025-10-06 11:53:43,964 - core.yaml_editor - ERROR - Error reading submodule config ServiceMonitor/failure: string index out of range
+2025-10-06 11:53:43,964 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_performance_3_Buffer_cache_hit_ratio: string index out of range
+2025-10-06 11:53:43,965 - core.eps_calculator - ERROR - Error reading submodule config for ServiceMonitor/failure: string index out of range
+2025-10-06 11:53:43,966 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_performance_3_Buffer_cache_hit_ratio: string index out of range
+2025-10-06 11:53:43,985 - core.yaml_editor - ERROR - Error reading module config SyntheticBrowserMonitoring: 'NoneType' object has no attribute 'anchor'
+2025-10-06 11:53:43,998 - core.eps_calculator - ERROR - Error reading module config for SyntheticBrowserMonitoring: 'NoneType' object has no attribute 'anchor'
+2025-10-06 11:53:44,012 - core.yaml_editor - ERROR - Error reading submodule config SyntheticBrowserMonitoring/metrics: while scanning a simple key
+  in "<unicode string>", line 56, column 5:
+      - name: message,Event,Screenshot
+                                ^ (line: 56)
+could not find expected ':'
+  in "<unicode string>", line 57, column 5:
+        DataType: String
+        ^ (line: 57)
+2025-10-06 11:53:44,012 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_performance_9_Log_Bytes_Flushed_sec_master: string index out of range
+2025-10-06 11:53:44,012 - core.eps_calculator - ERROR - Error reading submodule config for SyntheticBrowserMonitoring/metrics: while scanning a simple key
+  in "<unicode string>", line 56, column 5:
+      - name: message,Event,Screenshot
+                                ^ (line: 56)
+could not find expected ':'
+  in "<unicode string>", line 57, column 5:
+        DataType: String
+        ^ (line: 57)
+2025-10-06 11:53:44,013 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_performance_9_Log_Bytes_Flushed_sec_master: string index out of range
+2025-10-06 11:53:44,034 - core.yaml_editor - ERROR - Error reading submodule config Tomcat/ClassLoading: expected a single document in the stream
+  in "<unicode string>", line 55, column 3:
+      - name: bu_id
+      ^ (line: 55)
+but found another document
+  in "<unicode string>", line 55, column 5:
+      - name: bu_id
+        ^ (line: 55)
+2025-10-06 11:53:44,034 - core.yaml_editor - ERROR - Error reading submodule config Mssql/sqlserver_performance_9_Log_Bytes_flushed_sec_total: string index out of range
+2025-10-06 11:53:44,034 - core.eps_calculator - ERROR - Error reading submodule config for Tomcat/ClassLoading: expected a single document in the stream
+  in "<unicode string>", line 55, column 3:
+      - name: bu_id
+      ^ (line: 55)
+but found another document
+  in "<unicode string>", line 55, column 5:
+      - name: bu_id
+        ^ (line: 55)
+2025-10-06 11:53:44,035 - core.eps_calculator - ERROR - Error reading submodule config for Mssql/sqlserver_performance_9_Log_Bytes_flushed_sec_total: string index out of range
+2025-10-06 11:53:44,171 - core.yaml_editor - ERROR - Error reading submodule config Tomcat/Manager: mapping values are not allowed here
+  in "<unicode string>", line 136, column 15:
+          DataType: Boolean
+                  ^ (line: 136)
+2025-10-06 11:53:44,171 - core.yaml_editor - ERROR - Error reading submodule config LinuxMonitor/filesystem: string index out of range
+2025-10-06 11:53:44,172 - core.eps_calculator - ERROR - Error reading submodule config for Tomcat/Manager: mapping values are not allowed here
+  in "<unicode string>", line 136, column 15:
+          DataType: Boolean
+                  ^ (line: 136)
+2025-10-06 11:53:44,172 - core.eps_calculator - ERROR - Error reading submodule config for LinuxMonitor/filesystem: string index out of range
+2025-10-06 11:53:44,209 - core.yaml_editor - ERROR - Error reading submodule config Tomcat/MemoryManager: mapping values are not allowed here
+  in "<unicode string>", line 59, column 12:
+          Value: "UniqueKey"
+               ^ (line: 59)
+2025-10-06 11:53:44,209 - core.yaml_editor - ERROR - Error reading submodule config LinuxMonitor/network: string index out of range
+2025-10-06 11:53:44,209 - core.eps_calculator - ERROR - Error reading submodule config for Tomcat/MemoryManager: mapping values are not allowed here
+  in "<unicode string>", line 59, column 12:
+          Value: "UniqueKey"
+               ^ (line: 59)
+2025-10-06 11:53:44,209 - core.eps_calculator - ERROR - Error reading submodule config for LinuxMonitor/network: string index out of range
+2025-10-06 11:53:44,221 - core.yaml_editor - ERROR - Error reading submodule config LinuxMonitor/process: 'MappingEndEvent' object has no attribute 'anchor'
+2025-10-06 11:53:44,221 - core.yaml_editor - ERROR - Error reading submodule config Tomcat/MemoryPool: string index out of range
+2025-10-06 11:53:44,221 - core.eps_calculator - ERROR - Error reading submodule config for LinuxMonitor/process: 'MappingEndEvent' object has no attribute 'anchor'
+2025-10-06 11:53:44,221 - core.eps_calculator - ERROR - Error reading submodule config for Tomcat/MemoryPool: string index out of range
+2025-10-06 11:53:44,241 - core.yaml_editor - ERROR - Error reading submodule config Tomcat/OperatingSystem: while parsing a block mapping
+  in "<unicode string>", line 64, column 5:
+      - name: agent,id
+        ^ (line: 64)
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 65, column 13:
+          DataType: String
+                 ^ (line: 65)
+2025-10-06 11:53:44,241 - core.yaml_editor - ERROR - Error reading submodule config LinuxMonitor/socket: pop from empty list
+2025-10-06 11:53:44,241 - core.eps_calculator - ERROR - Error reading submodule config for Tomcat/OperatingSystem: while parsing a block mapping
+  in "<unicode string>", line 64, column 5:
+      - name: agent,id
+        ^ (line: 64)
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 65, column 13:
+          DataType: String
+                 ^ (line: 65)
+2025-10-06 11:53:44,241 - core.eps_calculator - ERROR - Error reading submodule config for LinuxMonitor/socket: pop from empty list
+2025-10-06 11:53:44,288 - core.yaml_editor - ERROR - Error reading module config exampleLogs: while parsing a block mapping
+  in "<unicode string>", line 79, column 7:
+        - name: host
+          ^ (line: 79)
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 82, column 14:
+          Value: UniqueKey
+                 ^ (line: 82)
+2025-10-06 11:53:44,288 - core.yaml_editor - ERROR - Error reading submodule config Tomcat/StringCache: string index out of range
+2025-10-06 11:53:44,288 - core.eps_calculator - ERROR - Error reading module config for exampleLogs: while parsing a block mapping
+  in "<unicode string>", line 79, column 7:
+        - name: host
+          ^ (line: 79)
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 82, column 14:
+          Value: UniqueKey
+                 ^ (line: 82)
+2025-10-06 11:53:44,289 - core.eps_calculator - ERROR - Error reading submodule config for Tomcat/StringCache: string index out of range
+2025-10-06 11:53:44,296 - core.yaml_editor - ERROR - Error reading submodule config exampleLogs/logs: while parsing a block mapping
+  in "<unicode string>", line 82, column 7:
+        - name: keepAliveTimeout
+          ^ (line: 82)
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 83, column 7:
+          DataType: Uint64
+          ^ (line: 83)
+2025-10-06 11:53:44,296 - core.yaml_editor - ERROR - Error reading submodule config Tomcat/ThreadPool: string index out of range
+2025-10-06 11:53:44,296 - core.eps_calculator - ERROR - Error reading submodule config for exampleLogs/logs: while parsing a block mapping
+  in "<unicode string>", line 82, column 7:
+        - name: keepAliveTimeout
+          ^ (line: 82)
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 83, column 7:
+          DataType: Uint64
+          ^ (line: 83)
+2025-10-06 11:53:44,297 - core.eps_calculator - ERROR - Error reading submodule config for Tomcat/ThreadPool: string index out of range
+2025-10-06 11:53:44,306 - core.yaml_editor - ERROR - Error reading module config WebLogic: while parsing a block mapping
+  in "<unicode string>", line 78, column 7:
+        - name: Host
+          ^ (line: 78)
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 81, column 7:
+          Value: UniqueKey
+          ^ (line: 81)
+2025-10-06 11:53:44,306 - core.yaml_editor - ERROR - Error reading submodule config Tomcat/Threading: string index out of range
+2025-10-06 11:53:44,306 - core.eps_calculator - ERROR - Error reading module config for WebLogic: while parsing a block mapping
+  in "<unicode string>", line 78, column 7:
+        - name: Host
+          ^ (line: 78)
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 81, column 7:
+          Value: UniqueKey
+          ^ (line: 81)
+2025-10-06 11:53:44,307 - core.eps_calculator - ERROR - Error reading submodule config for Tomcat/Threading: string index out of range
+2025-10-06 11:53:44,327 - core.yaml_editor - ERROR - Error reading submodule config Tomcat/Threading_details: while parsing a block mapping
+  in "<unicode string>", line 88, column 5:
+      - name: Memory,G1 Old Gen,MemoryBe ... 
+        ^ (line: 88)
+expected <block end>, but found '-'
+  in "<unicode string>", line 93, column 5:
+        - name: WaitedCount
+        ^ (line: 93)
+2025-10-06 11:53:44,327 - core.yaml_editor - ERROR - Error reading submodule config WebLogic/garbagecollector: string index out of range
+2025-10-06 11:53:44,327 - core.eps_calculator - ERROR - Error reading submodule config for Tomcat/Threading_details: while parsing a block mapping
+  in "<unicode string>", line 88, column 5:
+      - name: Memory,G1 Old Gen,MemoryBe ... 
+        ^ (line: 88)
+expected <block end>, but found '-'
+  in "<unicode string>", line 93, column 5:
+        - name: WaitedCount
+        ^ (line: 93)
+2025-10-06 11:53:44,327 - core.eps_calculator - ERROR - Error reading submodule config for WebLogic/garbagecollector: string index out of range
+2025-10-06 11:53:44,334 - core.yaml_editor - ERROR - Error reading submodule config WebLogic/ping: string index out of range
+2025-10-06 11:53:44,334 - core.eps_calculator - ERROR - Error reading submodule config for WebLogic/ping: string index out of range
+2025-10-06 11:53:44,335 - core.yaml_editor - ERROR - Error reading submodule config Tomcat/WebResourceRoot: string index out of range
+2025-10-06 11:53:44,335 - core.eps_calculator - ERROR - Error reading submodule config for Tomcat/WebResourceRoot: string index out of range
+2025-10-06 11:53:44,341 - core.yaml_editor - ERROR - Error reading module config Traces: string index out of range
+2025-10-06 11:53:44,341 - core.yaml_editor - ERROR - Error reading submodule config WebLogic/server: string index out of range
+2025-10-06 11:53:44,341 - core.eps_calculator - ERROR - Error reading module config for Traces: string index out of range
+2025-10-06 11:53:44,341 - core.eps_calculator - ERROR - Error reading submodule config for WebLogic/server: string index out of range
+2025-10-06 11:53:44,349 - core.yaml_editor - ERROR - Error reading submodule config WebLogic/threaddetails: string index out of range
+2025-10-06 11:53:44,349 - core.yaml_editor - ERROR - Error reading submodule config Traces/metrics: pop from empty list
+2025-10-06 11:53:44,349 - core.eps_calculator - ERROR - Error reading submodule config for WebLogic/threaddetails: string index out of range
+2025-10-06 11:53:44,349 - core.eps_calculator - ERROR - Error reading submodule config for Traces/metrics: pop from empty list
+2025-10-06 11:53:44,366 - core.yaml_editor - ERROR - Error reading module config Azure_API_Management: 'NoneType' object has no attribute 'anchor'
+2025-10-06 11:53:44,367 - core.eps_calculator - ERROR - Error reading module config for Azure_API_Management: 'NoneType' object has no attribute 'anchor'
+2025-10-06 11:53:44,391 - core.yaml_editor - ERROR - Error reading submodule config Azure_API_Management/backend_request: while parsing a block mapping
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 200, column 5:
+      - name: Memory,Metaspace,MemoryAft ... 
+        ^ (line: 200)
+2025-10-06 11:53:44,391 - core.yaml_editor - ERROR - Error reading submodule config WebLogic/garbagecollector: string index out of range
+2025-10-06 11:53:44,392 - core.eps_calculator - ERROR - Error reading submodule config for Azure_API_Management/backend_request: while parsing a block mapping
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 200, column 5:
+      - name: Memory,Metaspace,MemoryAft ... 
+        ^ (line: 200)
+2025-10-06 11:53:44,392 - core.eps_calculator - ERROR - Error reading submodule config for WebLogic/garbagecollector: string index out of range
+2025-10-06 11:53:44,458 - core.yaml_editor - ERROR - Error reading submodule config Azure_API_Management/successful_request: while parsing a block mapping
+  in "<unicode string>", line 66, column 5:
+      - name: ProcessType
+        ^ (line: 66)
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 69, column 12:
+        Value: ManagedProcess
+               ^ (line: 69)
+2025-10-06 11:53:44,458 - core.yaml_editor - ERROR - Error reading submodule config ibm_was/connection_pool_module: string index out of range
+2025-10-06 11:53:44,458 - core.eps_calculator - ERROR - Error reading submodule config for Azure_API_Management/successful_request: while parsing a block mapping
+  in "<unicode string>", line 66, column 5:
+      - name: ProcessType
+        ^ (line: 66)
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 69, column 12:
+        Value: ManagedProcess
+               ^ (line: 69)
+2025-10-06 11:53:44,458 - core.eps_calculator - ERROR - Error reading submodule config for ibm_was/connection_pool_module: string index out of range
+2025-10-06 11:53:44,542 - core.yaml_editor - ERROR - Error reading submodule config ibm_was/thread_pool_module: string index out of range
+2025-10-06 11:53:44,542 - core.yaml_editor - ERROR - Error reading submodule config K8s/container: pop from empty list
+2025-10-06 11:53:44,543 - core.eps_calculator - ERROR - Error reading submodule config for ibm_was/thread_pool_module: string index out of range
+2025-10-06 11:53:44,543 - core.eps_calculator - ERROR - Error reading submodule config for K8s/container: pop from empty list
+2025-10-06 11:53:44,572 - core.yaml_editor - ERROR - Error reading submodule config ibm_was/transaction_manager_module: while parsing a block mapping
+  in "<unicode string>", line 235, column 5:
+      - name: kubernetes,node,labels,nod ... 
+        ^ (line: 235)
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 236, column 5:
+        DataType: String
+        ^ (line: 236)
+2025-10-06 11:53:44,572 - core.yaml_editor - ERROR - Error reading submodule config K8s/controller-manager: string index out of range
+2025-10-06 11:53:44,572 - core.eps_calculator - ERROR - Error reading submodule config for ibm_was/transaction_manager_module: while parsing a block mapping
+  in "<unicode string>", line 235, column 5:
+      - name: kubernetes,node,labels,nod ... 
+        ^ (line: 235)
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 236, column 5:
+        DataType: String
+        ^ (line: 236)
+2025-10-06 11:53:44,573 - core.eps_calculator - ERROR - Error reading submodule config for K8s/controller-manager: string index out of range
+2025-10-06 11:53:44,617 - core.yaml_editor - ERROR - Error reading module config old-k8s: string index out of range
+2025-10-06 11:53:44,618 - core.yaml_editor - ERROR - Error reading submodule config K8s/kubelet: string index out of range
+2025-10-06 11:53:44,618 - core.eps_calculator - ERROR - Error reading module config for old-k8s: string index out of range
+2025-10-06 11:53:44,618 - core.eps_calculator - ERROR - Error reading submodule config for K8s/kubelet: string index out of range
+2025-10-06 11:53:44,713 - core.yaml_editor - ERROR - Error reading submodule config old-k8s/container: while constructing a mapping
+  in "<unicode string>", line 2, column 4:
+       name: kubernetes,pod,name
+       ^ (line: 2)
+found duplicate key "name" with value "kubernetes,container,name" (original value: "kubernetes,pod,name")
+  in "<unicode string>", line 8, column 4:
+       name: kubernetes,container,name
+       ^ (line: 8)
+
+To suppress this check see:
+    https://yaml.dev/doc/ruamel.yaml/api/#Duplicate_keys
+
+2025-10-06 11:53:44,720 - core.eps_calculator - ERROR - Error reading submodule config for old-k8s/container: while constructing a mapping
+  in "<unicode string>", line 2, column 4:
+       name: kubernetes,pod,name
+       ^ (line: 2)
+found duplicate key "name" with value "kubernetes,container,name" (original value: "kubernetes,pod,name")
+  in "<unicode string>", line 8, column 4:
+       name: kubernetes,container,name
+       ^ (line: 8)
+
+To suppress this check see:
+    https://yaml.dev/doc/ruamel.yaml/api/#Duplicate_keys
+
+2025-10-06 11:53:44,817 - core.yaml_editor - ERROR - Error reading submodule config old-k8s/etcd: while parsing a block mapping
+  in "<unicode string>", line 71, column 5:
+      - name: kubernetes,pod,cpu,usage,n ... 
+        ^ (line: 71)
+expected <block end>, but found '-'
+  in "<unicode string>", line 75, column 3:
+      - name: kubernetes,pod,memory,pa ... 
+      ^ (line: 75)
+2025-10-06 11:53:44,817 - core.yaml_editor - ERROR - Error reading submodule config K8s/replicaset: pop from empty list
+2025-10-06 11:53:44,818 - core.eps_calculator - ERROR - Error reading submodule config for old-k8s/etcd: while parsing a block mapping
+  in "<unicode string>", line 71, column 5:
+      - name: kubernetes,pod,cpu,usage,n ... 
+        ^ (line: 71)
+expected <block end>, but found '-'
+  in "<unicode string>", line 75, column 3:
+      - name: kubernetes,pod,memory,pa ... 
+      ^ (line: 75)
+2025-10-06 11:53:44,818 - core.eps_calculator - ERROR - Error reading submodule config for K8s/replicaset: pop from empty list
+2025-10-06 11:53:44,825 - core.yaml_editor - ERROR - Error reading submodule config K8s/state_container: while parsing a block mapping
+  in "<unicode string>", line 64, column 5:
+      - name: kubernetes,daemonset,repli ... 
+        ^ (line: 64)
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 65, column 5:
+        DataType: Uint64
+        ^ (line: 65)
+2025-10-06 11:53:44,825 - core.yaml_editor - ERROR - Error reading submodule config old-k8s/kube-state: string index out of range
+2025-10-06 11:53:44,825 - core.eps_calculator - ERROR - Error reading submodule config for K8s/state_container: while parsing a block mapping
+  in "<unicode string>", line 64, column 5:
+      - name: kubernetes,daemonset,repli ... 
+        ^ (line: 64)
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 65, column 5:
+        DataType: Uint64
+        ^ (line: 65)
+2025-10-06 11:53:44,825 - core.eps_calculator - ERROR - Error reading submodule config for old-k8s/kube-state: string index out of range
+2025-10-06 11:53:44,907 - core.yaml_editor - ERROR - Error reading submodule config old-k8s/node_cpu_mem: string index out of range
+2025-10-06 11:53:44,907 - core.yaml_editor - ERROR - Error reading submodule config K8s/state_node: string index out of range
+2025-10-06 11:53:44,907 - core.eps_calculator - ERROR - Error reading submodule config for old-k8s/node_cpu_mem: string index out of range
+2025-10-06 11:53:44,907 - core.eps_calculator - ERROR - Error reading submodule config for K8s/state_node: string index out of range
+2025-10-06 11:53:44,924 - core.yaml_editor - ERROR - Error reading submodule config old-k8s/pod: while parsing a block mapping
+  in "<unicode string>", line 222, column 5:
+      - name: kubernetes,pod,status,phase
+        ^ (line: 222)
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 223, column 15:
+        DataType: String
+                  ^ (line: 223)
+2025-10-06 11:53:44,924 - core.yaml_editor - ERROR - Error reading submodule config K8s/state_pod: string index out of range
+2025-10-06 11:53:44,924 - core.eps_calculator - ERROR - Error reading submodule config for old-k8s/pod: while parsing a block mapping
+  in "<unicode string>", line 222, column 5:
+      - name: kubernetes,pod,status,phase
+        ^ (line: 222)
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 223, column 15:
+        DataType: String
+                  ^ (line: 223)
+2025-10-06 11:53:44,924 - core.eps_calculator - ERROR - Error reading submodule config for K8s/state_pod: string index out of range
+2025-10-06 11:53:44,953 - core.yaml_editor - ERROR - Error reading submodule config old-k8s/pvc: while parsing a block mapping
+  in "<unicode string>", line 104, column 5:
+      - name: metricset,name
+        ^ (line: 104)
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 107, column 5:
+        Value: state_replicaset
+        ^ (line: 107)
+2025-10-06 11:53:44,953 - core.yaml_editor - ERROR - Error reading submodule config K8s/state_replicaset: string index out of range
+2025-10-06 11:53:44,953 - core.eps_calculator - ERROR - Error reading submodule config for old-k8s/pvc: while parsing a block mapping
+  in "<unicode string>", line 104, column 5:
+      - name: metricset,name
+        ^ (line: 104)
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 107, column 5:
+        Value: state_replicaset
+        ^ (line: 107)
+2025-10-06 11:53:44,953 - core.eps_calculator - ERROR - Error reading submodule config for K8s/state_replicaset: string index out of range
+2025-10-06 11:53:44,965 - core.yaml_editor - ERROR - Error reading submodule config old-k8s/replicaset: expected a single document in the stream
+  in "<unicode string>", line 148, column 12:
+        Value: e2e-72-47
+               ^ (line: 148)
+but found another document
+  in "<unicode string>", line 149, column 5:
+      - name: kubernetes,node,labels,snm ... 
+        ^ (line: 149)
+2025-10-06 11:53:44,965 - core.yaml_editor - ERROR - Error reading submodule config K8s/state_statefulset: string index out of range
+2025-10-06 11:53:44,965 - core.eps_calculator - ERROR - Error reading submodule config for old-k8s/replicaset: expected a single document in the stream
+  in "<unicode string>", line 148, column 12:
+        Value: e2e-72-47
+               ^ (line: 148)
+but found another document
+  in "<unicode string>", line 149, column 5:
+      - name: kubernetes,node,labels,snm ... 
+        ^ (line: 149)
+2025-10-06 11:53:44,966 - core.eps_calculator - ERROR - Error reading submodule config for K8s/state_statefulset: string index out of range
+2025-10-06 11:53:45,008 - core.yaml_editor - ERROR - Error reading submodule config old-k8s/state_daemonset: expected a single document in the stream
+  in "<unicode string>", line 72, column 5:
+      - name: agent,id
+        ^ (line: 72)
+but found another document
+  in "<unicode string>", line 76, column 5:
+      - name: service,address
+        ^ (line: 76)
+2025-10-06 11:53:45,009 - core.yaml_editor - ERROR - Error reading submodule config K8s/volume: string index out of range
+2025-10-06 11:53:45,009 - core.eps_calculator - ERROR - Error reading submodule config for old-k8s/state_daemonset: expected a single document in the stream
+  in "<unicode string>", line 72, column 5:
+      - name: agent,id
+        ^ (line: 72)
+but found another document
+  in "<unicode string>", line 76, column 5:
+      - name: service,address
+        ^ (line: 76)
+2025-10-06 11:53:45,009 - core.eps_calculator - ERROR - Error reading submodule config for K8s/volume: string index out of range
+2025-10-06 11:53:45,063 - core.yaml_editor - ERROR - Error reading submodule config Tomcat/GarbageCollector_MemoryUsage: while parsing a block mapping
+  in "<unicode string>", line 2, column 3:
+    - name: good
+      ^ (line: 2)
+expected <block end>, but found '<block mapping start>'
+  in "<unicode string>", line 68, column 5:
+      - name: agent,version
+        ^ (line: 68)
+2025-10-06 11:53:45,063 - core.eps_calculator - ERROR - Error reading submodule config for Tomcat/GarbageCollector_MemoryUsage: while parsing a block mapping
+  in "<unicode string>", line 2, column 3:
+    - name: good
+      ^ (line: 2)
+expected <block end>, but found '<block mapping start>'
+  in "<unicode string>", line 68, column 5:
+      - name: agent,version
+        ^ (line: 68)
+2025-10-06 11:53:45,064 - core.yaml_editor - ERROR - Error reading submodule config old-k8s/state_job: string index out of range
+2025-10-06 11:53:45,065 - core.eps_calculator - ERROR - Error reading submodule config for old-k8s/state_job: string index out of range
+2025-10-06 11:53:45,092 - core.yaml_editor - ERROR - Error reading submodule config old-k8s/state_node: while parsing a block collection
+  in "<unicode string>", line 15, column 5:
+        - name: tenant_id
+        ^ (line: 15)
+expected <block end>, but found '<block mapping start>'
+  in "<unicode string>", line 140, column 7:
+        - name: rejectedSessions
+          ^ (line: 140)
+2025-10-06 11:53:45,092 - core.yaml_editor - ERROR - Error reading submodule config Tomcat/Manager: string index out of range
+2025-10-06 11:53:45,092 - core.eps_calculator - ERROR - Error reading submodule config for old-k8s/state_node: while parsing a block collection
+  in "<unicode string>", line 15, column 5:
+        - name: tenant_id
+        ^ (line: 15)
+expected <block end>, but found '<block mapping start>'
+  in "<unicode string>", line 140, column 7:
+        - name: rejectedSessions
+          ^ (line: 140)
+2025-10-06 11:53:45,093 - core.eps_calculator - ERROR - Error reading submodule config for Tomcat/Manager: string index out of range
+2025-10-06 11:53:45,125 - core.yaml_editor - ERROR - Error reading submodule config Tomcat/MemoryPool: string index out of range
+2025-10-06 11:53:45,126 - core.yaml_editor - ERROR - Error reading submodule config old-k8s/state_pod: string index out of range
+2025-10-06 11:53:45,126 - core.eps_calculator - ERROR - Error reading submodule config for Tomcat/MemoryPool: string index out of range
+2025-10-06 11:53:45,126 - core.eps_calculator - ERROR - Error reading submodule config for old-k8s/state_pod: string index out of range
+2025-10-06 11:53:45,167 - core.yaml_editor - ERROR - Error reading submodule config old-k8s/state_pvc: string index out of range
+2025-10-06 11:53:45,167 - core.yaml_editor - ERROR - Error reading submodule config Tomcat/ThreadPool: string index out of range
+2025-10-06 11:53:45,167 - core.eps_calculator - ERROR - Error reading submodule config for old-k8s/state_pvc: string index out of range
+2025-10-06 11:53:45,167 - core.eps_calculator - ERROR - Error reading submodule config for Tomcat/ThreadPool: string index out of range
+2025-10-06 11:53:45,181 - core.yaml_editor - ERROR - Error reading submodule config old-k8s/state_replicaset: while parsing a block mapping
+  in "<unicode string>", line 80, column 7:
+        - name: ThreadState
+          ^ (line: 80)
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 83, column 14:
+          Value: "RUNNABLE:50,WAITING:20,TIMED_WA ... 
+                 ^ (line: 83)
+2025-10-06 11:53:45,182 - core.yaml_editor - ERROR - Error reading submodule config Tomcat/Threading_details: string index out of range
+2025-10-06 11:53:45,182 - core.eps_calculator - ERROR - Error reading submodule config for old-k8s/state_replicaset: while parsing a block mapping
+  in "<unicode string>", line 80, column 7:
+        - name: ThreadState
+          ^ (line: 80)
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 83, column 14:
+          Value: "RUNNABLE:50,WAITING:20,TIMED_WA ... 
+                 ^ (line: 83)
+2025-10-06 11:53:45,182 - core.eps_calculator - ERROR - Error reading submodule config for Tomcat/Threading_details: string index out of range
+2025-10-06 11:53:45,227 - core.yaml_editor - ERROR - Error reading submodule config old-k8s/volume: expected a single document in the stream
+  in "<unicode string>", line 65, column 5:
+        Value: SubModuleUniqueKey   
+        ^ (line: 65)
+but found another document
+  in "<unicode string>", line 66, column 3:
+      - name: kubernetes,pod,name
+      ^ (line: 66)
+2025-10-06 11:53:45,227 - core.yaml_editor - ERROR - Error reading submodule config BRUM/metrics: string index out of range
+2025-10-06 11:53:45,228 - core.eps_calculator - ERROR - Error reading submodule config for old-k8s/volume: expected a single document in the stream
+  in "<unicode string>", line 65, column 5:
+        Value: SubModuleUniqueKey   
+        ^ (line: 65)
+but found another document
+  in "<unicode string>", line 66, column 3:
+      - name: kubernetes,pod,name
+      ^ (line: 66)
+2025-10-06 11:53:45,228 - core.eps_calculator - ERROR - Error reading submodule config for BRUM/metrics: string index out of range
+2025-10-06 11:54:29,919 - core.yaml_editor - ERROR - Error reading submodule config LinuxMonitor/filesystem: while constructing a mapping
+  in "<unicode string>", line 114, column 5:
+      - name: system,filesystem,used,pct
+        ^ (line: 114)
+found duplicate key "ValueType" with value "EvaluatedValue" (original value: "RandomRange")
+  in "<unicode string>", line 117, column 5:
+        ValueType: "EvaluatedValue"
+        ^ (line: 117)
+
+To suppress this check see:
+    https://yaml.dev/doc/ruamel.yaml/api/#Duplicate_keys
+
+2025-10-06 11:54:29,920 - core.eps_calculator - ERROR - Error reading submodule config for LinuxMonitor/filesystem: while constructing a mapping
+  in "<unicode string>", line 114, column 5:
+      - name: system,filesystem,used,pct
+        ^ (line: 114)
+found duplicate key "ValueType" with value "EvaluatedValue" (original value: "RandomRange")
+  in "<unicode string>", line 117, column 5:
+        ValueType: "EvaluatedValue"
+        ^ (line: 117)
+
+To suppress this check see:
+    https://yaml.dev/doc/ruamel.yaml/api/#Duplicate_keys
+
+2025-10-06 11:54:30,975 - core.yaml_editor - ERROR - Error reading submodule config old-k8s/container: while constructing a mapping
+  in "<unicode string>", line 2, column 4:
+       name: kubernetes,pod,name
+       ^ (line: 2)
+found duplicate key "name" with value "kubernetes,container,name" (original value: "kubernetes,pod,name")
+  in "<unicode string>", line 8, column 4:
+       name: kubernetes,container,name
+       ^ (line: 8)
+
+To suppress this check see:
+    https://yaml.dev/doc/ruamel.yaml/api/#Duplicate_keys
+
+2025-10-06 11:54:30,975 - core.eps_calculator - ERROR - Error reading submodule config for old-k8s/container: while constructing a mapping
+  in "<unicode string>", line 2, column 4:
+       name: kubernetes,pod,name
+       ^ (line: 2)
+found duplicate key "name" with value "kubernetes,container,name" (original value: "kubernetes,pod,name")
+  in "<unicode string>", line 8, column 4:
+       name: kubernetes,container,name
+       ^ (line: 8)
+
+To suppress this check see:
+    https://yaml.dev/doc/ruamel.yaml/api/#Duplicate_keys
+
+2025-10-06 11:54:35,463 - core.binary_manager - INFO - Local bin directory does not exist: /home/vunet/vuDataSim_2/bin
+2025-10-06 11:54:37,464 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-06 11:54:37,687 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-06 11:54:41,651 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-06 11:54:41,836 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-06 11:55:00,388 - core.yaml_editor - ERROR - Error reading submodule config LinuxMonitor/filesystem: while constructing a mapping
+  in "<unicode string>", line 114, column 5:
+      - name: system,filesystem,used,pct
+        ^ (line: 114)
+found duplicate key "ValueType" with value "EvaluatedValue" (original value: "RandomRange")
+  in "<unicode string>", line 117, column 5:
+        ValueType: "EvaluatedValue"
+        ^ (line: 117)
+
+To suppress this check see:
+    https://yaml.dev/doc/ruamel.yaml/api/#Duplicate_keys
+
+2025-10-06 11:55:00,388 - core.eps_calculator - ERROR - Error reading submodule config for LinuxMonitor/filesystem: while constructing a mapping
+  in "<unicode string>", line 114, column 5:
+      - name: system,filesystem,used,pct
+        ^ (line: 114)
+found duplicate key "ValueType" with value "EvaluatedValue" (original value: "RandomRange")
+  in "<unicode string>", line 117, column 5:
+        ValueType: "EvaluatedValue"
+        ^ (line: 117)
+
+To suppress this check see:
+    https://yaml.dev/doc/ruamel.yaml/api/#Duplicate_keys
+
+2025-10-06 11:55:01,472 - core.yaml_editor - ERROR - Error reading submodule config old-k8s/container: while constructing a mapping
+  in "<unicode string>", line 2, column 4:
+       name: kubernetes,pod,name
+       ^ (line: 2)
+found duplicate key "name" with value "kubernetes,container,name" (original value: "kubernetes,pod,name")
+  in "<unicode string>", line 8, column 4:
+       name: kubernetes,container,name
+       ^ (line: 8)
+
+To suppress this check see:
+    https://yaml.dev/doc/ruamel.yaml/api/#Duplicate_keys
+
+2025-10-06 11:55:01,472 - core.eps_calculator - ERROR - Error reading submodule config for old-k8s/container: while constructing a mapping
+  in "<unicode string>", line 2, column 4:
+       name: kubernetes,pod,name
+       ^ (line: 2)
+found duplicate key "name" with value "kubernetes,container,name" (original value: "kubernetes,pod,name")
+  in "<unicode string>", line 8, column 4:
+       name: kubernetes,container,name
+       ^ (line: 8)
+
+To suppress this check see:
+    https://yaml.dev/doc/ruamel.yaml/api/#Duplicate_keys
+
+2025-10-06 11:55:10,776 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.9p1)
+2025-10-06 11:55:10,972 - paramiko.transport - INFO - Authentication (publickey) successful!
+2025-10-06 11:56:13,427 - core.yaml_editor - ERROR - Error reading submodule config LinuxMonitor/filesystem: while constructing a mapping
+  in "<unicode string>", line 114, column 5:
+      - name: system,filesystem,used,pct
+        ^ (line: 114)
+found duplicate key "ValueType" with value "EvaluatedValue" (original value: "RandomRange")
+  in "<unicode string>", line 117, column 5:
+        ValueType: "EvaluatedValue"
+        ^ (line: 117)
+
+To suppress this check see:
+    https://yaml.dev/doc/ruamel.yaml/api/#Duplicate_keys
+
+2025-10-06 11:56:13,427 - core.eps_calculator - ERROR - Error reading submodule config for LinuxMonitor/filesystem: while constructing a mapping
+  in "<unicode string>", line 114, column 5:
+      - name: system,filesystem,used,pct
+        ^ (line: 114)
+found duplicate key "ValueType" with value "EvaluatedValue" (original value: "RandomRange")
+  in "<unicode string>", line 117, column 5:
+        ValueType: "EvaluatedValue"
+        ^ (line: 117)
+
+To suppress this check see:
+    https://yaml.dev/doc/ruamel.yaml/api/#Duplicate_keys
+

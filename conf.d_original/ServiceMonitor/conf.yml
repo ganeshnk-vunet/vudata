@@ -1,0 +1,29 @@
+enabled: true
+uniquekey:
+  name: "host"
+  DataType: IPv4
+  ValueType: "RandomFixed"
+  Value: "10.10.10.1"
+  NumUniqKey: 30000
+period: 1s
+
+output.kafka:
+  enabled: true
+  topic: "servicebeat-metrics-input"
+
+# Add the timestamp field name and type. Type could be epoch_in_seconds, epoch_in_ms or datetime_rfc3339
+timestamp:
+  name: timestamp
+  type: epoch_in_seconds
+
+output.file:
+  enabled: false
+  path: /home/vunet/data_sim/vuDataSim/outputs/
+  filename: service.json
+  rotate_every_mb: 1
+  max_files: 5 #Once the number of files have reached max_files limit, it will overwrite the 1st file
+
+# Include following yml files from this directory.. To include all, please use ‘*’
+Include_sub_modules: [success,failure]
+#Include_sub_modules: [failure]
+  

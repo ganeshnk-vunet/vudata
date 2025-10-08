@@ -1,0 +1,25 @@
+nodes:
+  e2e-108-10:
+    host: 216.48.191.10
+    user: vunet
+    key_path: ~/.ssh/id_rsa
+    conf_dir: /home/vunet/vuDataSim/vuDataSim/conf.d
+    binary_dir: /home/vunet/vuDataSim/vuDataSim/bin
+    description: "Primary vuDataSim node"
+    enabled: true
+  # node2:
+  #   host: 10.0.0.12
+  #   user: vunet
+  #   key_path: ~/.ssh/id_rsa
+  #   conf_dir: /home/vunet/vuDataSim/conf.d
+  #   binary_dir: /home/vunet/vuDataSim/bin
+  #   description: "Secondary vuDataSim node"
+  #   enabled: true
+
+# Global settings for cluster management
+cluster_settings:
+  backup_retention_days: 30
+  sync_timeout: 60
+  connection_timeout: 10
+  max_retries: 3
+  conflict_resolution: "manual"  # Options: manual, local_wins, remote_wins

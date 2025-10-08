@@ -1,0 +1,129 @@
+uniquekey:
+  # Unique key will be based on host IP and connection pool name to ensure that each entry is distinct.
+  name: host,Name
+  DataType: String
+  ValueType: RandomFixed
+  Value: "Application-Server\\d{2}"
+  NumUniqKey: 5
+  
+  
+
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: UseTime_mean
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 11-110
+  - name: PercentUsed_current
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: UseTime_max
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 28-280
+  - name: Node
+    DataType: String
+    ValueType: RandomFixed
+    Value: "e2e-82-222Node\\d{2}"
+  - name: ServerIP
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: UseTime_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 3-30
+  - name: Time
+    DataType: DateTime
+    ValueType: Current
+    Value: datetime_rfc3339
+  - name: Process
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey
+  - name: WaitingThreadCount_current
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: Name
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey
+  - name: ProcessType
+    DataType: String
+    ValueType: Constant
+    Value: ManagedProcess
+  - name: WaitTime_max
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 14-140
+  - name: HostDisplayName
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: Cell
+    DataType: String
+    ValueType: RandomFixed
+    Value: "e2e-82-222Cell\\d{2}"
+  - name: PoolSize_current
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 2-20
+  - name: UseTime_min
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1-10
+  - name: FreePoolSize_current
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1-10
+  - name: WaitTime_min
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: CreateCount
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: Host
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: WaitTime_mean
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 3-30
+  - name: StatisticSubTypeLevel2
+    DataType: String
+    ValueType: RandomFixed
+    Value: "jdbc/DefaultEJBTimerDataSource\\d{1}"
+  - name: CloseCount
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: WaitTime_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1-10
+  - name: StatisticType
+    DataType: String
+    ValueType: Constant
+    Value: connectionPoolModule
+  - name: StatisticSubTypeLevel1
+    DataType: String
+    ValueType: RandomFixed
+    Value: "Derby JDBC Provider (XA)\\d{1}"

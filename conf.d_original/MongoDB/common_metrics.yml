@@ -1,0 +1,1447 @@
+group:
+- name: good
+  fields:
+  - name: fields,active_reads
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,active_writes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,aggregate_command_failed
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,aggregate_command_total
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 426-4260
+  - name: fields,assert_msg
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,assert_regular
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,assert_rollovers
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,assert_user
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 87-870
+  - name: fields,assert_warning
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,available_reads
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 12-120
+  - name: fields,available_writes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 12-120
+  - name: fields,commands
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 71547-715470
+  - name: fields,commands_per_sec
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,connections_available
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 80-800
+  - name: fields,connections_current
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1-10
+  - name: fields,connections_total_created
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 24-240
+  - name: fields,count_command_failed
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,count_command_total
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 2-20
+  - name: fields,cursor_no_timeout
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,cursor_no_timeout_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,cursor_pinned
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,cursor_pinned_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,cursor_timed_out
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,cursor_timed_out_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,cursor_total
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,cursor_total_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,delete_command_failed
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,delete_command_total
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 5-50
+  - name: fields,deletes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 6-60
+  - name: fields,deletes_per_sec
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,distinct_command_failed
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,distinct_command_total
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,document_deleted
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 2-20
+  - name: fields,document_inserted
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 2-20
+  - name: fields,document_returned
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 8015-80150
+  - name: fields,document_updated
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 84-840
+  - name: fields,find_and_modify_command_failed
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,find_and_modify_command_total
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,find_command_failed
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,find_command_total
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1007-10070
+  - name: fields,flushes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 431-4310
+  - name: fields,flushes_per_sec
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,flushes_total_time_ns
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 9177100000-91771000000
+  - name: fields,get_more_command_failed
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,get_more_command_total
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 7884-78840
+  - name: fields,getmores
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 7884-78840
+  - name: fields,getmores_per_sec
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,insert_command_failed
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,insert_command_total
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 2-20
+  - name: fields,inserts
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 2-20
+  - name: fields,inserts_per_sec
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,jumbo_chunks
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,latency_commands
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 19753661-197536610
+  - name: fields,latency_commands_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 70945-709450
+  - name: fields,latency_reads
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 9079653-90796530
+  - name: fields,latency_reads_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 9220-92200
+  - name: fields,latency_writes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 80680-806800
+  - name: fields,latency_writes_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 2-20
+  - name: fields,locks_Collection_AcquireCount_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Collection_AcquireCount_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 12359-123590
+  - name: fields,locks_Collection_AcquireCount_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Collection_AcquireCount_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 263269-2632690
+  - name: fields,locks_Collection_AcquireWaitCount_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Collection_AcquireWaitCount_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Collection_AcquireWaitCount_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Collection_AcquireWaitCount_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Collection_DeadLockCount_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Collection_DeadLockCount_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Collection_DeadLockCount_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Collection_DeadLockCount_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Collection_TimeAcquiringMicros_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Collection_TimeAcquiringMicros_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Collection_TimeAcquiringMicros_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Collection_TimeAcquiringMicros_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Collection_TimeLockedMicros_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Collection_TimeLockedMicros_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Collection_TimeLockedMicros_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Collection_TimeLockedMicros_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Database_AcquireCount_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Database_AcquireCount_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 32688-326880
+  - name: fields,locks_Database_AcquireCount_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 4-40
+  - name: fields,locks_Database_AcquireCount_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 263270-2632700
+  - name: fields,locks_Database_AcquireWaitCount_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Database_AcquireWaitCount_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Database_AcquireWaitCount_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Database_AcquireWaitCount_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Database_DeadLockCount_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Database_DeadLockCount_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Database_DeadLockCount_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Database_DeadLockCount_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Database_TimeAcquiringMicros_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Database_TimeAcquiringMicros_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Database_TimeAcquiringMicros_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Database_TimeAcquiringMicros_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Database_TimeLockedMicros_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Database_TimeLockedMicros_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Database_TimeLockedMicros_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Database_TimeLockedMicros_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_FeatureCompatibilityVersion_AcquireCount_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_FeatureCompatibilityVersion_AcquireCount_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 165165-1651650
+  - name: fields,locks_FeatureCompatibilityVersion_AcquireCount_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_FeatureCompatibilityVersion_AcquireCount_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 4432-44320
+  - name: fields,locks_FeatureCompatibilityVersion_AcquireWaitCount_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_FeatureCompatibilityVersion_AcquireWaitCount_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_FeatureCompatibilityVersion_AcquireWaitCount_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_FeatureCompatibilityVersion_AcquireWaitCount_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_FeatureCompatibilityVersion_DeadLockCount_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_FeatureCompatibilityVersion_DeadLockCount_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_FeatureCompatibilityVersion_DeadLockCount_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_FeatureCompatibilityVersion_DeadLockCount_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_FeatureCompatibilityVersion_TimeAcquiringMicros_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_FeatureCompatibilityVersion_TimeAcquiringMicros_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_FeatureCompatibilityVersion_TimeAcquiringMicros_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_FeatureCompatibilityVersion_TimeAcquiringMicros_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_FeatureCompatibilityVersion_TimeLockedMicros_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_FeatureCompatibilityVersion_TimeLockedMicros_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_FeatureCompatibilityVersion_TimeLockedMicros_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_FeatureCompatibilityVersion_TimeLockedMicros_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Global_AcquireCount_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Global_AcquireCount_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 424006-4240060
+  - name: fields,locks_Global_AcquireCount_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Global_AcquireCount_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 265868-2658680
+  - name: fields,locks_Global_AcquireWaitCount_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Global_AcquireWaitCount_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Global_AcquireWaitCount_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Global_AcquireWaitCount_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Global_DeadLockCount_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Global_DeadLockCount_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Global_DeadLockCount_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Global_DeadLockCount_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Global_TimeAcquiringMicros_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Global_TimeAcquiringMicros_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Global_TimeAcquiringMicros_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Global_TimeAcquiringMicros_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Global_TimeLockedMicros_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Global_TimeLockedMicros_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Global_TimeLockedMicros_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Global_TimeLockedMicros_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Mutex_AcquireCount_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Mutex_AcquireCount_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 305467-3054670
+  - name: fields,locks_Mutex_AcquireCount_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Mutex_AcquireCount_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Mutex_AcquireWaitCount_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Mutex_AcquireWaitCount_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Mutex_AcquireWaitCount_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Mutex_AcquireWaitCount_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Mutex_DeadLockCount_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Mutex_DeadLockCount_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Mutex_DeadLockCount_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Mutex_DeadLockCount_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Mutex_TimeAcquiringMicros_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Mutex_TimeAcquiringMicros_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Mutex_TimeAcquiringMicros_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Mutex_TimeAcquiringMicros_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Mutex_TimeLockedMicros_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Mutex_TimeLockedMicros_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Mutex_TimeLockedMicros_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_Mutex_TimeLockedMicros_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ParallelBatchWriterMode_AcquireCount_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ParallelBatchWriterMode_AcquireCount_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 266251-2662510
+  - name: fields,locks_ParallelBatchWriterMode_AcquireCount_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ParallelBatchWriterMode_AcquireCount_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ParallelBatchWriterMode_AcquireWaitCount_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ParallelBatchWriterMode_AcquireWaitCount_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ParallelBatchWriterMode_AcquireWaitCount_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ParallelBatchWriterMode_AcquireWaitCount_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ParallelBatchWriterMode_DeadLockCount_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ParallelBatchWriterMode_DeadLockCount_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ParallelBatchWriterMode_DeadLockCount_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ParallelBatchWriterMode_DeadLockCount_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ParallelBatchWriterMode_TimeAcquiringMicros_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ParallelBatchWriterMode_TimeAcquiringMicros_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ParallelBatchWriterMode_TimeAcquiringMicros_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ParallelBatchWriterMode_TimeAcquiringMicros_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ParallelBatchWriterMode_TimeLockedMicros_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ParallelBatchWriterMode_TimeLockedMicros_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ParallelBatchWriterMode_TimeLockedMicros_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ParallelBatchWriterMode_TimeLockedMicros_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ReplicationStateTransition_AcquireCount_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ReplicationStateTransition_AcquireCount_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ReplicationStateTransition_AcquireCount_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ReplicationStateTransition_AcquireCount_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 610033-6100330
+  - name: fields,locks_ReplicationStateTransition_AcquireWaitCount_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ReplicationStateTransition_AcquireWaitCount_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ReplicationStateTransition_AcquireWaitCount_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ReplicationStateTransition_AcquireWaitCount_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ReplicationStateTransition_DeadLockCount_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ReplicationStateTransition_DeadLockCount_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ReplicationStateTransition_DeadLockCount_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ReplicationStateTransition_DeadLockCount_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ReplicationStateTransition_TimeAcquiringMicros_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ReplicationStateTransition_TimeAcquiringMicros_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ReplicationStateTransition_TimeAcquiringMicros_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ReplicationStateTransition_TimeAcquiringMicros_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 473-4730
+  - name: fields,locks_ReplicationStateTransition_TimeLockedMicros_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ReplicationStateTransition_TimeLockedMicros_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ReplicationStateTransition_TimeLockedMicros_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_ReplicationStateTransition_TimeLockedMicros_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_oplog_AcquireCount_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_oplog_AcquireCount_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 27165-271650
+  - name: fields,locks_oplog_AcquireCount_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_oplog_AcquireCount_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_oplog_AcquireWaitCount_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_oplog_AcquireWaitCount_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_oplog_AcquireWaitCount_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_oplog_AcquireWaitCount_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_oplog_DeadLockCount_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_oplog_DeadLockCount_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_oplog_DeadLockCount_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_oplog_DeadLockCount_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_oplog_TimeAcquiringMicros_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_oplog_TimeAcquiringMicros_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_oplog_TimeAcquiringMicros_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_oplog_TimeAcquiringMicros_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_oplog_TimeLockedMicros_Read
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_oplog_TimeLockedMicros_ReadLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_oplog_TimeLockedMicros_Write
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,locks_oplog_TimeLockedMicros_WriteLower
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,member_status
+    DataType: String
+    ValueType: Constant
+    Value: PRI
+  - name: fields,members_arbiter_hosts
+    DataType: String
+    ValueType: Constant
+    Value: '[]'
+  - name: fields,members_down_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,members_down_hosts
+    DataType: String
+    ValueType: Constant
+    Value: '[]'
+  - name: fields,members_headroom_max
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 2515241400-25152414000
+  - name: fields,members_headroom_min
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 2515241400-25152414000
+  - name: fields,members_lag_max
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,members_lag_min
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,members_primary_hosts
+    DataType: String
+    ValueType: Constant
+    Value: 164.52.213.222:27017
+  - name: fields,members_recovering_hosts
+    DataType: String
+    ValueType: Constant
+    Value: '[]'
+  - name: fields,members_rollback_hosts
+    DataType: String
+    ValueType: Constant
+    Value: '[]'
+  - name: fields,members_secondry_hosts
+    DataType: String
+    ValueType: Constant
+    Value: '["164.52.213.222:27018","164.52.213.222:27019"]'
+  - name: fields,members_startup2_hosts
+    DataType: String
+    ValueType: Constant
+    Value: '[]'
+  - name: fields,members_unhealthy_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,members_unhealthy_hosts
+    DataType: String
+    ValueType: Constant
+    Value: '["164.52.213.222:27017","164.52.213.222:27018","164.52.213.222:27019"]'
+  - name: fields,members_unknown_hosts
+    DataType: String
+    ValueType: Constant
+    Value: '[]'
+  - name: fields,net_in_bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 120-1200
+  - name: fields,net_in_bytes_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 31627602-316276020
+  - name: fields,net_out_bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 662-6620
+  - name: fields,net_out_bytes_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 169968284-1699682840
+  - name: fields,open_connections
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1-10
+  - name: fields,operation_scan_and_order
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1-10
+  - name: fields,operation_write_conflicts
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,oplog_size_allocated
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 2054253030-20542530300
+  - name: fields,oplog_size_used
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 4499963-44999630
+  - name: fields,optimes_Applied_T
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,optimes_Applied_TS_I
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,optimes_Applied_TS_T
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 175672403-1756724030
+  - name: fields,optimes_Durable_T
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,optimes_Durable_TS_I
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,optimes_Durable_TS_T
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 175672403-1756724030
+  - name: fields,optimes_LastCommitted_T
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,optimes_LastCommitted_TS_I
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,optimes_LastCommitted_TS_T
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 175672403-1756724030
+  - name: fields,page_faults
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1-10
+  - name: fields,percent_cache_dirty
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,percent_cache_used
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,queries
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1007-10070
+  - name: fields,queries_per_sec
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,queued_reads
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,queued_writes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_apply_batches_num
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_apply_batches_total_millis
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_apply_ops
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_buffer_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_buffer_size_bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_commands
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_commands_per_sec
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_deletes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_deletes_per_sec
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_executor_pool_in_progress_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_executor_queues_network_in_progress
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_executor_queues_sleepers
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_executor_unsignaled_events
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_getmores
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_getmores_per_sec
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_health_avg
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_inserts
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_inserts_per_sec
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_lag
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_member_health
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_network_bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_network_getmores_num
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_network_getmores_total_millis
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_network_ops
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_oplog_window_sec
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 2515241-25152410
+  - name: fields,repl_queries
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_queries_per_sec
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_state
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_updates
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,repl_updates_per_sec
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,resident_megabytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 15-150
+  - name: fields,state
+    DataType: String
+    ValueType: Constant
+    Value: PRIMARY
+  - name: fields,storage_freelist_search_bucket_exhausted
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,storage_freelist_search_requests
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,storage_freelist_search_scanned
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,tcmalloc_central_cache_free_bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 164996-1649960
+  - name: fields,tcmalloc_current_allocated_bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 20117108-201171080
+  - name: fields,tcmalloc_current_total_thread_cache_bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 292846-2928460
+  - name: fields,tcmalloc_heap_size
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 27836416-278364160
+  - name: fields,tcmalloc_max_total_thread_cache_bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 107374182-1073741820
+  - name: fields,tcmalloc_pageheap_commit_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1644-16440
+  - name: fields,tcmalloc_pageheap_committed_bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 21715763-217157630
+  - name: fields,tcmalloc_pageheap_decommit_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 770-7700
+  - name: fields,tcmalloc_pageheap_free_bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 820428-8204280
+  - name: fields,tcmalloc_pageheap_reserve_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 8-80
+  - name: fields,tcmalloc_pageheap_scavenge_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 770-7700
+  - name: fields,tcmalloc_pageheap_total_commit_bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 577885388-5778853880
+  - name: fields,tcmalloc_pageheap_total_decommit_bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 556169625-5561696250
+  - name: fields,tcmalloc_pageheap_total_reserve_bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 27836416-278364160
+  - name: fields,tcmalloc_pageheap_unmapped_bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 6120652-61206520
+  - name: fields,tcmalloc_spinlock_total_delay_ns
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 814425-8144250
+  - name: fields,tcmalloc_thread_cache_free_bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 292846-2928460
+  - name: fields,tcmalloc_total_free_bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 778226-7782260
+  - name: fields,tcmalloc_transfer_cache_free_bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 320384-3203840
+  - name: fields,total_available
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,total_created
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 6-60
+  - name: fields,total_docs_scanned
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1070910-10709100
+  - name: fields,total_in_use
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,total_keys_scanned
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 111-1110
+  - name: fields,total_refreshing
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,total_tickets_reads
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 12-120
+  - name: fields,total_tickets_writes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 12-120
+  - name: fields,ttl_deletes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 5-50
+  - name: fields,ttl_deletes_per_sec
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,ttl_passes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 431-4310
+  - name: fields,ttl_passes_per_sec
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,update_command_failed
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,update_command_total
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 85-850
+  - name: fields,updates
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 90-900
+  - name: fields,updates_per_sec
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,uptime_ns
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 25886420500000-258864205000000
+  - name: fields,version
+    DataType: String
+    ValueType: Constant
+    Value: 5.0.26
+  - name: fields,vsize_megabytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 199-1990
+  - name: fields,wt_connection_files_currently_open
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 5-50
+  - name: fields,wt_data_handles_currently_active
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 9-90
+  - name: fields,wtcache_app_threads_page_read_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 42-420
+  - name: fields,wtcache_app_threads_page_read_time
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 7983-79830
+  - name: fields,wtcache_app_threads_page_write_count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 11162-111620
+  - name: fields,wtcache_bytes_read_into
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 4704950-47049500
+  - name: fields,wtcache_bytes_written_from
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 765140570-7651405700
+  - name: fields,wtcache_current_bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 6049879-60498790
+  - name: fields,wtcache_internal_pages_evicted
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,wtcache_max_bytes_configured
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1481637888-14816378880
+  - name: fields,wtcache_modified_pages_evicted
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 71-710
+  - name: fields,wtcache_pages_evicted_by_app_thread
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,wtcache_pages_queued_for_eviction
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,wtcache_pages_read_into
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 46-460
+  - name: fields,wtcache_pages_requested_from
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 416280-4162800
+  - name: fields,wtcache_pages_written_from
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 11164-111640
+  - name: fields,wtcache_server_evicting_pages
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,wtcache_tracked_dirty_bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 584426-5844260
+  - name: fields,wtcache_unmodified_pages_evicted
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: fields,wtcache_worker_thread_evictingpages
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 71-710
+  - name: name
+    DataType: String
+    ValueType: Constant
+    Value: mongodb
+  - name: tags,host
+    DataType: String
+    ValueType: Constant
+    Value: telegraf-mongodb-1-1-1-1-649b8b6485-67r9r
+  - name: tags,hostname
+    DataType: String
+    ValueType: Constant
+    Value: 164.52.213.222:27017
+  - name: tags,interval
+    DataType: String
+    ValueType: Constant
+    Value: 60s
+  - name: tags,node_type
+    DataType: String
+    ValueType: Constant
+    Value: PRI
+  - name: tags,rs_name
+    DataType: String
+    ValueType: Constant
+    Value: rs0
+  - name: tags,topic_name
+    DataType: String
+    ValueType: Constant
+    Value: mongo-metrics-input
+  - name: tags,vublock_name
+    DataType: String
+    ValueType: Constant
+    Value: MongoDB
+  - name: timestamp
+    DataType: DateTime
+    ValueType: Current
+    Value: "epoch_in_seconds"

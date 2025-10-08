@@ -1,0 +1,28 @@
+enabled: true
+uniquekey:
+  name: "host"
+  DataType: IPv4
+  ValueType: RandomFixed
+  Value: "10.10.10.1"
+  NumUniqKey: 6700
+  
+period: 1s
+
+# Add the timestamp field name and type. Type could be epoch_in_seconds, epoch_in_ms or datetime_rfc3339
+timestamp:
+  name: "@timestamp"
+  type: datetime_rfc3339
+
+output.kafka:
+    enabled: true
+    topic: "azure-api-input"
+
+Include_sub_modules: [backend_request, 
+  failure_request, 
+  overall_duration, 
+  service_request, 
+  total_request, 
+  other_request, 
+  service_capacity, 
+  successful_request, 
+  unauthorized_request ]

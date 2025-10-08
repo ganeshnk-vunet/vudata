@@ -1,0 +1,141 @@
+uniquekey:
+  # You can not override the key but you can create a new key in combination
+  # of previous and new ones. The following config will make sure that tool
+  # generate document for host and pid combination for each host IP & PID
+  name: system,diskio,name
+  DataType: String
+  ValueType: RandomFixed
+  Value: "diskio-\\d{2}"
+  NumUniqKey: 1
+
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: vublock_name
+    DataType: String
+    ValueType: Constant
+    Value: linux-monitor
+  - name: topic_name
+    DataType: String
+    ValueType: Constant
+    Value: linux-monitor-input
+  - name: '@metadata,beat'
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: '@metadata,type'
+    DataType: String
+    ValueType: Constant
+    Value: _doc
+  - name: '@metadata,version'
+    DataType: String
+    ValueType: Constant
+    Value: 8.12.2
+  - name: metricset,name
+    DataType: String
+    ValueType: Constant
+    Value: diskio
+  - name: "metricset,period"
+    DataType: Uint64
+    ValueType: "FromLocal"
+    Value: "period"
+  - name: event,dataset
+    DataType: String
+    ValueType: Constant
+    Value: system.diskio
+  - name: event,module
+    DataType: String
+    ValueType: Constant
+    Value: system
+  - name: event,duration
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: "200000-300000"
+  - name: system,diskio,read,count
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: "20000-30000"
+  - name: system,diskio,read,time
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: "50000-100000"
+  - name: system,diskio,read,bytes
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: "1000000-90000000"
+  - name: system,diskio,write,bytes
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: "1000000-90000000"
+  - name: system,diskio,write,count
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: "10000-9000000"
+  - name: system,diskio,write,time
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: "1000000-90000000"
+  - name: system,diskio,io,ops
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: "10000-900000"
+  - name: system,diskio,io,time
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: "1000000-90000000"
+  - name: system,diskio,name
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey
+  - name: source_id
+    DataType: String
+    ValueType: Constant
+    Value: 172.16.102.231
+  - name: ecs,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.0.0
+  - name: service,type
+    DataType: String
+    ValueType: Constant
+    Value: system
+  - name: bu_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: tenant_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: agent,ephemeral_id
+    DataType: String
+    ValueType: Constant
+    Value: 5ae03f0f-8a1a-4de2-aea4-eeb28fba67a3
+  - name: agent,id
+    DataType: String
+    ValueType: Constant
+    Value: b17f5610-6c0e-418d-a090-cc50ecaf7439
+  - name: agent,name
+    DataType: String
+    ValueType: Constant
+    Value: e2e-68-106
+  - name: agent,type
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: agent,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.12.2

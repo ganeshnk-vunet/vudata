@@ -1,0 +1,139 @@
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: '@metadata,beat'
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: '@metadata,type'
+    DataType: String
+    ValueType: Constant
+    Value: _doc
+  - name: '@metadata,version'
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.0
+  - name: metricset,period
+    DataType: Uint64
+    ValueType: FromLocal
+    Value: period
+  - name: metricset,name
+    DataType: String
+    ValueType: Constant
+    Value: state_job
+  - name: service,address
+    DataType: String
+    ValueType: Constant
+    Value: http://kube-state-metrics.kube-system:8080/metrics
+  - name: service,type
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes
+  - name: component
+    DataType: String
+    ValueType: Constant
+    Value: kube-state-metrics
+  - name: cluster_identifiers
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: agent,ephemeral_id
+    DataType: String
+    ValueType: Constant
+    Value: 8f37b49a-39d9-45ac-ab9e-7648d5fd92a1
+  - name: agent,id
+    DataType: String
+    ValueType: Constant
+    Value: 50c8df2a-d875-4bc5-98de-c33473d9451c
+  - name: agent,name
+    DataType: String
+    ValueType: Constant
+    Value: e2e-72-51
+  - name: agent,type
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: agent,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.0
+  - name: event,duration
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 16088-160880
+  - name: event,dataset
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes.job
+  - name: event,module
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes
+  - name: kubernetes,job,status,complete
+    DataType: String
+    ValueType: Boolean
+    Value: 'true'
+  - name: kubernetes,job,name
+    DataType: String
+    ValueType: Constant
+    Value: create-topics
+  - name: kubernetes,job,time,created
+    DataType: String
+    ValueType: Constant
+    Value: 2024-12-12 15:49:50:039
+  - name: kubernetes,job,time,completed
+    DataType: String
+    ValueType: Constant
+    Value: 2024-12-12 16:49:50:039
+  - name: kubernetes,job,completions,desired
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-1
+  - name: kubernetes,job,pods,succeeded
+    DataType: Uint64
+    ValueType: Constant
+    Value: 1
+  - name: kubernetes,job,pods,active
+    DataType: Uint64
+    ValueType: Constant
+    Value: 1
+  - name: kubernetes,job,parallelism,desired
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1-100
+  - name: kubernetes,namespace
+    DataType: String
+    ValueType: Constant
+    Value: vsmaps
+  - name: kubernetes,labels,app_kubernetes_io/version
+    DataType: String
+    ValueType: RandomRange
+    Value: 0-100
+  - name: kubernetes,labels,helm_sh/chart
+    DataType: String
+    ValueType: Constant
+    Value: cp-kafka-0.1.0
+  - name: kubernetes,labels,app_kubernetes_io/instance
+    DataType: String
+    ValueType: Constant
+    Value: kafka-cluster
+  - name: kubernetes,labels,app_kubernetes_io/managed-by
+    DataType: String
+    ValueType: Constant
+    Value: Helm
+  - name: ecs,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.0.0

@@ -1,0 +1,138 @@
+uniquekey:
+    name: kubernetes,node,name
+    DataType: String
+    ValueType: RandomFixed
+    Value: "e2e-72-\\d{2}"
+    NumUniqKey: 1
+
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: '@metadata,beat'
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: '@metadata,type'
+    DataType: String
+    ValueType: Constant
+    Value: _doc
+  - name: '@metadata,version'
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.0
+  - name: event,duration
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 122385-1223850
+  - name: event,dataset
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes.volume
+  - name: event,module
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes
+  - name: metricset,period
+    DataType: Uint64
+    ValueType: FromLocal
+    Value: period
+  - name: metricset,name
+    DataType: String
+    ValueType: Constant
+    Value: volume
+  - name: service,type
+    DataType: String
+    ValueType: Constant
+    Value: kubernetes
+  - name: service,address
+    DataType: String
+    ValueType: Constant
+    Value: https://e2e-72-47:10250/stats/summary
+  - name: kubernetes,namespace
+    DataType: String
+    ValueType: Constant
+    Value: kube-system
+  - name: kubernetes,namespace
+    DataType: String
+    ValueType: Constant
+    Value: longhorn     
+  - name: kubernetes,node,name
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey   
+  - name: kubernetes,pod,name
+    DataType: String
+    ValueType: Constant
+    Value: kube-metrics-kube-state-metrics-759f66dc8c-mpfsc
+  - name: kubernetes,volume,name
+    DataType: String
+    ValueType: Constant
+    Value: kube-api-access-f6jqs
+  - name: kubernetes,volume,fs,available,bytes
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 9418099507-94180995070
+  - name: kubernetes,volume,fs,capacity,bytes
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 9418100736-94181007360
+  - name: kubernetes,volume,fs,used,bytes
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 1228-12280
+  - name: kubernetes,volume,fs,used,pct
+    DataType: Float32
+    ValueType: RandomEverIncreasing
+    Value: 0-1
+  - name: kubernetes,volume,fs,inodes,free
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1150949-11509490
+  - name: kubernetes,volume,fs,inodes,count
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1150950-11509500
+  - name: kubernetes,volume,fs,inodes,used
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-100
+  - name: cluster_identifiers
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: agent,id
+    DataType: String
+    ValueType: Constant
+    Value: 57de9a68-e333-4123-bf0f-77348dd25525
+  - name: agent,name
+    DataType: String
+    ValueType: Constant
+    Value: e2e-72-47
+  - name: agent,type
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: agent,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.1.0
+  - name: agent,ephemeral_id
+    DataType: String
+    ValueType: Constant
+    Value: c0bd24de-87c3-4442-9fe9-97e3836b9cce
+  - name: ecs,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.0.0

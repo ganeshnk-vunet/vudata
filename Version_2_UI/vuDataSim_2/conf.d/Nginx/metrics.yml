@@ -1,0 +1,67 @@
+group:
+- name: good
+  fields:
+  - name: fields,accepts
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 150-200
+  - name: fields,active
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: fields,handled
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 10-100
+  - name: fields,reading
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-10
+  - name: fields,requests
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 100-1000
+  - name: fields,waiting
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-5
+  - name: fields,writing
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 0-5
+  - name: name
+    DataType: String
+    ValueType: Constant
+    Value: nginx
+  - name: tags,bu_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: tags,host
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: tags,port
+    DataType: Uint64
+    ValueType: Constant
+    Value: 80
+  - name: tags,server
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: tags,tenant_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: tags,topic_name
+    DataType: String
+    ValueType: Constant
+    Value: nginx-metrics-input
+  - name: tags,vublock_name
+    DataType: String
+    ValueType: Constant
+    Value: Nginx
+
+output.kafka:
+  enabled: true
+  topic: "nginx-metrics-input"

@@ -1,0 +1,145 @@
+group:
+  - name: success
+    logfile: LogFormat.txt
+    fields:
+      #      - name: timestamp
+      #        DataType: DateTime
+      #        ValueType: Current
+      #        Value: datetime_clf_yyyymmddTHHMMSSZ #2024-12-18T17:38:12+05:30
+      - name: bytes_sent
+        DataType: Uint64
+        ValueType: RandomRange
+        Value: "1000-10000"
+      - name: pid
+        DataType: Uint64
+        ValueType: RandomFixed
+        Value: "1000-10000"
+      - name: connection_time
+        DataType: Float32
+        ValueType: RandomRange
+        Value: "3.0-12.0"
+      - name: nginx_host
+        DataType: String
+        ValueType: FromLocal
+        Value: UniqueKey
+      - name: proxy_host
+        DataType: String
+        ValueType: Constant
+        Value: Backend
+      - name: proxy_port
+        DataType: Uint32
+        ValueType: Constant
+        Value: 80
+      - name: realip_remote_addr
+        DataType: IPv4
+        ValueType: RandomRange
+        Value: "192.168.10.1-192.168.10.255"
+      - name: realip_remote_port
+        DataType: Uint32
+        ValueType: RandomRange
+        Value: "30000-45000"
+      - name: remote_addr
+        DataType: String
+        ValueType: EvaluatedValue
+        Value: "realip_remote_addr"
+      - name: remote_port
+        DataType: Uint32
+        ValueType: EvaluatedValue
+        Value: "realip_remote_port + 0"
+      - name: request
+        DataType: String
+        ValueType: RandomRange
+        Value: "/check/this/uri\\d{2}"
+      - name: request_filename
+        DataType: String
+        ValueType: RandomRange
+        Value: "/etc/file/path/filename.\\d{2}"
+      - name: request_method
+        DataType: String
+        ValueType: "Enumeration"
+        Value: "GET:90,POST:8,PUT:1,DELETE:1"
+      - name: request_time
+        DataType: Float32
+        ValueType: RandomRange
+        Value: "0.0-2.0"
+      - name: request_uri
+        DataType: String
+        ValueType: RandomRange
+        Value: "/api/accounts/\\d{4}/fundtransfer"
+      - name: server_addr
+        DataType: String
+        ValueType: FromLocal
+        Value: UniqueKey
+      - name: server_name
+        DataType: String
+        ValueType: FromLocal
+        Value: UniqueKey
+      - name: server_port
+        DataType: Uint32
+        ValueType: Constant
+        Value: 80
+      - name: server_protocol
+        DataType: String
+        ValueType: Constant
+        Value: "HTTP/1.1"
+      - name: ssl_client_verify
+        DataType: String
+        ValueType: Constant
+        Value: "-"
+      - name: ssl_protocol
+        DataType: String
+        ValueType: Constant
+        Value: "-"
+      - name: ssl_server_name
+        DataType: String
+        ValueType: Constant
+        Value: "-"
+      - name: ssl_session_id
+        DataType: String
+        ValueType: Constant
+        Value: "-"
+      - name: ssl_session_reused
+        DataType: String
+        ValueType: Constant
+        Value: "-"
+      - name: status
+        DataType: Uint32
+        ValueType: "Enumeration"
+        Value: "200:90,404:5,403:2,500:3"
+      - name: upstream_addr
+        DataType: String
+        ValueType: Constant
+        Value: "172.16.68.179:8085"
+      - name: upstream_bytes_received
+        DataType: Uint64
+        ValueType: RandomRange
+        Value: "2000-12000"
+      - name: upstream_bytes_sent
+        DataType: Uint64
+        ValueType: RandomRange
+        Value: "1000-10000"
+      - name: upstream_cache_status
+        DataType: String
+        ValueType: Constant
+        Value: "-"
+      - name: upstream_connect_time
+        DataType: Float32
+        ValueType: RandomRange
+        Value: "0.001-0.010"
+      - name: upstream_response_time
+        DataType: Float32
+        ValueType: RandomRange
+        Value: "0.1-1.00"
+
+
+output.kafka:
+  enabled: true
+  topic: "nginx-logs-input"
+
+output.file:
+  enabled: true
+  path: ./tmp/nginx/
+  filename: access.log
+  rotate_every_mb: 1
+  max_files: 5    #Once the number of files have reached max_files limit, it will overwrite the 1st file
+

@@ -1,0 +1,218 @@
+# -------------------------
+# vuDataSim Configuration
+# -------------------------
+# uniquekey:
+#   name: host
+#   DataType: String
+#   ValueType: RandomFixed
+#   Value: 172.16.68.100-172.16.68.200
+#   NumUniqKey: 5
+
+group:
+- name: good
+  fields:
+    # Metadata
+    - name: tenant_id
+      DataType: String
+      ValueType: Constant
+      Value: "1"
+
+    - name: bu_id
+      DataType: String
+      ValueType: Constant
+      Value: "1"
+
+    - name: application_name
+      DataType: String
+      ValueType: Constant
+      Value: "IBMB"
+
+    # Numeric Thread/Connection Metrics
+    - name: currentThreadsBusy
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-100
+
+    - name: currentThreadCount
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 1-10
+
+    - name: maxThreads
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 20-200
+
+    - name: minSpareThreads
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 1-10
+
+    - name: acceptCount
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 10-100
+
+    - name: keepAliveCount
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-100
+
+    - name: maxKeepAliveRequests
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 10-100
+
+    - name: connectionCount
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-100
+
+    - name: maxConnections
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 819-8190
+
+    # Performance / Timeout Fields
+    - name: selectorTimeout
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 100-1000
+
+    - name: keepAliveTimeout
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 2000-20000
+
+    - name: connectionTimeout
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 2000-20000
+
+    - name: executorTerminationTimeoutMillis
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 500-5000
+
+    # Thread Priorities
+    - name: threadPriority
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-100
+
+    - name: acceptorThreadPriority
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-100
+
+    - name: pollerThreadPriority
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-100
+
+    # Boolean-like config flags
+    - name: running
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-1
+
+    - name: tcpNoDelay
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-1
+
+    - name: connectionLinger
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-1
+
+    - name: useSendfile
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-1
+
+    - name: daemon
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-1
+
+    - name: bindOnInit
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-1
+
+    # Ports
+    - name: port
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 1808-18080
+
+    - name: portWithOffset
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 1808-18080
+
+    - name: localPort
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 1808-18080
+
+    - name: sniParseLimit
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 6553-65530
+
+    # Static identifiers / Names
+    - name: modelerType
+      DataType: String
+      ValueType: Constant
+      Value: "org.apache.tomcat.util.net.NioEndpoint"
+
+    - name: ObjectName
+      DataType: String
+      ValueType: Constant
+      Value: 'Catalina:type=ThreadPool,name="http-nio-18080"'
+
+    - name: domain
+      DataType: String
+      ValueType: Constant
+      Value: "Catalina"
+
+    - name: name
+      DataType: String
+      ValueType: Constant
+      Value: "http-nio-18080"
+
+    - name: KeyPropertyListName
+      DataType: String
+      ValueType: Constant
+      Value: '"http-nio-18080"'
+
+    - name: defaultSSLHostConfigName
+      DataType: String
+      ValueType: Constant
+      Value: "_default_"
+
+    # Time (dynamic)
+    - name: Time
+      DataType: DateTime
+      ValueType: Current
+      Value: "datetime_rfc3339"
+
+    # Host fields
+    - name: Host
+      DataType: String
+      ValueType: FromLocal
+      Value: UniqueKey
+    - name: host
+      DataType: String
+      ValueType: FromLocal
+      Value: UniqueKey
+    - name: source_id
+      DataType: String
+      ValueType: FromLocal
+      Value: UniqueKey
+    - name: target
+      DataType: String
+      ValueType: FromLocal
+      Value: UniqueKey

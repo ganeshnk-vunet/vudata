@@ -1,0 +1,75 @@
+group:
+- name: good
+  fields:
+  - name: fields,@timestamp
+    DataType: DateTime
+    ValueType: Current
+    Value: ISO_8601
+  - name: fields,period
+    DataType: Uint64
+    ValueType: FromLocal
+    Value: period
+  - name: fields,system_name
+    DataType: String
+    ValueType: RandomFixed
+    Value: "Cisco-Switch-\\d{2}"
+  - name: fields,load_in_last_1_minute
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 1-40
+  - name: fields,load_in_last_5_minutes
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 1-40
+  - name: fields,load_in_last_5_seconds
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 1-40
+  - name: fields,cpu_used_p
+    DataType: Float32
+    ValueType: EvaluatedValue
+    Value: "fields,load_in_last_5_minutes + 0"
+  - name: name
+    DataType: String
+    ValueType: Constant
+    Value: cisco-cpu-health
+  - name: tags,bu_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: tags,host
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: tags,index
+    DataType: String
+    ValueType: Constant
+    Value: '0'
+  - name: tags,message_key
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: tags,tenant_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: tags,type
+    DataType: String
+    ValueType: Constant
+    Value: snmp
+  - name: tags,data_type
+    DataType: String
+    ValueType: Constant
+    Value: cisco-cpu-health
+  - name: tags,vendor_name
+    DataType: String
+    ValueType: Constant
+    Value: cisco
+  - name: tags,device_type
+    DataType: String
+    ValueType: Constant
+    Value: l3switch
+  - name: tags,topic_of
+    DataType: String
+    ValueType: Constant
+    Value: snmp-cisco-l3switch

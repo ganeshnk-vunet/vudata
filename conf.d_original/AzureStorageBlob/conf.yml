@@ -1,0 +1,45 @@
+enabled: true
+uniquekey:
+  name: "resource_name"
+  DataType: String
+  ValueType: RandomFixed
+  Value: "platformstoragenew/fileservices/default_\\d{2}"
+  NumUniqKey: 5000
+
+period: 1s
+
+# Add the timestamp field name and type. Type could be epoch_in_seconds, epoch_in_ms or datetime_rfc3339
+#timestamp:
+#  name: timestamp
+#  type: epoch_in_ms
+
+output.kafka:
+  enabled: true
+  topic: "vuazure-storage-blob-input"
+
+
+output.file:
+  enabled: false
+  max_files: 5
+  path: /home/vunet/data_sim/vuDataSim/outputs/
+  filename: azure.json
+  rotate_every_mb: 1
+
+# Include following yml files from this directory.. To include all, please use ‘*’
+Include_sub_modules: [Azure_Account_availability,
+  Azure_Account_e2elatency,
+  Azure_Account_serverlatency,
+  Azure_Blob_availability,
+  Azure_Blob_e2elatency,
+  Azure_Blob_serverlatency,
+  Azure_Queue_availability,
+  Azure_Queue_e2elatency,
+  Azure_Queue_serverlatency,
+  Azure_Table_availability,
+  Azure_Table_e2elatency, 
+  Azure_Table_serverlatency,
+  Azure_Files_availability,
+  Azure_Files_e2elatency,
+  Azure_Files_serverlatency,
+]
+#Include_sub_modules: [service_capacity, backend_request, overall_duration, failure_request]

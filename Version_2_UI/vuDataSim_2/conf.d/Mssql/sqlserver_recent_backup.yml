@@ -1,0 +1,65 @@
+uniquekey:
+  # You can not override the key but you can create a new key in combination
+  # of previous and new ones. The following config will make sure that tool
+  # generate document for host and pid combination for each host IP & PID
+  name: fields,sql_instance
+  DataType: String
+  ValueType: RandomFixed
+  Value: "mssql-2[2-4]"
+  NumUniqKey: 3
+ 
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: fields,database_name
+    DataType: String
+    ValueType: Constant
+    Value: TestDB
+  - name: fields,measurement
+    DataType: String
+    ValueType: Constant
+    Value: sqlserver_recentbackup
+  - name: fields,recovery_model
+    DataType: String
+    ValueType: Constant
+    Value: FULL
+  - name: fields,server_name
+    DataType: String
+    ValueType: Constant
+    Value: mssql-500
+  - name: fields,sql_instance
+    DataType: String
+    ValueType: FromLocal
+    Value: SubModuleUniqueKey
+  - name: fields,state
+    DataType: String
+    ValueType: Constant
+    Value: ONLINE
+  - name: name
+    DataType: String
+    ValueType: Constant
+    Value: sqlserver_recentbackup
+  - name: tags,host
+    DataType: String
+    ValueType: Constant
+    Value: mssql-polling-metrics-1-1-1-1-77854d496c-js6cp
+  - name: tags,source_id
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: tags,target
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey

@@ -1,0 +1,139 @@
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: applicationIP
+    DataType: String
+    ValueType: Constant
+    Value: 172.16.102.231
+  - name: tenant_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: HeapSizeMax
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 193986560-1939865600
+  - name: ExecuteThreadTotalCount
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 2-20
+  - name: Throughput
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-100
+  - name: Server_Health
+    DataType: String
+    ValueType: Constant
+    Value: 'HEALTH_OK '
+  - name: HeapFreeCurrent
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 59908708-599087080
+  - name: bu_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: JTA_Health
+    DataType: String
+    ValueType: Constant
+    Value: 'HEALTH_OK '
+  - name: applicationport
+    DataType: Uint64
+    ValueType: RandomFixed
+    Value: "7001-50000"
+  - name: Uptime
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 16556029-165560290
+  - name: HeapFreePercent
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 7-70
+  - name: MemoryUsage,HeapMemoryUsage,init
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 12163481-121634810
+  - name: MemoryUsage,HeapMemoryUsage,committed
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 106220748-1062207480
+  - name: MemoryUsage,HeapMemoryUsage,max
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 193986560-1939865600
+  - name: MemoryUsage,HeapMemoryUsage,used
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 46364264-463642640
+  - name: MemoryUsage,NonHeapMemoryUsage,init
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 766771-7667710
+  - name: MemoryUsage,NonHeapMemoryUsage,committed
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 48333619-483336190
+  - name: MemoryUsage,NonHeapMemoryUsage,max
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 0-100
+  - name: MemoryUsage,NonHeapMemoryUsage,used
+    DataType: Float32
+    ValueType: RandomRange
+    Value: 47075845-470758450
+  - name: TransactionCommittedTotalCount
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 100-10000
+  - name: target
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: JMS_Health
+    DataType: String
+    ValueType: Constant
+    Value: 'HEALTH_OK '
+  - name: Type
+    DataType: String
+    ValueType: Constant
+    Value: Server
+  - name: ServerName
+    DataType: String
+    ValueType: Constant
+    Value: AdminServer
+  - name: ExecuteThreadIdleCount
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1-10
+  - name: TransactionTotalCount
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 100-10000
+  - name: source_id
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: ActiveTransactionsTotalCount
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 100-10000
+  - name: TransactionAbandonedTotalCount
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 100-1000
+  - name: TransactionRolledBackTotalCount
+    DataType: Uint64
+    ValueType: RandomEverIncreasing
+    Value: 100-1000

@@ -1,0 +1,139 @@
+group:
+- name: good
+  fields:
+  - name: host,ip
+    DataType: String
+    ValueType: FromLocalAsList
+    Value: UniqueKey
+  - name: host,name
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: host,hostname
+    DataType: String
+    ValueType: FromLocal
+    Value: UniqueKey
+  - name: '@metadata,beat'
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: '@metadata,type'
+    DataType: String
+    ValueType: Constant
+    Value: _doc
+  - name: '@metadata,version'
+    DataType: String
+    ValueType: Constant
+    Value: 8.12.2
+  - name: service,type
+    DataType: String
+    ValueType: Constant
+    Value: system
+  - name: system,memory,cached
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 1000000000-10000000000
+  - name: system,memory,swap,total
+    DataType: Uint64
+    ValueType: Constant
+    Value: 10000000
+  - name: system,memory,swap,used,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 111100-300000
+  - name: system,memory,swap,free
+    DataType: Uint64
+    ValueType: EvaluatedValue
+    Value: "system,memory,swap,total - system,memory,swap,used,bytes"
+  - name: system,memory,total
+    DataType: Uint64
+    ValueType: Constant
+    Value: 10000000000
+  - name: system,memory,actual,used,bytes
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 4000000000-7000000000
+  - name: system,memory,actual,free
+    DataType: Uint64
+    ValueType: EvaluatedValue
+    Value: "system,memory,total - system,memory,actual,used,bytes"
+  - name: system,memory,actual,used,pct
+    DataType: Float32
+    ValueType: EvaluatedValue
+    Value: "system,memory,actual,used,bytes / system,memory,total"
+  - name: system,memory,used,pct
+    DataType: Float32
+    ValueType: EvaluatedValue
+    Value: "system,memory,actual,used,pct + 0"
+  - name: system,memory,used,bytes
+    DataType: Uint64
+    ValueType: EvaluatedValue
+    Value: "system,memory,actual,used,bytes + 0"
+  - name: system,memory,free
+    DataType: Uint64
+    ValueType: EvaluatedValue
+    Value: "system,memory,actual,free + 0"
+  - name: vublock_name
+    DataType: String
+    ValueType: Constant
+    Value: linux-monitor
+  - name: source_id
+    DataType: String
+    ValueType: Constant
+    Value: 10.0.110.68
+  - name: bu_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: ecs,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.0.0
+  - name: metricset,name
+    DataType: String
+    ValueType: Constant
+    Value: memory
+  - name: metricset,period
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 6000-60000
+  - name: topic_name
+    DataType: String
+    ValueType: Constant
+    Value: linux-monitor-input
+  - name: tenant_id
+    DataType: String
+    ValueType: Constant
+    Value: '1'
+  - name: agent,type
+    DataType: String
+    ValueType: Constant
+    Value: metricbeat
+  - name: agent,version
+    DataType: String
+    ValueType: Constant
+    Value: 8.12.2
+  - name: agent,ephemeral_id
+    DataType: String
+    ValueType: Constant
+    Value: 424b9f51-b770-494a-be28-94b80c5e6a12
+  - name: agent,id
+    DataType: String
+    ValueType: Constant
+    Value: e5705a0e-187d-4a88-b18c-aecabcf5cb85
+  - name: agent,name
+    DataType: String
+    ValueType: Constant
+    Value: ip-10-0-110-68
+  - name: event,dataset
+    DataType: String
+    ValueType: Constant
+    Value: system.memory
+  - name: event,module
+    DataType: String
+    ValueType: Constant
+    Value: system
+  - name: event,duration
+    DataType: Uint64
+    ValueType: RandomRange
+    Value: 10000-100000

@@ -1,0 +1,178 @@
+# -------------------------
+# vuDataSim Configuration
+# -------------------------
+uniquekey:
+  name: host
+  DataType: String
+  ValueType: RandomFixed
+  Value: 172.16.68.168
+  NumUniqKey: 1
+
+group:
+- name: good
+  fields:
+    # Standard metadata
+    - name: tenant_id
+      DataType: String
+      ValueType: Enumeration
+      Value: "1:100"
+
+    - name: bu_id
+      DataType: String
+      ValueType: Enumeration
+      Value: "1:100"
+
+    - name: application_name
+      DataType: String
+      ValueType: Enumeration
+      Value: "IBMB:100"
+
+    # vublock name (empty string)
+    - name: vublock_name
+      DataType: String
+      ValueType: Constant
+      Value: ""
+
+    # Dynamic timestamp @timestamp
+    - name: "@timestamp"
+      DataType: DateTime
+      ValueType: Current
+      Value: "datetime_rfc3339"
+
+    # Constant time field
+    - name: Time
+      DataType: DateTime
+      ValueType: Constant
+      Value: "2025-08-25T16:08:52.835+0530"
+
+    # Host fields (from UniqueKey)
+    - name: Host
+      DataType: String
+      ValueType: FromLocal
+      Value: "UniqueKey"
+
+    - name: host
+      DataType: String
+      ValueType: FromLocal
+      Value: "UniqueKey"
+
+    - name: source_id
+      DataType: String
+      ValueType: FromLocal
+      Value: "UniqueKey"
+
+    - name: target
+      DataType: String
+      ValueType: FromLocal
+      Value: "UniqueKey"
+
+    # Manager specific fields
+    - name: KeyPropertyListType
+      DataType: String
+      ValueType: Constant
+      Value: "Manager"
+
+    - name: ObjectName
+      DataType: String
+      ValueType: Constant
+      Value: "Catalina:type=Manager,host=localhost,context=/examples"
+
+    - name: name
+      DataType: String
+      ValueType: Constant
+      Value: "StandardManager"
+
+    - name: className
+      DataType: String
+      ValueType: Constant
+      Value: "org.apache.catalina.session.StandardManager"
+
+    - name: modelerType
+      DataType: String
+      ValueType: Constant
+      Value: "org.apache.catalina.session.StandardManager"
+
+    - name: secureRandomAlgorithm
+      DataType: String
+      ValueType: Constant
+      Value: "SHA1PRNG"
+
+    - name: stateName
+      DataType: String
+      ValueType: Constant
+      Value: "STARTED"
+
+    - name: processExpiresFrequency
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 6-6
+
+    - name: maxActiveSessions
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 10-100
+
+    - name: activeSessions
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-0
+
+    - name: sessionCreateRate
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-0
+
+    - name: sessionAverageAliveTime
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-0
+
+    - name: sessionMaxAliveTime
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-0
+
+    - name: sessionExpireRate
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-0
+
+    - name: rejectedSessions
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-0
+
+    - name: duplicates
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-0
+
+    - name: expiredSessions
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-0
+
+    - name: maxActive
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-0
+
+    - name: sessionCounter
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-0
+
+    - name: persistAuthentication
+      DataType: Boolean
+      ValueType: Constant
+      Value: false
+
+    - name: warnOnSessionAttributeFilterFailure
+      DataType: Boolean
+      ValueType: Constant
+      Value: false
+
+    - name: processingTime
+      DataType: Uint64
+      ValueType: RandomRange
+      Value: 0-0
